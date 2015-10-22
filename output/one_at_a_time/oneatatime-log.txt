@@ -1,0 +1,69 @@
+[03:09:18 07/10]	Opening log /home/ubuntu/output/one_at_a_time/oneatatime-log.txt at Tue Oct  7 03:09:18 2014
+####### Log opened at Tue Oct  7 03:09:18 2014 #######
+Command line: 
+[03:09:18 07/10]	os.path.basename(input):  9668063
+[03:09:18 07/10]	Classifying PubMed abstract 9668063
+[03:09:18 07/10]	*************************** NOTE ***************************
+[03:09:18 07/10]	Do not attempt to do large-scale classification of PubMed
+[03:09:18 07/10]	abstracts with this feature. For that, use the downloadable
+[03:09:18 07/10]	PubMed release. This is a demonstration feature only, and
+[03:09:18 07/10]	abusing it will cause you to be banned from PubMed!
+[03:09:18 07/10]	************************************************************
+[03:09:18 07/10]	Downloading PubMed abstract 9668063
+[03:09:18 07/10]	Skipping already downloaded file http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=9668063&retmode=xml
+[03:09:18 07/10]	Model /home/ubuntu/bionlp-1.3/GE11 doesn't exist, looking for a default model
+[03:09:18 07/10]	Classifying with default model /home/ubuntu/.tees/models/GE11-test
+[03:09:18 07/10]	Preprocessor output /home/ubuntu/output/one_at_a_time/oneatatime-preprocessed.xml.gz does not exist
+[03:09:18 07/10]	------------ Preprocessing ------------
+[03:09:18 07/10]	* Preprocessor:PROCESS(ENTER) *
+[03:09:18 07/10]	Caching model "/home/ubuntu/.tees/models/GE11-test" member "TEES_MODEL_VALUES.tsv" to "/tmp/tmpehmKO5/TEES_MODEL_VALUES.tsv"
+[03:09:18 07/10]	Tool chain parameters: 
+[03:09:18 07/10]	=== ENTER STEP Preprocessor:PROCESS:CONVERT ===
+[03:09:18 07/10]	Running step CONVERT with arguments {'input': '/tmp/pmid-9668063.txt', 'output': '/home/ubuntu/output/one_at_a_time/oneatatime-preprocessed.xml.gz-documents.xml.gz', 'dataSetNames': None, 'corpusName': None}
+[03:09:18 07/10]	Converting ST-format to Interaction XML
+[03:09:18 07/10]	Reading /tmp/pmid-9668063.txt set, 1 documents
+[03:09:18 07/10]	Resolving equivalences
+[03:09:18 07/10]	Duplication created 0 new events (new total 0 events)
+[03:09:18 07/10]	Writing output to /home/ubuntu/output/one_at_a_time/oneatatime-preprocessed.xml.gz-documents.xml.gz
+[03:09:18 07/10]	=== EXIT STEP CONVERT time: 0:00:00.003308 ===
+[03:09:18 07/10]	=== ENTER STEP Preprocessor:PROCESS:SPLIT-SENTENCES ===
+[03:09:18 07/10]	Running step SPLIT-SENTENCES with arguments {'debug': False, 'input': <ElementTree object at 0x7f6900664e90>, 'postProcess': True, 'output': '/home/ubuntu/output/one_at_a_time/oneatatime-preprocessed.xml.gz-sentences.xml.gz'}
+[03:09:18 07/10]	Loading corpus <ElementTree object at 0x7f6900664e90>
+[03:09:18 07/10]	Corpus file loaded
+[03:09:18 07/10]	Running GENIA Sentence Splitter /home/ubuntu/.tees/tools/geniass (Using post-processing)
+[03:09:18 07/10]	Splitting Documents (TEES.d0): 100.00 % (0:0:0.000)
+[03:09:18 07/10]	Traceback (most recent call last):
+[03:09:18 07/10]	  File "<stdin>", line 1, in <module>
+[03:09:18 07/10]	  File "/usr/local/lib/python2.7/dist-packages/classify.py", line 72, in classify
+[03:09:18 07/10]	    classifyInput = preprocessor.process(input, preprocessorOutput, preprocessorParams, model, [], fromStep=detectorSteps["PREPROCESS"], toStep=None, omitSteps=omitDetectorSteps["PREPROCESS"])
+[03:09:18 07/10]	  File "/usr/local/lib/python2.7/dist-packages/Detectors/Preprocessor.py", line 49, in process
+[03:09:18 07/10]	    xml = ToolChain.process(self, source, output, parameters, model, fromStep, toStep, omitSteps)
+[03:09:18 07/10]	  File "/usr/local/lib/python2.7/dist-packages/Detectors/ToolChain.py", line 142, in process
+[03:09:18 07/10]	    step[1](**stepArgs) # call the tool
+[03:09:18 07/10]	  File "/usr/local/lib/python2.7/dist-packages/Tools/GeniaSentenceSplitter.py", line 186, in makeSentences
+[03:09:18 07/10]	    assert os.path.exists(postProcessorPath), postProcessorPath
+[03:09:18 07/10]	AssertionError: /usr/local/lib/python2.7/dist-packages/Tools/geniass-postproc.pl
+[03:12:47 07/10]	Opening log /home/ubuntu/output/one_at_a_time/oneatatime-log.txt at Tue Oct  7 03:12:47 2014
+####### Log opened at Tue Oct  7 03:12:47 2014 #######
+Command line: 
+[03:12:47 07/10]	os.path.basename(input):  10089566
+[03:12:47 07/10]	Classifying PubMed abstract 10089566
+[03:12:47 07/10]	*************************** NOTE ***************************
+[03:12:47 07/10]	Do not attempt to do large-scale classification of PubMed
+[03:12:47 07/10]	abstracts with this feature. For that, use the downloadable
+[03:12:47 07/10]	PubMed release. This is a demonstration feature only, and
+[03:12:47 07/10]	abusing it will cause you to be banned from PubMed!
+[03:12:47 07/10]	************************************************************
+[03:12:47 07/10]	Downloading PubMed abstract 10089566
+[03:12:47 07/10]	Skipping already downloaded file http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=10089566&retmode=xml
+[03:12:47 07/10]	Traceback (most recent call last):
+[03:12:47 07/10]	  File "<stdin>", line 1, in <module>
+[03:12:47 07/10]	  File "classify.py", line 45, in classify
+[03:12:47 07/10]	    input, preprocess = getInput(input)
+[03:12:47 07/10]	  File "classify.py", line 112, in getInput
+[03:12:47 07/10]	    input = getPubMed(os.path.basename(input))
+[03:12:47 07/10]	  File "classify.py", line 157, in getPubMed
+[03:12:47 07/10]	    f = codecs.open(downloaded + ".txt", "wt", "utf-8")
+[03:12:47 07/10]	  File "/usr/lib/python2.7/codecs.py", line 878, in open
+[03:12:47 07/10]	    file = __builtin__.open(filename, mode, buffering)
+[03:12:47 07/10]	IOError: [Errno 13] Permission denied: '/tmp/pmid-10089566.txt'

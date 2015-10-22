@@ -1,0 +1,310 @@
+[08:20:24 19/10]	Opening log /home/ubuntu/UPTEESoutput/ID11/genes/HIST1H3A/26474573-log.txt at Mon Oct 19 08:20:24 2015
+####### Log opened at Mon Oct 19 08:20:24 2015 #######
+Command line: UPSITE_kwargs.py --q1 TP53 --q2 MDM2 --n 1 --outputFile temp.txt
+[08:20:24 19/10]	Classifying PubMed abstract 26474573
+[08:20:24 19/10]	*************************** NOTE ***************************
+[08:20:24 19/10]	Do not attempt to do large-scale classification of PubMed
+[08:20:24 19/10]	abstracts with this feature. For that, use the downloadable
+[08:20:24 19/10]	PubMed release. This is a demonstration feature only, and
+[08:20:24 19/10]	abusing it will cause you to be banned from PubMed!!!!!!!!!!!!
+[08:20:24 19/10]	************************************************************
+[08:20:24 19/10]	Downloading PubMed abstract 26474573
+[08:20:24 19/10]	Skipping already downloaded file http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=26474573&retmode=xml
+[08:20:24 19/10]	Classifying input /tmp/pmid-26474573.txt
+[08:20:24 19/10]	Model /home/ubuntu/UPTEES/ID11 doesn't exist, looking for a default model
+[08:20:24 19/10]	Classifying with default model /home/ubuntu/.tees/models/ID11-test
+[08:20:24 19/10]	Preprocessor output /home/ubuntu/UPTEESoutput/ID11/genes/HIST1H3A/26474573-preprocessed.xml.gz does not exist
+[08:20:24 19/10]	------------ Preprocessing ------------
+[08:20:24 19/10]	* Preprocessor:PROCESS(ENTER) *
+[08:20:24 19/10]	Caching model "/home/ubuntu/.tees/models/ID11-test" member "TEES_MODEL_VALUES.tsv" to "/tmp/tmpMIfOZm/TEES_MODEL_VALUES.tsv"
+[08:20:24 19/10]	Tool chain parameters: 
+[08:20:24 19/10]	=== ENTER STEP Preprocessor:PROCESS:CONVERT ===
+[08:20:24 19/10]	Running step CONVERT with arguments {'input': '/tmp/pmid-26474573.txt', 'output': '/home/ubuntu/UPTEESoutput/ID11/genes/HIST1H3A/26474573-preprocessed.xml.gz-documents.xml.gz', 'dataSetNames': None, 'corpusName': None}
+[08:20:24 19/10]	Converting ST-format to Interaction XML
+[08:20:24 19/10]	Reading /tmp/pmid-26474573.txt set, 1 documents
+[08:20:24 19/10]	Resolving equivalences
+[08:20:24 19/10]	Duplication created 0 new events (new total 0 events)
+[08:20:24 19/10]	Writing output to /home/ubuntu/UPTEESoutput/ID11/genes/HIST1H3A/26474573-preprocessed.xml.gz-documents.xml.gz
+[08:20:24 19/10]	=== EXIT STEP CONVERT time: 0:00:00.034666 ===
+[08:20:24 19/10]	=== ENTER STEP Preprocessor:PROCESS:SPLIT-SENTENCES ===
+[08:20:24 19/10]	Running step SPLIT-SENTENCES with arguments {'debug': False, 'input': <ElementTree object at 0x7f4b08a5b550>, 'postProcess': True, 'output': '/home/ubuntu/UPTEESoutput/ID11/genes/HIST1H3A/26474573-preprocessed.xml.gz-sentences.xml.gz'}
+[08:20:24 19/10]	Loading corpus <ElementTree object at 0x7f4b08a5b550>
+[08:20:24 19/10]	Corpus file loaded
+[08:20:24 19/10]	Running GENIA Sentence Splitter /home/ubuntu/.tees/tools/geniass (Using post-processing)
+[08:20:24 19/10]	Splitting Documents (TEES.d0): 100.00 % (0:0:0.000)
+[08:20:25 19/10]	Sentence splitting created 1 sentences
+[08:20:25 19/10]	Redivided 0 sentences
+[08:20:25 19/10]	Writing output to /home/ubuntu/UPTEESoutput/ID11/genes/HIST1H3A/26474573-preprocessed.xml.gz-sentences.xml.gz
+[08:20:25 19/10]	=== EXIT STEP SPLIT-SENTENCES time: 0:00:00.417804 ===
+[08:20:25 19/10]	=== ENTER STEP Preprocessor:PROCESS:NER ===
+[08:20:25 19/10]	Running step NER with arguments {'elementName': 'entity', 'splitNewlines': True, 'output': '/home/ubuntu/UPTEESoutput/ID11/genes/HIST1H3A/26474573-preprocessed.xml.gz-ner.xml.gz', 'debug': False, 'input': <ElementTree object at 0x7f4b08a5b550>, 'processElement': 'sentence'}
+[08:20:25 19/10]	Loading corpus <ElementTree object at 0x7f4b08a5b550>
+[08:20:25 19/10]	Corpus file loaded
+[08:20:25 19/10]	Running BANNER /home/ubuntu/.tees/tools/BANNER
+[08:20:25 19/10]	BANNER command: java -cp /home/ubuntu/.tees/tools/BANNER/bin:/home/ubuntu/.tees/tools/BANNER/lib/* banner.eval.BANNER test /tmp/tmpGkecJ3/banner_config.xml
+[08:21:18 19/10]	BANNER time: 0:00:53.391714
+[08:21:18 19/10]	Inserting entities
+[08:21:18 19/10]	BANNER found 0 entities in 0 sentence-elements (1 sentences processed)
+[08:21:18 19/10]	New entity-elements: 0 (Split 0 BANNER entities with newlines)
+[08:21:18 19/10]	Writing output to /home/ubuntu/UPTEESoutput/ID11/genes/HIST1H3A/26474573-preprocessed.xml.gz-ner.xml.gz
+[08:21:18 19/10]	=== EXIT STEP NER time: 0:00:53.489703 ===
+[08:21:18 19/10]	=== ENTER STEP Preprocessor:PROCESS:PARSE ===
+[08:21:18 19/10]	Running step PARSE with arguments {'debug': False, 'input': <ElementTree object at 0x7f4b08a5b550>, 'requireEntities': False, 'parseName': 'McCC', 'output': '/home/ubuntu/UPTEESoutput/ID11/genes/HIST1H3A/26474573-preprocessed.xml.gz-parse.xml.gz'}
+[08:21:18 19/10]	BLLIP parser
+[08:21:18 19/10]	BLLIP time stamp: 19.10.15 08:21:18
+[08:21:18 19/10]	BLLIP parser at: /home/ubuntu/.tees/tools/BLLIP/dmcc-bllip-parser-31d5647
+[08:21:18 19/10]	Biomodel at: /home/ubuntu/.tees/tools/BLLIP/biomodel
+[08:21:18 19/10]	Loading corpus <ElementTree object at 0x7f4b08a5b550>
+[08:21:18 19/10]	Corpus file loaded
+[08:21:18 19/10]	Parser does the tokenization
+[08:21:18 19/10]	Running BLLIP parser with tokenization
+[08:22:03 19/10]	Parsing: 100.00 % (0:0:44.485)
+[08:22:03 19/10]	Processed succesfully all sentences
+[08:22:03 19/10]	Inserting parses
+[08:22:03 19/10]	Parsed 1 sentences (0 failed)
+[08:22:03 19/10]	All sentences were parsed succesfully
+[08:22:03 19/10]	Writing output to /home/ubuntu/UPTEESoutput/ID11/genes/HIST1H3A/26474573-preprocessed.xml.gz-parse.xml.gz
+[08:22:03 19/10]	=== EXIT STEP PARSE time: 0:00:44.730058 ===
+[08:22:03 19/10]	=== ENTER STEP Preprocessor:PROCESS:CONVERT-PARSE ===
+[08:22:03 19/10]	Running step CONVERT-PARSE with arguments {'debug': False, 'input': <ElementTree object at 0x7f4b08a5b550>, 'parser': 'McCC', 'output': '/home/ubuntu/UPTEESoutput/ID11/genes/HIST1H3A/26474573-preprocessed.xml.gz-converted-parse.xml.gz'}
+[08:22:03 19/10]	Running Stanford conversion
+[08:22:03 19/10]	Stanford tools at: /home/ubuntu/.tees/tools/stanford-parser-2012-03-09
+[08:22:03 19/10]	Stanford tools arguments: java -mx500m -cp stanford-parser.jar edu.stanford.nlp.trees.EnglishGrammaticalStructure -CCprocessed -keepPunct -treeFile
+[08:22:03 19/10]	Stanford time stamp: 19.10.15 08:22:03
+[08:22:03 19/10]	Loading corpus <ElementTree object at 0x7f4b08a5b550>
+[08:22:03 19/10]	Corpus file loaded
+[08:22:10 19/10]	Stanford Conversion: 100.00 % (0:0:7.080)
+[08:22:10 19/10]	Processed succesfully all sentences
+[08:22:10 19/10]	Stanford conversion was done for 1 sentences, 0 had no dependencies, 0 failed
+[08:22:10 19/10]	Writing output to /home/ubuntu/UPTEESoutput/ID11/genes/HIST1H3A/26474573-preprocessed.xml.gz-converted-parse.xml.gz
+[08:22:10 19/10]	=== EXIT STEP CONVERT-PARSE time: 0:00:07.238665 ===
+[08:22:10 19/10]	=== ENTER STEP Preprocessor:PROCESS:SPLIT-NAMES ===
+[08:22:10 19/10]	Running step SPLIT-NAMES with arguments {'input': <ElementTree object at 0x7f4b08a5b550>, 'parseName': 'McCC', 'removeOld': True, 'output': '/home/ubuntu/UPTEESoutput/ID11/genes/HIST1H3A/26474573-preprocessed.xml.gz-split-names.xml.gz'}
+[08:22:10 19/10]	Protein Name Splitter
+[08:22:10 19/10]	Splitting names (TEES.d0.s0): 100.00 % (0:0:0.000)
+[08:22:10 19/10]	Tokenization missing from 0 sentences
+[08:22:10 19/10]	Writing output to /home/ubuntu/UPTEESoutput/ID11/genes/HIST1H3A/26474573-preprocessed.xml.gz-split-names.xml.gz
+[08:22:10 19/10]	=== EXIT STEP SPLIT-NAMES time: 0:00:00.064552 ===
+[08:22:10 19/10]	=== ENTER STEP Preprocessor:PROCESS:FIND-HEADS ===
+[08:22:10 19/10]	Running step FIND-HEADS with arguments {'parse': 'McCC', 'removeExisting': True, 'output': '/home/ubuntu/UPTEESoutput/ID11/genes/HIST1H3A/26474573-preprocessed.xml.gz-heads.xml.gz', 'input': <ElementTree object at 0x7f4b08a5b550>}
+[08:22:10 19/10]	Removing existing head offsets
+[08:22:10 19/10]	Removed head offsets from 0 entities
+[08:22:10 19/10]	Determining head offsets using parse McCC and tokenization None
+[08:22:10 19/10]	1 documents, 1 sentences
+[08:22:10 19/10]	Making sentence graphs (TEES.d0.s0): 100.00 % (0:0:0.000)
+[08:22:10 19/10]	Skipped 0 duplicate interaction edges in SentenceGraphs
+[08:22:10 19/10]	Writing output to /home/ubuntu/UPTEESoutput/ID11/genes/HIST1H3A/26474573-preprocessed.xml.gz-heads.xml.gz
+[08:22:10 19/10]	=== EXIT STEP FIND-HEADS time: 0:00:00.094248 ===
+[08:22:10 19/10]	=== ENTER STEP Preprocessor:PROCESS:DIVIDE-SETS ===
+[08:22:10 19/10]	Running step DIVIDE-SETS with arguments {'input': <ElementTree object at 0x7f4b08a5b550>, 'outputStem': None, 'saveCombined': True}
+[08:22:10 19/10]	No set division
+[08:22:10 19/10]	=== EXIT STEP DIVIDE-SETS: 0:00:00.001987 ===
+[08:22:10 19/10]	* Preprocessor:PROCESS(EXIT) 0:01:46.193151 *
+[08:22:10 19/10]	=== EXIT STEP PREPROCESS time: 0:01:46.227481 ===
+[08:22:10 19/10]	Caching model "/home/ubuntu/.tees/models/ID11-test" member "TEES_MODEL_VALUES.tsv" to "/tmp/tmpfRkzPd/TEES_MODEL_VALUES.tsv"
+[08:22:10 19/10]	Importing detector Detectors.EventDetector
+[08:22:10 19/10]	Caching model "/home/ubuntu/.tees/models/ID11-test" member "TEES_MODEL_VALUES.tsv" to "/tmp/tmpnqAPbu/TEES_MODEL_VALUES.tsv"
+[08:22:10 19/10]	* EventDetector:CLASSIFY(ENTER) *
+[08:22:10 19/10]	=== ENTER STEP EventDetector:CLASSIFY:TRIGGERS ===
+[08:22:10 19/10]	Caching model "/home/ubuntu/.tees/models/ID11-test" member "TEES_MODEL_VALUES.tsv" to "/tmp/tmp_M3QL1/TEES_MODEL_VALUES.tsv"
+[08:22:10 19/10]	Caching model "/home/ubuntu/.tees/models/ID11-test" member "structure.txt" to "/tmp/tmp_M3QL1/structure.txt"
+[08:22:10 19/10]	Warning, EVENT Binding does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[08:22:10 19/10]	Warning, EVENT Gene_expression does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[08:22:10 19/10]	Warning, EVENT Localization does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[08:22:10 19/10]	Warning, EVENT Negative_regulation does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[08:22:10 19/10]	Warning, EVENT Phosphorylation does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[08:22:10 19/10]	Warning, EVENT Positive_regulation does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[08:22:10 19/10]	Warning, EVENT Process does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [0-999].
+[08:22:10 19/10]	Warning, EVENT Protein_catabolism does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[08:22:10 19/10]	Warning, EVENT Regulation does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[08:22:10 19/10]	Warning, EVENT Transcription does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[08:22:10 19/10]	Warning, RELATION RELATION SiteParent uses model file format <2.2.
+[08:22:10 19/10]	Example generation for /tmp/tmpanNEGn/26474573-trigger-examples.gz
+[08:22:10 19/10]	Caching model "/home/ubuntu/.tees/models/ID11-test" member "trigger-ids.classes" to "/tmp/tmp_M3QL1/trigger-ids.classes"
+[08:22:10 19/10]	Caching model "/home/ubuntu/.tees/models/ID11-test" member "trigger-ids.features" to "/tmp/tmp_M3QL1/trigger-ids.features"
+[08:22:11 19/10]	Running EntityExampleBuilder
+[08:22:11 19/10]	  input: <ElementTree object at 0x7f4b08a5b550>
+[08:22:11 19/10]	  output: /tmp/tmpanNEGn/26474573-trigger-examples.gz (append: False)
+[08:22:11 19/10]	  add new class/feature ids: False
+[08:22:11 19/10]	  style: 
+[08:22:11 19/10]	  parse: McCC
+[08:22:11 19/10]	Using predefined class names from /tmp/tmp_M3QL1/trigger-ids.classes
+[08:22:11 19/10]	Using predefined feature names from /tmp/tmp_M3QL1/trigger-ids.features
+[08:22:24 19/10]	No gazetteer loaded
+[08:22:24 19/10]	1 documents, 1 sentences
+[08:22:24 19/10]	Making sentence graphs (TEES.d0.s0): 100.00 % (0:0:0.000)
+[08:22:24 19/10]	Skipped 0 duplicate interaction edges in SentenceGraphs
+[08:22:24 19/10]	Defining predicted value range: None
+[08:22:24 19/10]	Building examples (TEES.d0.s0): 1 (0:0:0) 
+[08:22:24 19/10]	Examples built: 0
+[08:22:33 19/10]	Features: 699588
+[08:22:33 19/10]	Style: 
+[08:22:34 19/10]	Caching model "/home/ubuntu/.tees/models/ID11-test" member "trigger-classifier-model" to "/tmp/tmp_M3QL1/trigger-classifier-model"
+[08:22:35 19/10]	Uncompressing example file /tmp/tmpanNEGn/26474573-trigger-examples.gz
+[08:22:35 19/10]	SVMMultiClassClassifier using example file /tmp/tmpanNEGn/26474573-trigger-examples.gz as /tmp/tmpanNEGn/26474573-trigger-examples-unzipped-temp
+[08:22:35 19/10]	Submitted job 5670 1445242965.29
+[08:22:46 19/10]	Binding p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[08:22:46 19/10]	Binding---Negative_regulation p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[08:22:46 19/10]	Binding---Positive_regulation p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[08:22:46 19/10]	Entity p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[08:22:46 19/10]	Entity---Positive_regulation p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[08:22:46 19/10]	Gene_expression p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[08:22:46 19/10]	Gene_expression---Negative_regulation p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[08:22:46 19/10]	Gene_expression---Positive_regulation p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[08:22:46 19/10]	Gene_expression---Transcription p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[08:22:46 19/10]	Localization p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[08:22:46 19/10]	Localization---Positive_regulation p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[08:22:46 19/10]	Localization---Regulation p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[08:22:46 19/10]	Negative_regulation p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[08:22:46 19/10]	Negative_regulation---Phosphorylation p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[08:22:46 19/10]	Negative_regulation---Positive_regulation p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[08:22:46 19/10]	Negative_regulation---Positive_regulation---Regulation p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[08:22:46 19/10]	Negative_regulation---Regulation p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[08:22:46 19/10]	Phosphorylation p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[08:22:46 19/10]	Phosphorylation---Positive_regulation p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[08:22:46 19/10]	Positive_regulation p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[08:22:46 19/10]	Positive_regulation---Protein_catabolism p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[08:22:46 19/10]	Positive_regulation---Regulation p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[08:22:46 19/10]	Positive_regulation---Transcription p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[08:22:46 19/10]	Process p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[08:22:46 19/10]	Protein_catabolism p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[08:22:46 19/10]	Regulation p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[08:22:46 19/10]	Regulation---Transcription p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[08:22:46 19/10]	Transcription p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[08:22:46 19/10]	(neg p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0)
+[08:22:46 19/10]	averages:
+[08:22:46 19/10]	micro p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[08:22:46 19/10]	macro p/r/f:0.0/0.0/0.0
+[08:22:46 19/10]	untyped p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[08:22:46 19/10]	untyped undirected p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:None/None/None
+[08:22:46 19/10]	Warning, EVENT Binding does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[08:22:46 19/10]	Warning, EVENT Gene_expression does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[08:22:46 19/10]	Warning, EVENT Localization does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[08:22:46 19/10]	Warning, EVENT Negative_regulation does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[08:22:46 19/10]	Warning, EVENT Phosphorylation does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[08:22:46 19/10]	Warning, EVENT Positive_regulation does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[08:22:46 19/10]	Warning, EVENT Process does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [0-999].
+[08:22:46 19/10]	Warning, EVENT Protein_catabolism does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[08:22:46 19/10]	Warning, EVENT Regulation does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[08:22:46 19/10]	Warning, EVENT Transcription does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[08:22:46 19/10]	Warning, RELATION RELATION SiteParent uses model file format <2.2.
+[08:22:46 19/10]	1 documents, 1 sentences
+[08:22:46 19/10]	Making sentence graphs (TEES.d0.s0): 100.00 % (0:0:0.000)
+[08:22:46 19/10]	Skipped 0 duplicate interaction edges in SentenceGraphs
+[08:22:46 19/10]	Reading examples from /tmp/tmpanNEGn/26474573-trigger-examples.gz
+[08:22:46 19/10]	Writing corpus to /tmp/tmpanNEGn/26474573-trigger-pred.xml.gz
+[08:22:46 19/10]	=== EXIT STEP TRIGGERS time: 0:00:35.528619 ===
+[08:22:46 19/10]	=== ENTER STEP EventDetector:CLASSIFY:EDGES ===
+[08:22:46 19/10]	Warning, EVENT Binding does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[08:22:46 19/10]	Warning, EVENT Gene_expression does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[08:22:46 19/10]	Warning, EVENT Localization does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[08:22:46 19/10]	Warning, EVENT Negative_regulation does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[08:22:46 19/10]	Warning, EVENT Phosphorylation does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[08:22:46 19/10]	Warning, EVENT Positive_regulation does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[08:22:46 19/10]	Warning, EVENT Process does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [0-999].
+[08:22:46 19/10]	Warning, EVENT Protein_catabolism does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[08:22:46 19/10]	Warning, EVENT Regulation does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[08:22:46 19/10]	Warning, EVENT Transcription does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[08:22:46 19/10]	Warning, RELATION RELATION SiteParent uses model file format <2.2.
+[08:22:46 19/10]	Example generation for /tmp/tmpanNEGn/26474573-edge-examples.gz
+[08:22:46 19/10]	Caching model "/home/ubuntu/.tees/models/ID11-test" member "edge-ids.classes" to "/tmp/tmp_M3QL1/edge-ids.classes"
+[08:22:46 19/10]	Caching model "/home/ubuntu/.tees/models/ID11-test" member "edge-ids.features" to "/tmp/tmp_M3QL1/edge-ids.features"
+[08:22:46 19/10]	Running EdgeExampleBuilder
+[08:22:46 19/10]	  input: <ElementTree object at 0x7f4b08a5b550>
+[08:22:46 19/10]	  output: /tmp/tmpanNEGn/26474573-edge-examples.gz (append: False)
+[08:22:46 19/10]	  add new class/feature ids: False
+[08:22:46 19/10]	  style: 
+[08:22:46 19/10]	  parse: McCC
+[08:22:46 19/10]	Using predefined class names from /tmp/tmp_M3QL1/edge-ids.classes
+[08:22:46 19/10]	Using predefined feature names from /tmp/tmp_M3QL1/edge-ids.features
+[08:22:58 19/10]	1 documents, 1 sentences
+[08:22:58 19/10]	Making sentence graphs (TEES.d0.s0): 100.00 % (0:0:0.000)
+[08:22:58 19/10]	Skipped 0 duplicate interaction edges in SentenceGraphs
+[08:22:58 19/10]	Defining predicted value range: [None, None]
+[08:22:58 19/10]	Building examples (TEES.d0.s0): 1 (0:0:0) 
+[08:22:58 19/10]	Examples built: 0
+[08:23:06 19/10]	Features: 555438
+[08:23:06 19/10]	Style: 
+[08:23:07 19/10]	Caching model "/home/ubuntu/.tees/models/ID11-test" member "edge-classifier-model" to "/tmp/tmp_M3QL1/edge-classifier-model"
+[08:23:07 19/10]	Uncompressing example file /tmp/tmpanNEGn/26474573-edge-examples.gz
+[08:23:07 19/10]	SVMMultiClassClassifier using example file /tmp/tmpanNEGn/26474573-edge-examples.gz as /tmp/tmpanNEGn/26474573-edge-examples-unzipped-temp
+[08:23:07 19/10]	Submitted job 5706 1445242997.52
+[08:23:18 19/10]	AtLoc p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[08:23:18 19/10]	Cause p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[08:23:18 19/10]	Cause---Theme p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[08:23:18 19/10]	Participant p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[08:23:18 19/10]	Site p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[08:23:18 19/10]	SiteParent p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[08:23:18 19/10]	Theme p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[08:23:18 19/10]	ToLoc p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[08:23:18 19/10]	(neg p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0)
+[08:23:18 19/10]	averages:
+[08:23:18 19/10]	micro p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[08:23:18 19/10]	macro p/r/f:0.0/0.0/0.0
+[08:23:18 19/10]	untyped p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[08:23:18 19/10]	untyped undirected p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:None/None/None
+[08:23:18 19/10]	Warning, EVENT Binding does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[08:23:18 19/10]	Warning, EVENT Gene_expression does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[08:23:18 19/10]	Warning, EVENT Localization does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[08:23:18 19/10]	Warning, EVENT Negative_regulation does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[08:23:18 19/10]	Warning, EVENT Phosphorylation does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[08:23:18 19/10]	Warning, EVENT Positive_regulation does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[08:23:18 19/10]	Warning, EVENT Process does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [0-999].
+[08:23:18 19/10]	Warning, EVENT Protein_catabolism does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[08:23:18 19/10]	Warning, EVENT Regulation does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[08:23:18 19/10]	Warning, EVENT Transcription does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[08:23:18 19/10]	Warning, RELATION RELATION SiteParent uses model file format <2.2.
+[08:23:18 19/10]	1 documents, 1 sentences
+[08:23:18 19/10]	Making sentence graphs (TEES.d0.s0): 100.00 % (0:0:0.000)
+[08:23:18 19/10]	Skipped 0 duplicate interaction edges in SentenceGraphs
+[08:23:18 19/10]	Reading examples from /tmp/tmpanNEGn/26474573-edge-examples.gz
+[08:23:18 19/10]	Writing corpus to /tmp/tmpanNEGn/26474573-edge-pred.xml.gz
+[08:23:18 19/10]	##### EvaluateInteractionXML #####
+[08:23:18 19/10]	Comparing input <ElementTree object at 0x7f4b08a5b550> to gold <ElementTree object at 0x7f4b08a5b550>
+[08:23:18 19/10]	1 documents, 1 sentences
+[08:23:18 19/10]	Making sentence graphs (TEES.d0.s0): 100.00 % (0:0:0.000)
+[08:23:18 19/10]	Skipped 0 duplicate interaction edges in SentenceGraphs
+[08:23:18 19/10]	1 documents, 1 sentences
+[08:23:18 19/10]	Making sentence graphs (TEES.d0.s0): 100.00 % (0:0:0.000)
+[08:23:18 19/10]	Skipped 0 duplicate interaction edges in SentenceGraphs
+[08:23:18 19/10]	TEES.d0100.00 % (0:0:0)
+[08:23:18 19/10]	=== EXIT STEP EDGES time: 0:00:32.235109 ===
+[08:23:18 19/10]	=== ENTER STEP EventDetector:CLASSIFY:UNMERGING ===
+[08:23:18 19/10]	Warning, EVENT Binding does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[08:23:18 19/10]	Warning, EVENT Gene_expression does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[08:23:18 19/10]	Warning, EVENT Localization does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[08:23:18 19/10]	Warning, EVENT Negative_regulation does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[08:23:18 19/10]	Warning, EVENT Phosphorylation does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[08:23:18 19/10]	Warning, EVENT Positive_regulation does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[08:23:18 19/10]	Warning, EVENT Process does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [0-999].
+[08:23:18 19/10]	Warning, EVENT Protein_catabolism does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[08:23:18 19/10]	Warning, EVENT Regulation does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[08:23:18 19/10]	Warning, EVENT Transcription does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[08:23:18 19/10]	Warning, RELATION RELATION SiteParent uses model file format <2.2.
+[08:23:18 19/10]	Example generation for /tmp/tmpanNEGn/26474573-unmerging-examples.gz
+[08:23:18 19/10]	Caching model "/home/ubuntu/.tees/models/ID11-test" member "unmerging-ids.classes" to "/tmp/tmp_M3QL1/unmerging-ids.classes"
+[08:23:18 19/10]	Caching model "/home/ubuntu/.tees/models/ID11-test" member "unmerging-ids.features" to "/tmp/tmp_M3QL1/unmerging-ids.features"
+[08:23:19 19/10]	Running UnmergingExampleBuilder
+[08:23:19 19/10]	  input: /tmp/tmpanNEGn/26474573-edge-pred.xml.gz
+[08:23:19 19/10]	  gold: /tmp/tmpanNEGn/26474573-edge-pred.xml.gz
+[08:23:19 19/10]	  output: /tmp/tmpanNEGn/26474573-unmerging-examples.gz (append: False)
+[08:23:19 19/10]	  add new class/feature ids: False
+[08:23:19 19/10]	  style: 
+[08:23:19 19/10]	  parse: McCC
+[08:23:19 19/10]	Using predefined class names from /tmp/tmp_M3QL1/unmerging-ids.classes
+[08:23:19 19/10]	Using predefined feature names from /tmp/tmp_M3QL1/unmerging-ids.features
+[08:23:27 19/10]	Counting elements: {'documents': 1, 'sentences': 1}
+[08:23:27 19/10]	Loading corpus file /tmp/tmpanNEGn/26474573-edge-pred.xml.gz
+[08:23:27 19/10]	1 documents, 1 sentences
+[08:23:27 19/10]	Making sentence graphs (TEES.d0.s0): 100.00 % (0:0:0.000)
+[08:23:27 19/10]	Skipped 0 duplicate interaction edges in SentenceGraphs
+[08:23:27 19/10]	Defining predicted value range: None
+[08:23:27 19/10]	Keeping intersentence interactions for gold corpus
+[08:23:27 19/10]	Building examples (TEES.d0.s0): 100.00 % (0:0:0)
+[08:23:27 19/10]	Examples built: 0
+[08:23:32 19/10]	Features: 405528
+[08:23:32 19/10]	Style: keep_intersentence=False:keep_intersentence_gold:no_arg_count_upper_limit=False
+[08:23:33 19/10]	Caching model "/home/ubuntu/.tees/models/ID11-test" member "unmerging-classifier-model" to "/tmp/tmp_M3QL1/unmerging-classifier-model"
+[08:23:33 19/10]	Uncompressing example file /tmp/tmpanNEGn/26474573-unmerging-examples.gz
+[08:23:33 19/10]	SVMMultiClassClassifier using example file /tmp/tmpanNEGn/26474573-unmerging-examples.gz as /tmp/tmpanNEGn/26474573-unmerging-examples-unzipped-temp
+[08:23:33 19/10]	Submitted job 5742 1445243023.7

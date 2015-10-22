@@ -1,0 +1,98 @@
+[02:03:03 07/10]	Opening log /home/ubuntu/output/xml_file/xml_file-log.txt at Tue Oct  7 02:03:03 2014
+####### Log opened at Tue Oct  7 02:03:03 2014 #######
+Command line: classify.py -m GE11 -i efetch.fcgi.xml -o /home/ubuntu/output/xml_file/xml_file
+[02:03:03 07/10]	os.path.basename(input):  efetch.fcgi.xml
+[02:03:03 07/10]	Classifying input /home/ubuntu/TEES/efetch.fcgi.xml
+[02:03:03 07/10]	Model /home/ubuntu/TEES/GE11 doesn't exist, looking for a default model
+[02:03:03 07/10]	Classifying with default model /home/ubuntu/.tees/models/GE11-test
+[02:03:03 07/10]	Preprocessor output /home/ubuntu/output/xml_file/xml_file-preprocessed.xml.gz does not exist
+[02:03:03 07/10]	------------ Preprocessing ------------
+[02:03:03 07/10]	* Preprocessor:PROCESS(ENTER) *
+[02:03:03 07/10]	Caching model "/home/ubuntu/.tees/models/GE11-test" member "TEES_MODEL_VALUES.tsv" to "/tmp/tmpuznXeP/TEES_MODEL_VALUES.tsv"
+[02:03:03 07/10]	Tool chain parameters: 
+[02:03:03 07/10]	=== ENTER STEP Preprocessor:PROCESS:CONVERT ===
+[02:03:03 07/10]	Running step CONVERT with arguments {'input': '/home/ubuntu/TEES/efetch.fcgi.xml', 'output': '/home/ubuntu/output/xml_file/xml_file-preprocessed.xml.gz-documents.xml.gz', 'dataSetNames': None, 'corpusName': None}
+[02:03:03 07/10]	Processing source as interaction XML
+[02:03:03 07/10]	=== EXIT STEP CONVERT time: 0:00:00.004674 ===
+[02:03:03 07/10]	=== ENTER STEP Preprocessor:PROCESS:SPLIT-SENTENCES ===
+[02:03:03 07/10]	Running step SPLIT-SENTENCES with arguments {'debug': False, 'input': <ElementTree object at 0x7f8358cdfa90>, 'postProcess': True, 'output': '/home/ubuntu/output/xml_file/xml_file-preprocessed.xml.gz-sentences.xml.gz'}
+[02:03:03 07/10]	Loading corpus <ElementTree object at 0x7f8358cdfa90>
+[02:03:03 07/10]	Corpus file loaded
+[02:03:03 07/10]	Running GENIA Sentence Splitter /home/ubuntu/.tees/tools/geniass (Using post-processing)
+[02:03:03 07/10]	Sentence splitting created 0 sentences
+[02:03:03 07/10]	Redivided 0 sentences
+[02:03:03 07/10]	Writing output to /home/ubuntu/output/xml_file/xml_file-preprocessed.xml.gz-sentences.xml.gz
+[02:03:03 07/10]	Counter "GeniaSentenceSplitter" did not finish
+[02:03:03 07/10]	Last count: 0/0
+[02:03:03 07/10]	Last update: None
+[02:03:03 07/10]	=== EXIT STEP SPLIT-SENTENCES time: 0:00:00.156951 ===
+[02:03:03 07/10]	=== ENTER STEP Preprocessor:PROCESS:NER ===
+[02:03:03 07/10]	Running step NER with arguments {'elementName': 'entity', 'splitNewlines': True, 'output': '/home/ubuntu/output/xml_file/xml_file-preprocessed.xml.gz-ner.xml.gz', 'debug': False, 'input': <ElementTree object at 0x7f8358cdfa90>, 'processElement': 'sentence'}
+[02:03:03 07/10]	Loading corpus <ElementTree object at 0x7f8358cdfa90>
+[02:03:03 07/10]	Corpus file loaded
+[02:03:03 07/10]	Running BANNER /home/ubuntu/.tees/tools/BANNER
+[02:03:03 07/10]	BANNER command: java -cp /home/ubuntu/.tees/tools/BANNER/bin:/home/ubuntu/.tees/tools/BANNER/lib/* banner.eval.BANNER test /tmp/tmpQmQjkC/banner_config.xml
+[02:03:09 07/10]	BANNER time: 0:00:06.762707
+[02:03:09 07/10]	Inserting entities
+[02:03:09 07/10]	BANNER found 0 entities in 0 sentence-elements (0 sentences processed)
+[02:03:09 07/10]	New entity-elements: 0 (Split 0 BANNER entities with newlines)
+[02:03:09 07/10]	Writing output to /home/ubuntu/output/xml_file/xml_file-preprocessed.xml.gz-ner.xml.gz
+[02:03:10 07/10]	=== EXIT STEP NER time: 0:00:06.921607 ===
+[02:03:10 07/10]	=== ENTER STEP Preprocessor:PROCESS:PARSE ===
+[02:03:10 07/10]	Running step PARSE with arguments {'debug': False, 'input': <ElementTree object at 0x7f8358cdfa90>, 'requireEntities': False, 'parseName': 'McCC', 'output': '/home/ubuntu/output/xml_file/xml_file-preprocessed.xml.gz-parse.xml.gz'}
+[02:03:10 07/10]	BLLIP parser
+[02:03:10 07/10]	BLLIP time stamp: 07.10.14 02:03:10
+[02:03:10 07/10]	BLLIP parser at: /home/ubuntu/.tees/tools/BLLIP/dmcc-bllip-parser-31d5647
+[02:03:10 07/10]	Biomodel at: /home/ubuntu/.tees/tools/BLLIP/biomodel
+[02:03:10 07/10]	Loading corpus <ElementTree object at 0x7f8358cdfa90>
+[02:03:10 07/10]	Corpus file loaded
+[02:03:10 07/10]	Parser does the tokenization
+[02:03:10 07/10]	Running BLLIP parser with tokenization
+[02:03:16 07/10]	Processed succesfully all sentences
+[02:03:16 07/10]	Inserting parses
+[02:03:16 07/10]	Parsed 0 sentences (0 failed)
+[02:03:16 07/10]	All sentences were parsed succesfully
+[02:03:16 07/10]	Writing output to /home/ubuntu/output/xml_file/xml_file-preprocessed.xml.gz-parse.xml.gz
+[02:03:16 07/10]	=== EXIT STEP PARSE time: 0:00:06.174569 ===
+[02:03:16 07/10]	=== ENTER STEP Preprocessor:PROCESS:CONVERT-PARSE ===
+[02:03:16 07/10]	Running step CONVERT-PARSE with arguments {'debug': False, 'input': <ElementTree object at 0x7f8358cdfa90>, 'parser': 'McCC', 'output': '/home/ubuntu/output/xml_file/xml_file-preprocessed.xml.gz-converted-parse.xml.gz'}
+[02:03:16 07/10]	Running Stanford conversion
+[02:03:16 07/10]	Stanford tools at: /home/ubuntu/.tees/tools/stanford-parser-2012-03-09
+[02:03:16 07/10]	Stanford tools arguments: java -mx500m -cp stanford-parser.jar edu.stanford.nlp.trees.EnglishGrammaticalStructure -CCprocessed -keepPunct -treeFile
+[02:03:16 07/10]	Stanford time stamp: 07.10.14 02:03:16
+[02:03:16 07/10]	Loading corpus <ElementTree object at 0x7f8358cdfa90>
+[02:03:16 07/10]	Corpus file loaded
+[02:03:17 07/10]	Processed succesfully all sentences
+[02:03:17 07/10]	Stanford conversion was done for 0 sentences, 0 had no dependencies, 0 failed
+[02:03:17 07/10]	Writing output to /home/ubuntu/output/xml_file/xml_file-preprocessed.xml.gz-converted-parse.xml.gz
+[02:03:17 07/10]	=== EXIT STEP CONVERT-PARSE time: 0:00:01.157950 ===
+[02:03:17 07/10]	=== ENTER STEP Preprocessor:PROCESS:SPLIT-NAMES ===
+[02:03:17 07/10]	Running step SPLIT-NAMES with arguments {'input': <ElementTree object at 0x7f8358cdfa90>, 'parseName': 'McCC', 'removeOld': True, 'output': '/home/ubuntu/output/xml_file/xml_file-preprocessed.xml.gz-split-names.xml.gz'}
+[02:03:17 07/10]	Protein Name Splitter
+[02:03:17 07/10]	Tokenization missing from 0 sentences
+[02:03:17 07/10]	Writing output to /home/ubuntu/output/xml_file/xml_file-preprocessed.xml.gz-split-names.xml.gz
+[02:03:17 07/10]	Counter "Split Protein Names" did not finish
+[02:03:17 07/10]	Last count: 0/0
+[02:03:17 07/10]	Last update: None
+[02:03:17 07/10]	=== EXIT STEP SPLIT-NAMES time: 0:00:00.151635 ===
+[02:03:17 07/10]	=== ENTER STEP Preprocessor:PROCESS:FIND-HEADS ===
+[02:03:17 07/10]	Running step FIND-HEADS with arguments {'parse': 'McCC', 'removeExisting': True, 'output': '/home/ubuntu/output/xml_file/xml_file-preprocessed.xml.gz-heads.xml.gz', 'input': <ElementTree object at 0x7f8358cdfa90>}
+[02:03:17 07/10]	Removing existing head offsets
+[02:03:17 07/10]	Removed head offsets from 0 entities
+[02:03:17 07/10]	Determining head offsets using parse McCC and tokenization None
+[02:03:17 07/10]	Traceback (most recent call last):
+[02:03:17 07/10]	  File "classify.py", line 193, in <module>
+[02:03:17 07/10]	    preprocessorParams=options.preprocessorParams, bioNLPSTParams=options.bioNLPSTParams)
+[02:03:17 07/10]	  File "classify.py", line 72, in classify
+[02:03:17 07/10]	    classifyInput = preprocessor.process(input, preprocessorOutput, preprocessorParams, model, [], fromStep=detectorSteps["PREPROCESS"], toStep=None, omitSteps=omitDetectorSteps["PREPROCESS"])
+[02:03:17 07/10]	  File "/home/ubuntu/TEES/Detectors/Preprocessor.py", line 49, in process
+[02:03:17 07/10]	    xml = ToolChain.process(self, source, output, parameters, model, fromStep, toStep, omitSteps)
+[02:03:17 07/10]	  File "/home/ubuntu/TEES/Detectors/ToolChain.py", line 142, in process
+[02:03:17 07/10]	    step[1](**stepArgs) # call the tool
+[02:03:17 07/10]	  File "/home/ubuntu/TEES/Utils/FindHeads.py", line 46, in findHeads
+[02:03:17 07/10]	    corpusElements = SentenceGraph.loadCorpus(xml, parse, tokenization)
+[02:03:17 07/10]	  File "/home/ubuntu/TEES/Core/SentenceGraph.py", line 32, in loadCorpus
+[02:03:17 07/10]	    corpusElements = CorpusElements(corpusRoot, parse, tokenization, tree=corpusTree, removeNameInfo=removeNameInfo, removeIntersentenceInteractions=removeIntersentenceInteractionsFromCorpusElements)
+[02:03:17 07/10]	  File "/home/ubuntu/TEES/Utils/InteractionXML/CorpusElements.py", line 26, in __init__
+[02:03:17 07/10]	    raise Exception("Corpus root element is not 'corpus', but '" + str(rootElement.tag) + "'")
+[02:03:17 07/10]	Exception: Corpus root element is not 'corpus', but 'PubmedArticleSet'

@@ -1,0 +1,30 @@
+This is a list of all the steps I took to get UPTEES running from scratch
+
+1. apt-get install git
+
+2. git clone https://github.com/jbjorne/TEES.git (Download the TEES Source)
+
+3. cd TEES
+
+4. python configure.py
+
+5. Compiling SVM on the local system seems to be throwing an error, however using the pre-compiled binary seems to be working
+
+6. Download and Install all TEES models (part of the default configuration file)
+
+7. Install all the Corpora for TEES to be able to train classification models
+
+8. Install NLP tools
+ - Dependency : Ruby (sudo apt-get install ruby)
+ - Dependency : Make (sudo apt-get install make)
+ - Dependency : g++ (sudo apt-get install g++-multilib)
+ - Dependency : flex (sudo apt-get install flex)
+ - Dependency : boost (sudo apt-get install libboost-all-dev)
+ - Dependency : Java (sudo apt-get install default-jre, sudo apt-get install default-jdk)
+
+9. UPTEES dependencies
+ - Dependency : Numpy (sudo apt-get install python-numpy)
+ - Dependency : Scipy (sudo apt-get install python-scipy)
+ - Dependency : Sklearn (sudo apt-get install python-sklearn)
+ - Dependency : NLTK (sudo apt-get install python-nltk)
+

@@ -1,0 +1,79 @@
+[03:43:54 07/10]	Opening log /home/ubuntu/output/pmids/22244827-log.txt at Tue Oct  7 03:43:54 2014
+####### Log opened at Tue Oct  7 03:43:54 2014 #######
+Command line: UPSITE.py
+[03:43:54 07/10]	os.path.basename(input):  22244827
+[03:43:54 07/10]	Classifying PubMed abstract 22244827
+[03:43:54 07/10]	*************************** NOTE ***************************
+[03:43:54 07/10]	Do not attempt to do large-scale classification of PubMed
+[03:43:54 07/10]	abstracts with this feature. For that, use the downloadable
+[03:43:54 07/10]	PubMed release. This is a demonstration feature only, and
+[03:43:54 07/10]	abusing it will cause you to be banned from PubMed!
+[03:43:54 07/10]	************************************************************
+[03:43:54 07/10]	Downloading PubMed abstract 22244827
+[03:43:54 07/10]	Downloading file http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=22244827&retmode=xml to /tmp/pmid-22244827.xml
+[03:43:54 07/10]	Model /home/ubuntu/TEES/GE11 doesn't exist, looking for a default model
+[03:43:54 07/10]	Classifying with default model /home/ubuntu/.tees/models/GE11-test
+[03:43:54 07/10]	Preprocessor output /home/ubuntu/output/pmids/22244827-preprocessed.xml.gz does not exist
+[03:43:54 07/10]	------------ Preprocessing ------------
+[03:43:54 07/10]	* Preprocessor:PROCESS(ENTER) *
+[03:43:54 07/10]	Caching model "/home/ubuntu/.tees/models/GE11-test" member "TEES_MODEL_VALUES.tsv" to "/tmp/tmpWxL0Fa/TEES_MODEL_VALUES.tsv"
+[03:43:54 07/10]	Tool chain parameters: 
+[03:43:54 07/10]	=== ENTER STEP Preprocessor:PROCESS:CONVERT ===
+[03:43:54 07/10]	Running step CONVERT with arguments {'input': '/tmp/pmid-22244827.txt', 'output': '/home/ubuntu/output/pmids/22244827-preprocessed.xml.gz-documents.xml.gz', 'dataSetNames': None, 'corpusName': None}
+[03:43:54 07/10]	Converting ST-format to Interaction XML
+[03:43:54 07/10]	Reading /tmp/pmid-22244827.txt set, 1 documents
+[03:43:54 07/10]	Resolving equivalences
+[03:43:54 07/10]	Duplication created 0 new events (new total 0 events)
+[03:43:54 07/10]	Writing output to /home/ubuntu/output/pmids/22244827-preprocessed.xml.gz-documents.xml.gz
+[03:43:54 07/10]	=== EXIT STEP CONVERT time: 0:00:00.002864 ===
+[03:43:54 07/10]	=== ENTER STEP Preprocessor:PROCESS:SPLIT-SENTENCES ===
+[03:43:54 07/10]	Running step SPLIT-SENTENCES with arguments {'debug': False, 'input': <ElementTree object at 0x7f5551f97090>, 'postProcess': True, 'output': '/home/ubuntu/output/pmids/22244827-preprocessed.xml.gz-sentences.xml.gz'}
+[03:43:54 07/10]	Loading corpus <ElementTree object at 0x7f5551f97090>
+[03:43:54 07/10]	Corpus file loaded
+[03:43:54 07/10]	Running GENIA Sentence Splitter /home/ubuntu/.tees/tools/geniass (Using post-processing)
+[03:43:54 07/10]	Splitting Documents (TEES.d0): 100.00 % (0:0:0.000)
+[03:43:54 07/10]	Sentence splitting created 11 sentences
+[03:43:54 07/10]	Redivided 0 sentences
+[03:43:54 07/10]	Writing output to /home/ubuntu/output/pmids/22244827-preprocessed.xml.gz-sentences.xml.gz
+[03:43:54 07/10]	=== EXIT STEP SPLIT-SENTENCES time: 0:00:00.045805 ===
+[03:43:54 07/10]	=== ENTER STEP Preprocessor:PROCESS:NER ===
+[03:43:54 07/10]	Running step NER with arguments {'elementName': 'entity', 'splitNewlines': True, 'output': '/home/ubuntu/output/pmids/22244827-preprocessed.xml.gz-ner.xml.gz', 'debug': False, 'input': <ElementTree object at 0x7f5551f97090>, 'processElement': 'sentence'}
+[03:43:54 07/10]	Loading corpus <ElementTree object at 0x7f5551f97090>
+[03:43:54 07/10]	Corpus file loaded
+[03:43:54 07/10]	Running BANNER /home/ubuntu/.tees/tools/BANNER
+[03:43:54 07/10]	BANNER command: java -cp /home/ubuntu/.tees/tools/BANNER/bin:/home/ubuntu/.tees/tools/BANNER/lib/* banner.eval.BANNER test /tmp/tmpvbyCzH/banner_config.xml
+[03:44:03 07/10]	BANNER time: 0:00:09.086201
+[03:44:03 07/10]	Inserting entities
+[03:44:03 07/10]	BANNER found 23 entities in 9 sentence-elements (11 sentences processed)
+[03:44:03 07/10]	New entity-elements: 23 (Split 0 BANNER entities with newlines)
+[03:44:03 07/10]	Writing output to /home/ubuntu/output/pmids/22244827-preprocessed.xml.gz-ner.xml.gz
+[03:44:03 07/10]	=== EXIT STEP NER time: 0:00:09.102217 ===
+[03:44:03 07/10]	=== ENTER STEP Preprocessor:PROCESS:PARSE ===
+[03:44:03 07/10]	Running step PARSE with arguments {'debug': False, 'input': <ElementTree object at 0x7f5551f97090>, 'requireEntities': False, 'parseName': 'McCC', 'output': '/home/ubuntu/output/pmids/22244827-preprocessed.xml.gz-parse.xml.gz'}
+[03:44:03 07/10]	BLLIP parser
+[03:44:03 07/10]	BLLIP time stamp: 07.10.14 03:44:03
+[03:44:03 07/10]	BLLIP parser at: /home/ubuntu/.tees/tools/BLLIP/dmcc-bllip-parser-31d5647
+[03:44:03 07/10]	Biomodel at: /home/ubuntu/.tees/tools/BLLIP/biomodel
+[03:44:03 07/10]	Loading corpus <ElementTree object at 0x7f5551f97090>
+[03:44:03 07/10]	Corpus file loaded
+[03:44:03 07/10]	Parser does the tokenization
+[03:44:03 07/10]	Running BLLIP parser with tokenization
+[03:44:11 07/10]	Parsing: 100.00 % (0:0:8.009)
+[03:44:11 07/10]	Processed succesfully all sentences
+[03:44:11 07/10]	Inserting parses
+[03:44:11 07/10]	Parsed 11 sentences (0 failed)
+[03:44:11 07/10]	All sentences were parsed succesfully
+[03:44:11 07/10]	Writing output to /home/ubuntu/output/pmids/22244827-preprocessed.xml.gz-parse.xml.gz
+[03:44:11 07/10]	=== EXIT STEP PARSE time: 0:00:08.076724 ===
+[03:44:11 07/10]	=== ENTER STEP Preprocessor:PROCESS:CONVERT-PARSE ===
+[03:44:11 07/10]	Running step CONVERT-PARSE with arguments {'debug': False, 'input': <ElementTree object at 0x7f5551f97090>, 'parser': 'McCC', 'output': '/home/ubuntu/output/pmids/22244827-preprocessed.xml.gz-converted-parse.xml.gz'}
+[03:44:11 07/10]	Running Stanford conversion
+[03:44:11 07/10]	Stanford tools at: /home/ubuntu/.tees/tools/stanford-parser-2012-03-09
+[03:44:11 07/10]	Stanford tools arguments: java -mx500m -cp stanford-parser.jar edu.stanford.nlp.trees.EnglishGrammaticalStructure -CCprocessed -keepPunct -treeFile
+[03:44:11 07/10]	Stanford time stamp: 07.10.14 03:44:11
+[03:44:11 07/10]	Loading corpus <ElementTree object at 0x7f5551f97090>
+[03:44:11 07/10]	Corpus file loaded
+[03:44:14 07/10]	Stanford Conversion: 100.00 % (0:0:3.005)
+[03:44:14 07/10]	Processed succesfully all sentences
+[03:44:14 07/10]	Stanford conversion was done for 11 sentences, 0 had no dependencies, 0 failed
+[03:44:14 07/10]	Writing output to /home/ubuntu/output/pmids/22244827-preprocessed.xml.gz-converted-parse.xml.gz

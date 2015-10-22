@@ -1,0 +1,327 @@
+[03:31:14 07/10]	Opening log home/ubuntu/output/one_at_a_time/oneatatime-log.txt at Tue Oct  7 03:31:14 2014
+####### Log opened at Tue Oct  7 03:31:14 2014 #######
+Command line: UPSITE.py
+[03:31:14 07/10]	os.path.basename(input):  9668063
+[03:31:14 07/10]	Classifying PubMed abstract 9668063
+[03:31:14 07/10]	*************************** NOTE ***************************
+[03:31:14 07/10]	Do not attempt to do large-scale classification of PubMed
+[03:31:14 07/10]	abstracts with this feature. For that, use the downloadable
+[03:31:14 07/10]	PubMed release. This is a demonstration feature only, and
+[03:31:14 07/10]	abusing it will cause you to be banned from PubMed!
+[03:31:14 07/10]	************************************************************
+[03:31:14 07/10]	Downloading PubMed abstract 9668063
+[03:31:14 07/10]	Skipping already downloaded file http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=9668063&retmode=xml
+[03:31:14 07/10]	Model /home/ubuntu/bionlp-1.3/GE11 doesn't exist, looking for a default model
+[03:31:14 07/10]	Classifying with default model /home/ubuntu/.tees/models/GE11-test
+[03:31:14 07/10]	Preprocessor output home/ubuntu/output/one_at_a_time/oneatatime-preprocessed.xml.gz does not exist
+[03:31:14 07/10]	------------ Preprocessing ------------
+[03:31:14 07/10]	* Preprocessor:PROCESS(ENTER) *
+[03:31:14 07/10]	Caching model "/home/ubuntu/.tees/models/GE11-test" member "TEES_MODEL_VALUES.tsv" to "/tmp/tmprLXn2C/TEES_MODEL_VALUES.tsv"
+[03:31:14 07/10]	Tool chain parameters: 
+[03:31:14 07/10]	=== ENTER STEP Preprocessor:PROCESS:CONVERT ===
+[03:31:14 07/10]	Running step CONVERT with arguments {'input': '/tmp/pmid-9668063.txt', 'output': 'home/ubuntu/output/one_at_a_time/oneatatime-preprocessed.xml.gz-documents.xml.gz', 'dataSetNames': None, 'corpusName': None}
+[03:31:14 07/10]	Converting ST-format to Interaction XML
+[03:31:14 07/10]	Reading /tmp/pmid-9668063.txt set, 1 documents
+[03:31:14 07/10]	Resolving equivalences
+[03:31:14 07/10]	Duplication created 0 new events (new total 0 events)
+[03:31:14 07/10]	Writing output to home/ubuntu/output/one_at_a_time/oneatatime-preprocessed.xml.gz-documents.xml.gz
+[03:31:14 07/10]	=== EXIT STEP CONVERT time: 0:00:00.003165 ===
+[03:31:14 07/10]	=== ENTER STEP Preprocessor:PROCESS:SPLIT-SENTENCES ===
+[03:31:14 07/10]	Running step SPLIT-SENTENCES with arguments {'debug': False, 'input': <ElementTree object at 0x7fd04d64b410>, 'postProcess': True, 'output': 'home/ubuntu/output/one_at_a_time/oneatatime-preprocessed.xml.gz-sentences.xml.gz'}
+[03:31:14 07/10]	Loading corpus <ElementTree object at 0x7fd04d64b410>
+[03:31:14 07/10]	Corpus file loaded
+[03:31:14 07/10]	Running GENIA Sentence Splitter /home/ubuntu/.tees/tools/geniass (Using post-processing)
+[03:31:14 07/10]	Splitting Documents (TEES.d0): 100.00 % (0:0:0.000)
+[03:31:14 07/10]	Traceback (most recent call last):
+[03:31:14 07/10]	  File "UPSITE.py", line 46, in <module>
+[03:31:14 07/10]	    main(options.q1, options.q2, options.articles)
+[03:31:14 07/10]	  File "UPSITE.py", line 15, in main
+[03:31:14 07/10]	    classify.classify('9668063','GE11','home/ubuntu/output/one_at_a_time/oneatatime')
+[03:31:14 07/10]	  File "/usr/local/lib/python2.7/dist-packages/classify.py", line 72, in classify
+[03:31:14 07/10]	    classifyInput = preprocessor.process(input, preprocessorOutput, preprocessorParams, model, [], fromStep=detectorSteps["PREPROCESS"], toStep=None, omitSteps=omitDetectorSteps["PREPROCESS"])
+[03:31:14 07/10]	  File "/usr/local/lib/python2.7/dist-packages/Detectors/Preprocessor.py", line 49, in process
+[03:31:14 07/10]	    xml = ToolChain.process(self, source, output, parameters, model, fromStep, toStep, omitSteps)
+[03:31:14 07/10]	  File "/usr/local/lib/python2.7/dist-packages/Detectors/ToolChain.py", line 142, in process
+[03:31:14 07/10]	    step[1](**stepArgs) # call the tool
+[03:31:14 07/10]	  File "/usr/local/lib/python2.7/dist-packages/Tools/GeniaSentenceSplitter.py", line 186, in makeSentences
+[03:31:14 07/10]	    assert os.path.exists(postProcessorPath), postProcessorPath
+[03:31:14 07/10]	AssertionError: /usr/local/lib/python2.7/dist-packages/Tools/geniass-postproc.pl
+[03:31:43 07/10]	Opening log home/ubuntu/output/one_at_a_time/oneatatime-log.txt at Tue Oct  7 03:31:43 2014
+####### Log opened at Tue Oct  7 03:31:43 2014 #######
+Command line: 
+[03:31:43 07/10]	os.path.basename(input):  9668063
+[03:31:43 07/10]	Classifying PubMed abstract 9668063
+[03:31:43 07/10]	*************************** NOTE ***************************
+[03:31:43 07/10]	Do not attempt to do large-scale classification of PubMed
+[03:31:43 07/10]	abstracts with this feature. For that, use the downloadable
+[03:31:43 07/10]	PubMed release. This is a demonstration feature only, and
+[03:31:43 07/10]	abusing it will cause you to be banned from PubMed!
+[03:31:43 07/10]	************************************************************
+[03:31:43 07/10]	Downloading PubMed abstract 9668063
+[03:31:43 07/10]	Skipping already downloaded file http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=9668063&retmode=xml
+[03:31:43 07/10]	Model /home/ubuntu/bionlp-1.3/GE11 doesn't exist, looking for a default model
+[03:31:43 07/10]	Classifying with default model /home/ubuntu/.tees/models/GE11-test
+[03:31:43 07/10]	Preprocessor output home/ubuntu/output/one_at_a_time/oneatatime-preprocessed.xml.gz does not exist
+[03:31:43 07/10]	------------ Preprocessing ------------
+[03:31:43 07/10]	* Preprocessor:PROCESS(ENTER) *
+[03:31:43 07/10]	Caching model "/home/ubuntu/.tees/models/GE11-test" member "TEES_MODEL_VALUES.tsv" to "/tmp/tmp5ki9c6/TEES_MODEL_VALUES.tsv"
+[03:31:43 07/10]	Tool chain parameters: 
+[03:31:43 07/10]	=== ENTER STEP Preprocessor:PROCESS:CONVERT ===
+[03:31:43 07/10]	Running step CONVERT with arguments {'input': '/tmp/pmid-9668063.txt', 'output': 'home/ubuntu/output/one_at_a_time/oneatatime-preprocessed.xml.gz-documents.xml.gz', 'dataSetNames': None, 'corpusName': None}
+[03:31:43 07/10]	Converting ST-format to Interaction XML
+[03:31:43 07/10]	Reading /tmp/pmid-9668063.txt set, 1 documents
+[03:31:43 07/10]	Resolving equivalences
+[03:31:43 07/10]	Duplication created 0 new events (new total 0 events)
+[03:31:43 07/10]	Writing output to home/ubuntu/output/one_at_a_time/oneatatime-preprocessed.xml.gz-documents.xml.gz
+[03:31:43 07/10]	=== EXIT STEP CONVERT time: 0:00:00.003609 ===
+[03:31:43 07/10]	=== ENTER STEP Preprocessor:PROCESS:SPLIT-SENTENCES ===
+[03:31:43 07/10]	Running step SPLIT-SENTENCES with arguments {'debug': False, 'input': <ElementTree object at 0x7f36b8d80e90>, 'postProcess': True, 'output': 'home/ubuntu/output/one_at_a_time/oneatatime-preprocessed.xml.gz-sentences.xml.gz'}
+[03:31:43 07/10]	Loading corpus <ElementTree object at 0x7f36b8d80e90>
+[03:31:43 07/10]	Corpus file loaded
+[03:31:43 07/10]	Running GENIA Sentence Splitter /home/ubuntu/.tees/tools/geniass (Using post-processing)
+[03:31:43 07/10]	Splitting Documents (TEES.d0): 100.00 % (0:0:0.000)
+[03:31:43 07/10]	Traceback (most recent call last):
+[03:31:43 07/10]	  File "<stdin>", line 1, in <module>
+[03:31:43 07/10]	  File "/usr/local/lib/python2.7/dist-packages/classify.py", line 72, in classify
+[03:31:43 07/10]	    classifyInput = preprocessor.process(input, preprocessorOutput, preprocessorParams, model, [], fromStep=detectorSteps["PREPROCESS"], toStep=None, omitSteps=omitDetectorSteps["PREPROCESS"])
+[03:31:43 07/10]	  File "/usr/local/lib/python2.7/dist-packages/Detectors/Preprocessor.py", line 49, in process
+[03:31:43 07/10]	    xml = ToolChain.process(self, source, output, parameters, model, fromStep, toStep, omitSteps)
+[03:31:43 07/10]	  File "/usr/local/lib/python2.7/dist-packages/Detectors/ToolChain.py", line 142, in process
+[03:31:43 07/10]	    step[1](**stepArgs) # call the tool
+[03:31:43 07/10]	  File "/usr/local/lib/python2.7/dist-packages/Tools/GeniaSentenceSplitter.py", line 186, in makeSentences
+[03:31:43 07/10]	    assert os.path.exists(postProcessorPath), postProcessorPath
+[03:31:43 07/10]	AssertionError: /usr/local/lib/python2.7/dist-packages/Tools/geniass-postproc.pl
+[03:31:58 07/10]	Opening log home/ubuntu/output/one_at_a_time/oneatatime-log.txt at Tue Oct  7 03:31:58 2014
+####### Log opened at Tue Oct  7 03:31:58 2014 #######
+Command line: UPSITE.py
+[03:31:58 07/10]	os.path.basename(input):  9668063
+[03:31:58 07/10]	Classifying PubMed abstract 9668063
+[03:31:58 07/10]	*************************** NOTE ***************************
+[03:31:58 07/10]	Do not attempt to do large-scale classification of PubMed
+[03:31:58 07/10]	abstracts with this feature. For that, use the downloadable
+[03:31:58 07/10]	PubMed release. This is a demonstration feature only, and
+[03:31:58 07/10]	abusing it will cause you to be banned from PubMed!
+[03:31:58 07/10]	************************************************************
+[03:31:58 07/10]	Downloading PubMed abstract 9668063
+[03:31:58 07/10]	Skipping already downloaded file http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=9668063&retmode=xml
+[03:31:58 07/10]	Model /home/ubuntu/bionlp-1.3/GE11 doesn't exist, looking for a default model
+[03:31:58 07/10]	Classifying with default model /home/ubuntu/.tees/models/GE11-test
+[03:31:58 07/10]	Preprocessor output home/ubuntu/output/one_at_a_time/oneatatime-preprocessed.xml.gz does not exist
+[03:31:58 07/10]	------------ Preprocessing ------------
+[03:31:58 07/10]	* Preprocessor:PROCESS(ENTER) *
+[03:31:58 07/10]	Caching model "/home/ubuntu/.tees/models/GE11-test" member "TEES_MODEL_VALUES.tsv" to "/tmp/tmpzFBYDG/TEES_MODEL_VALUES.tsv"
+[03:31:58 07/10]	Tool chain parameters: 
+[03:31:58 07/10]	=== ENTER STEP Preprocessor:PROCESS:CONVERT ===
+[03:31:58 07/10]	Running step CONVERT with arguments {'input': '/tmp/pmid-9668063.txt', 'output': 'home/ubuntu/output/one_at_a_time/oneatatime-preprocessed.xml.gz-documents.xml.gz', 'dataSetNames': None, 'corpusName': None}
+[03:31:58 07/10]	Converting ST-format to Interaction XML
+[03:31:58 07/10]	Reading /tmp/pmid-9668063.txt set, 1 documents
+[03:31:58 07/10]	Resolving equivalences
+[03:31:58 07/10]	Duplication created 0 new events (new total 0 events)
+[03:31:58 07/10]	Writing output to home/ubuntu/output/one_at_a_time/oneatatime-preprocessed.xml.gz-documents.xml.gz
+[03:31:58 07/10]	=== EXIT STEP CONVERT time: 0:00:00.003225 ===
+[03:31:58 07/10]	=== ENTER STEP Preprocessor:PROCESS:SPLIT-SENTENCES ===
+[03:31:58 07/10]	Running step SPLIT-SENTENCES with arguments {'debug': False, 'input': <ElementTree object at 0x7f0a408c5f50>, 'postProcess': True, 'output': 'home/ubuntu/output/one_at_a_time/oneatatime-preprocessed.xml.gz-sentences.xml.gz'}
+[03:31:58 07/10]	Loading corpus <ElementTree object at 0x7f0a408c5f50>
+[03:31:58 07/10]	Corpus file loaded
+[03:31:58 07/10]	Running GENIA Sentence Splitter /home/ubuntu/.tees/tools/geniass (Using post-processing)
+[03:31:58 07/10]	Splitting Documents (TEES.d0): 100.00 % (0:0:0.000)
+[03:31:58 07/10]	Traceback (most recent call last):
+[03:31:58 07/10]	  File "UPSITE.py", line 46, in <module>
+[03:31:58 07/10]	    main(options.q1, options.q2, options.articles)
+[03:31:58 07/10]	  File "UPSITE.py", line 15, in main
+[03:31:58 07/10]	    classify.classify('9668063','GE11','home/ubuntu/output/one_at_a_time/oneatatime')
+[03:31:58 07/10]	  File "/usr/local/lib/python2.7/dist-packages/classify.py", line 72, in classify
+[03:31:58 07/10]	    classifyInput = preprocessor.process(input, preprocessorOutput, preprocessorParams, model, [], fromStep=detectorSteps["PREPROCESS"], toStep=None, omitSteps=omitDetectorSteps["PREPROCESS"])
+[03:31:58 07/10]	  File "/usr/local/lib/python2.7/dist-packages/Detectors/Preprocessor.py", line 49, in process
+[03:31:58 07/10]	    xml = ToolChain.process(self, source, output, parameters, model, fromStep, toStep, omitSteps)
+[03:31:58 07/10]	  File "/usr/local/lib/python2.7/dist-packages/Detectors/ToolChain.py", line 142, in process
+[03:31:58 07/10]	    step[1](**stepArgs) # call the tool
+[03:31:58 07/10]	  File "/usr/local/lib/python2.7/dist-packages/Tools/GeniaSentenceSplitter.py", line 186, in makeSentences
+[03:31:58 07/10]	    assert os.path.exists(postProcessorPath), postProcessorPath
+[03:31:58 07/10]	AssertionError: /usr/local/lib/python2.7/dist-packages/Tools/geniass-postproc.pl
+[03:32:17 07/10]	Opening log home/ubuntu/output/one_at_a_time/oneatatime-log.txt at Tue Oct  7 03:32:18 2014
+####### Log opened at Tue Oct  7 03:32:18 2014 #######
+Command line: 
+[03:32:17 07/10]	os.path.basename(input):  9668063
+[03:32:17 07/10]	Classifying PubMed abstract 9668063
+[03:32:17 07/10]	*************************** NOTE ***************************
+[03:32:17 07/10]	Do not attempt to do large-scale classification of PubMed
+[03:32:17 07/10]	abstracts with this feature. For that, use the downloadable
+[03:32:17 07/10]	PubMed release. This is a demonstration feature only, and
+[03:32:17 07/10]	abusing it will cause you to be banned from PubMed!
+[03:32:17 07/10]	************************************************************
+[03:32:17 07/10]	Downloading PubMed abstract 9668063
+[03:32:18 07/10]	Skipping already downloaded file http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=9668063&retmode=xml
+[03:32:18 07/10]	Model /home/ubuntu/bionlp-1.3/GE11 doesn't exist, looking for a default model
+[03:32:18 07/10]	Classifying with default model /home/ubuntu/.tees/models/GE11-test
+[03:32:18 07/10]	Preprocessor output home/ubuntu/output/one_at_a_time/oneatatime-preprocessed.xml.gz does not exist
+[03:32:18 07/10]	------------ Preprocessing ------------
+[03:32:18 07/10]	* Preprocessor:PROCESS(ENTER) *
+[03:32:18 07/10]	Caching model "/home/ubuntu/.tees/models/GE11-test" member "TEES_MODEL_VALUES.tsv" to "/tmp/tmpEcTb0y/TEES_MODEL_VALUES.tsv"
+[03:32:18 07/10]	Tool chain parameters: 
+[03:32:18 07/10]	=== ENTER STEP Preprocessor:PROCESS:CONVERT ===
+[03:32:18 07/10]	Running step CONVERT with arguments {'input': '/tmp/pmid-9668063.txt', 'output': 'home/ubuntu/output/one_at_a_time/oneatatime-preprocessed.xml.gz-documents.xml.gz', 'dataSetNames': None, 'corpusName': None}
+[03:32:18 07/10]	Converting ST-format to Interaction XML
+[03:32:18 07/10]	Reading /tmp/pmid-9668063.txt set, 1 documents
+[03:32:18 07/10]	Resolving equivalences
+[03:32:18 07/10]	Duplication created 0 new events (new total 0 events)
+[03:32:18 07/10]	Writing output to home/ubuntu/output/one_at_a_time/oneatatime-preprocessed.xml.gz-documents.xml.gz
+[03:32:18 07/10]	=== EXIT STEP CONVERT time: 0:00:00.003290 ===
+[03:32:18 07/10]	=== ENTER STEP Preprocessor:PROCESS:SPLIT-SENTENCES ===
+[03:32:18 07/10]	Running step SPLIT-SENTENCES with arguments {'debug': False, 'input': <ElementTree object at 0x7fb723911d90>, 'postProcess': True, 'output': 'home/ubuntu/output/one_at_a_time/oneatatime-preprocessed.xml.gz-sentences.xml.gz'}
+[03:32:18 07/10]	Loading corpus <ElementTree object at 0x7fb723911d90>
+[03:32:18 07/10]	Corpus file loaded
+[03:32:18 07/10]	Running GENIA Sentence Splitter /home/ubuntu/.tees/tools/geniass (Using post-processing)
+[03:32:18 07/10]	Splitting Documents (TEES.d0): 100.00 % (0:0:0.000)
+[03:32:18 07/10]	Traceback (most recent call last):
+[03:32:18 07/10]	  File "<stdin>", line 1, in <module>
+[03:32:18 07/10]	  File "/usr/local/lib/python2.7/dist-packages/classify.py", line 72, in classify
+[03:32:18 07/10]	    classifyInput = preprocessor.process(input, preprocessorOutput, preprocessorParams, model, [], fromStep=detectorSteps["PREPROCESS"], toStep=None, omitSteps=omitDetectorSteps["PREPROCESS"])
+[03:32:18 07/10]	  File "/usr/local/lib/python2.7/dist-packages/Detectors/Preprocessor.py", line 49, in process
+[03:32:18 07/10]	    xml = ToolChain.process(self, source, output, parameters, model, fromStep, toStep, omitSteps)
+[03:32:18 07/10]	  File "/usr/local/lib/python2.7/dist-packages/Detectors/ToolChain.py", line 142, in process
+[03:32:18 07/10]	    step[1](**stepArgs) # call the tool
+[03:32:18 07/10]	  File "/usr/local/lib/python2.7/dist-packages/Tools/GeniaSentenceSplitter.py", line 186, in makeSentences
+[03:32:18 07/10]	    assert os.path.exists(postProcessorPath), postProcessorPath
+[03:32:18 07/10]	AssertionError: /usr/local/lib/python2.7/dist-packages/Tools/geniass-postproc.pl
+[03:32:52 07/10]	
+[03:32:52 07/10]	KeyboardInterrupt
+[03:32:55 07/10]	Opening log home/ubuntu/output/one_at_a_time/oneatatime-log.txt at Tue Oct  7 03:32:55 2014
+[03:32:55 07/10]	Opening log home/ubuntu/output/one_at_a_time/oneatatime-log.txt at Tue Oct  7 03:32:55 2014
+####### Log opened at Tue Oct  7 03:32:55 2014 #######
+####### Log opened at Tue Oct  7 03:32:55 2014 #######
+Command line: 
+Command line: 
+[03:32:55 07/10]	os.path.basename(input):  9668063
+[03:32:55 07/10]	os.path.basename(input):  9668063
+[03:32:55 07/10]	Classifying PubMed abstract 9668063
+[03:32:55 07/10]	Classifying PubMed abstract 9668063
+[03:32:55 07/10]	*************************** NOTE ***************************
+[03:32:55 07/10]	*************************** NOTE ***************************
+[03:32:55 07/10]	Do not attempt to do large-scale classification of PubMed
+[03:32:55 07/10]	Do not attempt to do large-scale classification of PubMed
+[03:32:55 07/10]	abstracts with this feature. For that, use the downloadable
+[03:32:55 07/10]	abstracts with this feature. For that, use the downloadable
+[03:32:55 07/10]	PubMed release. This is a demonstration feature only, and
+[03:32:55 07/10]	PubMed release. This is a demonstration feature only, and
+[03:32:55 07/10]	abusing it will cause you to be banned from PubMed!
+[03:32:55 07/10]	abusing it will cause you to be banned from PubMed!
+[03:32:55 07/10]	************************************************************
+[03:32:55 07/10]	************************************************************
+[03:32:55 07/10]	Downloading PubMed abstract 9668063
+[03:32:55 07/10]	Downloading PubMed abstract 9668063
+[03:32:55 07/10]	Skipping already downloaded file http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=9668063&retmode=xml
+[03:32:55 07/10]	Skipping already downloaded file http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=9668063&retmode=xml
+[03:32:55 07/10]	Model /home/ubuntu/bionlp-1.3/GE11 doesn't exist, looking for a default model
+[03:32:55 07/10]	Model /home/ubuntu/bionlp-1.3/GE11 doesn't exist, looking for a default model
+[03:32:55 07/10]	Classifying with default model /home/ubuntu/.tees/models/GE11-test
+[03:32:55 07/10]	Classifying with default model /home/ubuntu/.tees/models/GE11-test
+[03:32:55 07/10]	Preprocessor output home/ubuntu/output/one_at_a_time/oneatatime-preprocessed.xml.gz does not exist
+[03:32:55 07/10]	Preprocessor output home/ubuntu/output/one_at_a_time/oneatatime-preprocessed.xml.gz does not exist
+[03:32:55 07/10]	------------ Preprocessing ------------
+[03:32:55 07/10]	------------ Preprocessing ------------
+[03:32:55 07/10]	* Preprocessor:PROCESS(ENTER) *
+[03:32:55 07/10]	* Preprocessor:PROCESS(ENTER) *
+[03:32:55 07/10]	Caching model "/home/ubuntu/.tees/models/GE11-test" member "TEES_MODEL_VALUES.tsv" to "/tmp/tmpxtRZWp/TEES_MODEL_VALUES.tsv"
+[03:32:55 07/10]	Caching model "/home/ubuntu/.tees/models/GE11-test" member "TEES_MODEL_VALUES.tsv" to "/tmp/tmpxtRZWp/TEES_MODEL_VALUES.tsv"
+[03:32:55 07/10]	Tool chain parameters: 
+[03:32:55 07/10]	Tool chain parameters: 
+[03:32:55 07/10]	=== ENTER STEP Preprocessor:PROCESS:CONVERT ===
+[03:32:55 07/10]	=== ENTER STEP Preprocessor:PROCESS:CONVERT ===
+[03:32:55 07/10]	Running step CONVERT with arguments {'input': '/tmp/pmid-9668063.txt', 'output': 'home/ubuntu/output/one_at_a_time/oneatatime-preprocessed.xml.gz-documents.xml.gz', 'dataSetNames': None, 'corpusName': None}
+[03:32:55 07/10]	Running step CONVERT with arguments {'input': '/tmp/pmid-9668063.txt', 'output': 'home/ubuntu/output/one_at_a_time/oneatatime-preprocessed.xml.gz-documents.xml.gz', 'dataSetNames': None, 'corpusName': None}
+[03:32:55 07/10]	Converting ST-format to Interaction XML
+[03:32:55 07/10]	Converting ST-format to Interaction XML
+[03:32:55 07/10]	Reading /tmp/pmid-9668063.txt set, 1 documents
+[03:32:55 07/10]	Reading /tmp/pmid-9668063.txt set, 1 documents
+[03:32:55 07/10]	Resolving equivalences
+[03:32:55 07/10]	Resolving equivalences
+[03:32:55 07/10]	Duplication created 0 new events (new total 0 events)
+[03:32:55 07/10]	Duplication created 0 new events (new total 0 events)
+[03:32:55 07/10]	Writing output to home/ubuntu/output/one_at_a_time/oneatatime-preprocessed.xml.gz-documents.xml.gz
+[03:32:55 07/10]	Writing output to home/ubuntu/output/one_at_a_time/oneatatime-preprocessed.xml.gz-documents.xml.gz
+[03:32:55 07/10]	=== EXIT STEP CONVERT time: 0:00:00.008255 ===
+[03:32:55 07/10]	=== EXIT STEP CONVERT time: 0:00:00.008255 ===
+[03:32:55 07/10]	=== ENTER STEP Preprocessor:PROCESS:SPLIT-SENTENCES ===
+[03:32:55 07/10]	=== ENTER STEP Preprocessor:PROCESS:SPLIT-SENTENCES ===
+[03:32:55 07/10]	Running step SPLIT-SENTENCES with arguments {'debug': False, 'input': <ElementTree object at 0x7fb723911d50>, 'postProcess': True, 'output': 'home/ubuntu/output/one_at_a_time/oneatatime-preprocessed.xml.gz-sentences.xml.gz'}
+[03:32:55 07/10]	Running step SPLIT-SENTENCES with arguments {'debug': False, 'input': <ElementTree object at 0x7fb723911d50>, 'postProcess': True, 'output': 'home/ubuntu/output/one_at_a_time/oneatatime-preprocessed.xml.gz-sentences.xml.gz'}
+[03:32:55 07/10]	Loading corpus <ElementTree object at 0x7fb723911d50>
+[03:32:55 07/10]	Loading corpus <ElementTree object at 0x7fb723911d50>
+[03:32:55 07/10]	Corpus file loaded
+[03:32:55 07/10]	Corpus file loaded
+[03:32:55 07/10]	Running GENIA Sentence Splitter /home/ubuntu/.tees/tools/geniass (Using post-processing)
+[03:32:55 07/10]	Running GENIA Sentence Splitter /home/ubuntu/.tees/tools/geniass (Using post-processing)
+[03:32:55 07/10]	Splitting Documents (TEES.d0): 100.00 % (0:0:0.000)
+[03:32:55 07/10]	Splitting Documents (TEES.d0): 100.00 % (0:0:0.000)
+[03:32:55 07/10]	Traceback (most recent call last):
+[03:32:55 07/10]	Traceback (most recent call last):
+[03:32:55 07/10]	  File "<stdin>", line 1, in <module>
+[03:32:55 07/10]	  File "<stdin>", line 1, in <module>
+[03:32:55 07/10]	  File "/usr/local/lib/python2.7/dist-packages/classify.py", line 72, in classify
+[03:32:55 07/10]	  File "/usr/local/lib/python2.7/dist-packages/classify.py", line 72, in classify
+[03:32:55 07/10]	    classifyInput = preprocessor.process(input, preprocessorOutput, preprocessorParams, model, [], fromStep=detectorSteps["PREPROCESS"], toStep=None, omitSteps=omitDetectorSteps["PREPROCESS"])
+[03:32:55 07/10]	    classifyInput = preprocessor.process(input, preprocessorOutput, preprocessorParams, model, [], fromStep=detectorSteps["PREPROCESS"], toStep=None, omitSteps=omitDetectorSteps["PREPROCESS"])
+[03:32:55 07/10]	  File "/usr/local/lib/python2.7/dist-packages/Detectors/Preprocessor.py", line 49, in process
+[03:32:55 07/10]	  File "/usr/local/lib/python2.7/dist-packages/Detectors/Preprocessor.py", line 49, in process
+[03:32:55 07/10]	    xml = ToolChain.process(self, source, output, parameters, model, fromStep, toStep, omitSteps)
+[03:32:55 07/10]	    xml = ToolChain.process(self, source, output, parameters, model, fromStep, toStep, omitSteps)
+[03:32:55 07/10]	  File "/usr/local/lib/python2.7/dist-packages/Detectors/ToolChain.py", line 142, in process
+[03:32:55 07/10]	  File "/usr/local/lib/python2.7/dist-packages/Detectors/ToolChain.py", line 142, in process
+[03:32:55 07/10]	    step[1](**stepArgs) # call the tool
+[03:32:55 07/10]	    step[1](**stepArgs) # call the tool
+[03:32:55 07/10]	  File "/usr/local/lib/python2.7/dist-packages/Tools/GeniaSentenceSplitter.py", line 186, in makeSentences
+[03:32:55 07/10]	  File "/usr/local/lib/python2.7/dist-packages/Tools/GeniaSentenceSplitter.py", line 186, in makeSentences
+[03:32:55 07/10]	    assert os.path.exists(postProcessorPath), postProcessorPath
+[03:32:55 07/10]	    assert os.path.exists(postProcessorPath), postProcessorPath
+[03:32:55 07/10]	AssertionError: /usr/local/lib/python2.7/dist-packages/Tools/geniass-postproc.pl
+[03:32:55 07/10]	AssertionError: /usr/local/lib/python2.7/dist-packages/Tools/geniass-postproc.pl
+[03:33:50 07/10]	Opening log home/ubuntu/output/one_at_a_time/oneatatime-log.txt at Tue Oct  7 03:33:50 2014
+####### Log opened at Tue Oct  7 03:33:50 2014 #######
+Command line: 
+[03:33:50 07/10]	os.path.basename(input):  9668063
+[03:33:50 07/10]	Classifying PubMed abstract 9668063
+[03:33:50 07/10]	*************************** NOTE ***************************
+[03:33:50 07/10]	Do not attempt to do large-scale classification of PubMed
+[03:33:50 07/10]	abstracts with this feature. For that, use the downloadable
+[03:33:50 07/10]	PubMed release. This is a demonstration feature only, and
+[03:33:50 07/10]	abusing it will cause you to be banned from PubMed!
+[03:33:50 07/10]	************************************************************
+[03:33:50 07/10]	Downloading PubMed abstract 9668063
+[03:33:50 07/10]	Skipping already downloaded file http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=9668063&retmode=xml
+[03:33:50 07/10]	Model /home/ubuntu/bionlp-1.3/GE11 doesn't exist, looking for a default model
+[03:33:50 07/10]	Classifying with default model /home/ubuntu/.tees/models/GE11-test
+[03:33:50 07/10]	Preprocessor output home/ubuntu/output/one_at_a_time/oneatatime-preprocessed.xml.gz does not exist
+[03:33:50 07/10]	------------ Preprocessing ------------
+[03:33:50 07/10]	* Preprocessor:PROCESS(ENTER) *
+[03:33:50 07/10]	Caching model "/home/ubuntu/.tees/models/GE11-test" member "TEES_MODEL_VALUES.tsv" to "/tmp/tmptU95N5/TEES_MODEL_VALUES.tsv"
+[03:33:50 07/10]	Tool chain parameters: 
+[03:33:50 07/10]	=== ENTER STEP Preprocessor:PROCESS:CONVERT ===
+[03:33:50 07/10]	Running step CONVERT with arguments {'input': '/tmp/pmid-9668063.txt', 'output': 'home/ubuntu/output/one_at_a_time/oneatatime-preprocessed.xml.gz-documents.xml.gz', 'dataSetNames': None, 'corpusName': None}
+[03:33:50 07/10]	Converting ST-format to Interaction XML
+[03:33:50 07/10]	Reading /tmp/pmid-9668063.txt set, 1 documents
+[03:33:50 07/10]	Resolving equivalences
+[03:33:50 07/10]	Duplication created 0 new events (new total 0 events)
+[03:33:50 07/10]	Writing output to home/ubuntu/output/one_at_a_time/oneatatime-preprocessed.xml.gz-documents.xml.gz
+[03:33:50 07/10]	=== EXIT STEP CONVERT time: 0:00:00.003401 ===
+[03:33:50 07/10]	=== ENTER STEP Preprocessor:PROCESS:SPLIT-SENTENCES ===
+[03:33:50 07/10]	Running step SPLIT-SENTENCES with arguments {'debug': False, 'input': <ElementTree object at 0x7f1a46203d90>, 'postProcess': True, 'output': 'home/ubuntu/output/one_at_a_time/oneatatime-preprocessed.xml.gz-sentences.xml.gz'}
+[03:33:50 07/10]	Loading corpus <ElementTree object at 0x7f1a46203d90>
+[03:33:50 07/10]	Corpus file loaded
+[03:33:50 07/10]	Running GENIA Sentence Splitter /home/ubuntu/.tees/tools/geniass (Using post-processing)
+[03:33:50 07/10]	Splitting Documents (TEES.d0): 100.00 % (0:0:0.000)
+[03:33:50 07/10]	Traceback (most recent call last):
+[03:33:50 07/10]	  File "<stdin>", line 1, in <module>
+[03:33:50 07/10]	  File "/usr/local/lib/python2.7/dist-packages/classify.py", line 72, in classify
+[03:33:50 07/10]	    classifyInput = preprocessor.process(input, preprocessorOutput, preprocessorParams, model, [], fromStep=detectorSteps["PREPROCESS"], toStep=None, omitSteps=omitDetectorSteps["PREPROCESS"])
+[03:33:50 07/10]	  File "/usr/local/lib/python2.7/dist-packages/Detectors/Preprocessor.py", line 49, in process
+[03:33:50 07/10]	    xml = ToolChain.process(self, source, output, parameters, model, fromStep, toStep, omitSteps)
+[03:33:50 07/10]	  File "/usr/local/lib/python2.7/dist-packages/Detectors/ToolChain.py", line 142, in process
+[03:33:50 07/10]	    step[1](**stepArgs) # call the tool
+[03:33:50 07/10]	  File "/usr/local/lib/python2.7/dist-packages/Tools/GeniaSentenceSplitter.py", line 186, in makeSentences
+[03:33:50 07/10]	    assert os.path.exists(postProcessorPath), postProcessorPath
+[03:33:50 07/10]	AssertionError: /usr/local/lib/python2.7/dist-packages/Tools/geniass-postproc.pl
+[03:36:23 07/10]	  File "<stdin>", line 1
+[03:36:23 07/10]	    exit(*)
+[03:36:23 07/10]	          ^
+[03:36:23 07/10]	SyntaxError: invalid syntax

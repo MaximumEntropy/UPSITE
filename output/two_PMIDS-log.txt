@@ -1,0 +1,251 @@
+[20:37:47 03/10]	Opening log /home/ubuntu/output/two_PMIDS-log.txt at Fri Oct  3 20:37:47 2014
+####### Log opened at Fri Oct  3 20:37:47 2014 #######
+Command line: classify.py -m GE11 -i 10089566,9668063 -o /home/ubuntu/output/two_PMIDS
+[20:37:47 03/10]	Traceback (most recent call last):
+[20:37:47 03/10]	  File "classify.py", line 190, in <module>
+[20:37:47 03/10]	    preprocessorParams=options.preprocessorParams, bioNLPSTParams=options.bioNLPSTParams)
+[20:37:47 03/10]	  File "classify.py", line 45, in classify
+[20:37:47 03/10]	    input, preprocess = getInput(input)
+[20:37:47 03/10]	  File "classify.py", line 125, in getInput
+[20:37:47 03/10]	    raise Exception("Default corpus file for input " + str(defaultInput) + " not found")
+[20:37:47 03/10]	Exception: Default corpus file for input 10089566,9668063 not found
+[20:42:42 03/10]	Opening log /home/ubuntu/output/two_PMIDS-log.txt at Fri Oct  3 20:42:42 2014
+####### Log opened at Fri Oct  3 20:42:42 2014 #######
+Command line: classify.py -m GE11 -i 10089566,9668063 -o /home/ubuntu/output/two_PMIDS
+[20:42:42 03/10]	os.path.basename(input):  10089566,9668063
+[20:42:42 03/10]	Traceback (most recent call last):
+[20:42:42 03/10]	  File "classify.py", line 190, in <module>
+[20:42:42 03/10]	    preprocessorParams=options.preprocessorParams, bioNLPSTParams=options.bioNLPSTParams)
+[20:42:42 03/10]	  File "classify.py", line 45, in classify
+[20:42:42 03/10]	    input, preprocess = getInput(input)
+[20:42:42 03/10]	  File "classify.py", line 125, in getInput
+[20:42:42 03/10]	    raise Exception("Default corpus file for input " + str(defaultInput) + " not found")
+[20:42:42 03/10]	Exception: Default corpus file for input 10089566,9668063 not found
+[20:55:35 03/10]	Opening log /home/ubuntu/output/two_PMIDS-log.txt at Fri Oct  3 20:55:35 2014
+####### Log opened at Fri Oct  3 20:55:35 2014 #######
+Command line: classify.py -m GE11 -i 10089566,9668063 -o /home/ubuntu/output/two_PMIDS
+[20:55:35 03/10]	os.path.basename(input):  10089566,9668063
+[20:55:35 03/10]	*************************** NOTE ***************************
+[20:55:35 03/10]	Do not attempt to do large-scale classification of PubMed
+[20:55:35 03/10]	abstracts with this feature. For that, use the downloadable
+[20:55:35 03/10]	PubMed release. This is a demonstration feature only, and
+[20:55:35 03/10]	abusing it will cause you to be banned from PubMed!
+[20:55:35 03/10]	************************************************************
+[20:55:35 03/10]	Downloading PubMed abstract 10089566,9668063
+[20:55:36 03/10]	Downloading file http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=10089566,9668063&retmode=xml to /tmp/pmid-10089566,9668063.xml
+[20:55:36 03/10]	Model /home/ubuntu/TEES/GE11 doesn't exist, looking for a default model
+[20:55:36 03/10]	Classifying with default model /home/ubuntu/.tees/models/GE11-test
+[20:55:36 03/10]	Preprocessor output /home/ubuntu/output/two_PMIDS-preprocessed.xml.gz does not exist
+[20:55:36 03/10]	------------ Preprocessing ------------
+[20:55:36 03/10]	* Preprocessor:PROCESS(ENTER) *
+[20:55:36 03/10]	Caching model "/home/ubuntu/.tees/models/GE11-test" member "TEES_MODEL_VALUES.tsv" to "/tmp/tmpSqRbHn/TEES_MODEL_VALUES.tsv"
+[20:55:36 03/10]	Tool chain parameters: 
+[20:55:36 03/10]	=== ENTER STEP Preprocessor:PROCESS:CONVERT ===
+[20:55:36 03/10]	Running step CONVERT with arguments {'input': '/tmp/pmid-10089566,9668063.txt', 'output': '/home/ubuntu/output/two_PMIDS-preprocessed.xml.gz-documents.xml.gz', 'dataSetNames': None, 'corpusName': None}
+[20:55:36 03/10]	Converting ST-format to Interaction XML
+[20:55:36 03/10]	Reading /tmp/pmid-10089566 set,Traceback (most recent call last):
+[20:55:36 03/10]	  File "classify.py", line 194, in <module>
+[20:55:36 03/10]	    preprocessorParams=options.preprocessorParams, bioNLPSTParams=options.bioNLPSTParams)
+[20:55:36 03/10]	  File "classify.py", line 72, in classify
+[20:55:36 03/10]	    classifyInput = preprocessor.process(input, preprocessorOutput, preprocessorParams, model, [], fromStep=detectorSteps["PREPROCESS"], toStep=None, omitSteps=omitDetectorSteps["PREPROCESS"])
+[20:55:36 03/10]	  File "/home/ubuntu/TEES/Detectors/Preprocessor.py", line 49, in process
+[20:55:36 03/10]	    xml = ToolChain.process(self, source, output, parameters, model, fromStep, toStep, omitSteps)
+[20:55:36 03/10]	  File "/home/ubuntu/TEES/Detectors/ToolChain.py", line 142, in process
+[20:55:36 03/10]	    step[1](**stepArgs) # call the tool
+[20:55:36 03/10]	  File "/home/ubuntu/TEES/Detectors/Preprocessor.py", line 71, in convert
+[20:55:36 03/10]	    docs = Utils.STFormat.STTools.loadSet(dataSetDir, dataSetName)
+[20:55:36 03/10]	  File "/home/ubuntu/TEES/Utils/STFormat/STTools.py", line 701, in loadSet
+[20:55:36 03/10]	    for filename in os.listdir(dir):
+[20:55:36 03/10]	OSError: [Errno 2] No such file or directory: '/tmp/pmid-10089566'
+[21:12:26 03/10]	Opening log /home/ubuntu/output/two_PMIDS-log.txt at Fri Oct  3 21:12:26 2014
+####### Log opened at Fri Oct  3 21:12:26 2014 #######
+Command line: classify.py -m GE11 -i madeup.xml -o /home/ubuntu/output/two_PMIDS
+[21:12:26 03/10]	os.path.basename(input):  madeup.xml
+[21:12:26 03/10]	Classifying default corpus file /home/ubuntu/.tees/corpora/madeup.xml
+[21:12:26 03/10]	Model /home/ubuntu/TEES/GE11 doesn't exist, looking for a default model
+[21:12:26 03/10]	Classifying with default model /home/ubuntu/.tees/models/GE11-test
+[21:12:26 03/10]	Omitting step PREPROCESS
+[21:12:26 03/10]	=== EXIT STEP PREPROCESS time: 0:00:00.000281 ===
+[21:12:26 03/10]	Caching model "/home/ubuntu/.tees/models/GE11-test" member "TEES_MODEL_VALUES.tsv" to "/tmp/tmphoOHgv/TEES_MODEL_VALUES.tsv"
+[21:12:26 03/10]	Importing detector Detectors.EventDetector
+[21:12:26 03/10]	Caching model "/home/ubuntu/.tees/models/GE11-test" member "TEES_MODEL_VALUES.tsv" to "/tmp/tmpFWBcMa/TEES_MODEL_VALUES.tsv"
+[21:12:26 03/10]	* EventDetector:CLASSIFY(ENTER) *
+[21:12:26 03/10]	=== ENTER STEP EventDetector:CLASSIFY:TRIGGERS ===
+[21:12:26 03/10]	Caching model "/home/ubuntu/.tees/models/GE11-test" member "TEES_MODEL_VALUES.tsv" to "/tmp/tmpiZOmfv/TEES_MODEL_VALUES.tsv"
+[21:12:26 03/10]	Caching model "/home/ubuntu/.tees/models/GE11-test" member "structure.txt" to "/tmp/tmpiZOmfv/structure.txt"
+[21:12:26 03/10]	Warning, EVENT Binding does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[21:12:26 03/10]	Warning, EVENT Gene_expression does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[21:12:26 03/10]	Warning, EVENT Localization does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[21:12:26 03/10]	Warning, EVENT Negative_regulation does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[21:12:26 03/10]	Warning, EVENT Phosphorylation does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[21:12:26 03/10]	Warning, EVENT Positive_regulation does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[21:12:26 03/10]	Warning, EVENT Protein_catabolism does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[21:12:26 03/10]	Warning, EVENT Regulation does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[21:12:26 03/10]	Warning, EVENT Transcription does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[21:12:26 03/10]	Warning, RELATION RELATION SiteParent uses model file format <2.2.
+[21:12:26 03/10]	Example generation for /tmp/tmp3fe1Dz/two_PMIDS-trigger-examples.gz
+[21:12:26 03/10]	Caching model "/home/ubuntu/.tees/models/GE11-test" member "trigger-ids.classes" to "/tmp/tmpiZOmfv/trigger-ids.classes"
+[21:12:26 03/10]	Caching model "/home/ubuntu/.tees/models/GE11-test" member "trigger-ids.features" to "/tmp/tmpiZOmfv/trigger-ids.features"
+[21:12:26 03/10]	Running EntityExampleBuilder
+[21:12:26 03/10]	  input: /home/ubuntu/.tees/corpora/madeup.xml
+[21:12:26 03/10]	  output: /tmp/tmp3fe1Dz/two_PMIDS-trigger-examples.gz (append: False)
+[21:12:26 03/10]	  add new class/feature ids: False
+[21:12:26 03/10]	  style: 
+[21:12:26 03/10]	  parse: McCC
+[21:12:26 03/10]	Using predefined class names from /tmp/tmpiZOmfv/trigger-ids.classes
+[21:12:26 03/10]	Using predefined feature names from /tmp/tmpiZOmfv/trigger-ids.features
+[21:12:28 03/10]	No gazetteer loaded
+[21:12:28 03/10]	Counting elements: {'documents': 2, 'sentences': 0}
+[21:12:28 03/10]	Loading corpus file /home/ubuntu/.tees/corpora/madeup.xml
+[21:12:28 03/10]	Traceback (most recent call last):
+[21:12:28 03/10]	  File "classify.py", line 193, in <module>
+[21:12:28 03/10]	    preprocessorParams=options.preprocessorParams, bioNLPSTParams=options.bioNLPSTParams)
+[21:12:28 03/10]	  File "classify.py", line 78, in classify
+[21:12:28 03/10]	    detector.classify(classifyInput, model, output, goldData=goldInput, fromStep=detectorSteps["CLASSIFY"], omitSteps=omitDetectorSteps["CLASSIFY"], workDir=workDir)
+[21:12:28 03/10]	  File "/home/ubuntu/TEES/Detectors/EventDetector.py", line 339, in classify
+[21:12:28 03/10]	    xml = self.triggerDetector.classifyToXML(self.classifyData, self.model, None, workOutputTag, goldData=goldData, parse=self.parse, recallAdjust=float(self.getStr("recallAdjustParameter", self.model)))
+[21:12:28 03/10]	  File "/home/ubuntu/TEES/Detectors/SingleStageDetector.py", line 157, in classifyToXML
+[21:12:28 03/10]	    self.buildExamples(model, [data], [exampleFileName], [goldData], parse=parse, exampleStyle=exampleStyle)
+[21:12:28 03/10]	  File "/home/ubuntu/TEES/Detectors/Detector.py", line 203, in buildExamples
+[21:12:28 03/10]	    structureAnalyzer=self.structureAnalyzer)
+[21:12:28 03/10]	  File "/home/ubuntu/TEES/ExampleBuilders/ExampleBuilder.py", line 220, in run
+[21:12:28 03/10]	    builder.processCorpus(input, output, gold, append=append, allowNewIds=allowNewIds, structureAnalyzer=structureAnalyzer)
+[21:12:28 03/10]	  File "/home/ubuntu/TEES/ExampleBuilders/ExampleBuilder.py", line 125, in processCorpus
+[21:12:28 03/10]	    self.calculatePredictedRange(self.getSentences(input, self.parse, self.tokenization))
+[21:12:28 03/10]	  File "/home/ubuntu/TEES/ExampleBuilders/ExampleBuilder.py", line 272, in getSentences
+[21:12:28 03/10]	    corpusElements = Core.SentenceGraph.loadCorpus(input, parse, tokenization, removeNameInfo=removeNameInfo)
+[21:12:28 03/10]	  File "/home/ubuntu/TEES/Core/SentenceGraph.py", line 29, in loadCorpus
+[21:12:28 03/10]	    corpusTree = ETUtils.ETFromObj(corpus)
+[21:12:28 03/10]	  File "/home/ubuntu/TEES/Utils/ElementTreeUtils.py", line 127, in ETFromObj
+[21:12:28 03/10]	    return ElementTree.parse(fStream)
+[21:12:28 03/10]	  File "<string>", line 62, in parse
+[21:12:28 03/10]	  File "<string>", line 38, in parse
+[21:12:28 03/10]	cElementTree.ParseError: no element found: line 6, column 0
+[21:15:50 03/10]	Opening log /home/ubuntu/output/two_PMIDS-log.txt at Fri Oct  3 21:15:50 2014
+####### Log opened at Fri Oct  3 21:15:50 2014 #######
+Command line: classify.py -m GE11 -i madeup.xml -o /home/ubuntu/output/two_PMIDS
+[21:15:50 03/10]	os.path.basename(input):  madeup.xml
+[21:15:50 03/10]	Classifying default corpus file /home/ubuntu/.tees/corpora/madeup.xml
+[21:15:50 03/10]	Model /home/ubuntu/TEES/GE11 doesn't exist, looking for a default model
+[21:15:50 03/10]	Classifying with default model /home/ubuntu/.tees/models/GE11-test
+[21:15:50 03/10]	Omitting step PREPROCESS
+[21:15:50 03/10]	=== EXIT STEP PREPROCESS time: 0:00:00.000266 ===
+[21:15:50 03/10]	Caching model "/home/ubuntu/.tees/models/GE11-test" member "TEES_MODEL_VALUES.tsv" to "/tmp/tmp9S_Az7/TEES_MODEL_VALUES.tsv"
+[21:15:50 03/10]	Importing detector Detectors.EventDetector
+[21:15:50 03/10]	Caching model "/home/ubuntu/.tees/models/GE11-test" member "TEES_MODEL_VALUES.tsv" to "/tmp/tmpjiqzNs/TEES_MODEL_VALUES.tsv"
+[21:15:50 03/10]	* EventDetector:CLASSIFY(ENTER) *
+[21:15:50 03/10]	=== ENTER STEP EventDetector:CLASSIFY:TRIGGERS ===
+[21:15:50 03/10]	Caching model "/home/ubuntu/.tees/models/GE11-test" member "TEES_MODEL_VALUES.tsv" to "/tmp/tmplItwQj/TEES_MODEL_VALUES.tsv"
+[21:15:50 03/10]	Caching model "/home/ubuntu/.tees/models/GE11-test" member "structure.txt" to "/tmp/tmplItwQj/structure.txt"
+[21:15:50 03/10]	Warning, EVENT Binding does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[21:15:50 03/10]	Warning, EVENT Gene_expression does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[21:15:50 03/10]	Warning, EVENT Localization does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[21:15:50 03/10]	Warning, EVENT Negative_regulation does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[21:15:50 03/10]	Warning, EVENT Phosphorylation does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[21:15:50 03/10]	Warning, EVENT Positive_regulation does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[21:15:50 03/10]	Warning, EVENT Protein_catabolism does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[21:15:50 03/10]	Warning, EVENT Regulation does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[21:15:50 03/10]	Warning, EVENT Transcription does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[21:15:50 03/10]	Warning, RELATION RELATION SiteParent uses model file format <2.2.
+[21:15:50 03/10]	Example generation for /tmp/tmpOSLgp7/two_PMIDS-trigger-examples.gz
+[21:15:50 03/10]	Caching model "/home/ubuntu/.tees/models/GE11-test" member "trigger-ids.classes" to "/tmp/tmplItwQj/trigger-ids.classes"
+[21:15:50 03/10]	Caching model "/home/ubuntu/.tees/models/GE11-test" member "trigger-ids.features" to "/tmp/tmplItwQj/trigger-ids.features"
+[21:15:50 03/10]	Running EntityExampleBuilder
+[21:15:50 03/10]	  input: /home/ubuntu/.tees/corpora/madeup.xml
+[21:15:50 03/10]	  output: /tmp/tmpOSLgp7/two_PMIDS-trigger-examples.gz (append: False)
+[21:15:50 03/10]	  add new class/feature ids: False
+[21:15:50 03/10]	  style: 
+[21:15:50 03/10]	  parse: McCC
+[21:15:50 03/10]	Using predefined class names from /tmp/tmplItwQj/trigger-ids.classes
+[21:15:50 03/10]	Using predefined feature names from /tmp/tmplItwQj/trigger-ids.features
+[21:15:51 03/10]	No gazetteer loaded
+[21:15:51 03/10]	Counting elements: {'documents': 2, 'sentences': 0}
+[21:15:51 03/10]	Loading corpus file /home/ubuntu/.tees/corpora/madeup.xml
+[21:15:51 03/10]	Traceback (most recent call last):
+[21:15:51 03/10]	  File "classify.py", line 193, in <module>
+[21:15:51 03/10]	    preprocessorParams=options.preprocessorParams, bioNLPSTParams=options.bioNLPSTParams)
+[21:15:51 03/10]	  File "classify.py", line 78, in classify
+[21:15:51 03/10]	    detector.classify(classifyInput, model, output, goldData=goldInput, fromStep=detectorSteps["CLASSIFY"], omitSteps=omitDetectorSteps["CLASSIFY"], workDir=workDir)
+[21:15:51 03/10]	  File "/home/ubuntu/TEES/Detectors/EventDetector.py", line 339, in classify
+[21:15:51 03/10]	    xml = self.triggerDetector.classifyToXML(self.classifyData, self.model, None, workOutputTag, goldData=goldData, parse=self.parse, recallAdjust=float(self.getStr("recallAdjustParameter", self.model)))
+[21:15:51 03/10]	  File "/home/ubuntu/TEES/Detectors/SingleStageDetector.py", line 157, in classifyToXML
+[21:15:51 03/10]	    self.buildExamples(model, [data], [exampleFileName], [goldData], parse=parse, exampleStyle=exampleStyle)
+[21:15:51 03/10]	  File "/home/ubuntu/TEES/Detectors/Detector.py", line 203, in buildExamples
+[21:15:51 03/10]	    structureAnalyzer=self.structureAnalyzer)
+[21:15:52 03/10]	  File "/home/ubuntu/TEES/ExampleBuilders/ExampleBuilder.py", line 220, in run
+[21:15:52 03/10]	    builder.processCorpus(input, output, gold, append=append, allowNewIds=allowNewIds, structureAnalyzer=structureAnalyzer)
+[21:15:52 03/10]	  File "/home/ubuntu/TEES/ExampleBuilders/ExampleBuilder.py", line 125, in processCorpus
+[21:15:52 03/10]	    self.calculatePredictedRange(self.getSentences(input, self.parse, self.tokenization))
+[21:15:52 03/10]	  File "/home/ubuntu/TEES/ExampleBuilders/ExampleBuilder.py", line 272, in getSentences
+[21:15:52 03/10]	    corpusElements = Core.SentenceGraph.loadCorpus(input, parse, tokenization, removeNameInfo=removeNameInfo)
+[21:15:52 03/10]	  File "/home/ubuntu/TEES/Core/SentenceGraph.py", line 29, in loadCorpus
+[21:15:52 03/10]	    corpusTree = ETUtils.ETFromObj(corpus)
+[21:15:52 03/10]	  File "/home/ubuntu/TEES/Utils/ElementTreeUtils.py", line 127, in ETFromObj
+[21:15:52 03/10]	    return ElementTree.parse(fStream)
+[21:15:52 03/10]	  File "<string>", line 62, in parse
+[21:15:52 03/10]	  File "<string>", line 38, in parse
+[21:15:52 03/10]	cElementTree.ParseError: no element found: line 6, column 0
+[21:16:10 03/10]	Opening log /home/ubuntu/output/two_PMIDS-log.txt at Fri Oct  3 21:16:10 2014
+####### Log opened at Fri Oct  3 21:16:10 2014 #######
+Command line: classify.py -m GE11 -i madeup.xml -o /home/ubuntu/output/two_PMIDS
+[21:16:10 03/10]	os.path.basename(input):  madeup.xml
+[21:16:10 03/10]	Classifying default corpus file /home/ubuntu/.tees/corpora/madeup.xml
+[21:16:10 03/10]	Model /home/ubuntu/TEES/GE11 doesn't exist, looking for a default model
+[21:16:10 03/10]	Classifying with default model /home/ubuntu/.tees/models/GE11-test
+[21:16:10 03/10]	Omitting step PREPROCESS
+[21:16:10 03/10]	=== EXIT STEP PREPROCESS time: 0:00:00.000244 ===
+[21:16:10 03/10]	Caching model "/home/ubuntu/.tees/models/GE11-test" member "TEES_MODEL_VALUES.tsv" to "/tmp/tmpYSOWNZ/TEES_MODEL_VALUES.tsv"
+[21:16:10 03/10]	Importing detector Detectors.EventDetector
+[21:16:10 03/10]	Caching model "/home/ubuntu/.tees/models/GE11-test" member "TEES_MODEL_VALUES.tsv" to "/tmp/tmp2bRkuy/TEES_MODEL_VALUES.tsv"
+[21:16:10 03/10]	* EventDetector:CLASSIFY(ENTER) *
+[21:16:10 03/10]	=== ENTER STEP EventDetector:CLASSIFY:TRIGGERS ===
+[21:16:10 03/10]	Caching model "/home/ubuntu/.tees/models/GE11-test" member "TEES_MODEL_VALUES.tsv" to "/tmp/tmpbCLsH7/TEES_MODEL_VALUES.tsv"
+[21:16:10 03/10]	Caching model "/home/ubuntu/.tees/models/GE11-test" member "structure.txt" to "/tmp/tmpbCLsH7/structure.txt"
+[21:16:10 03/10]	Warning, EVENT Binding does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[21:16:10 03/10]	Warning, EVENT Gene_expression does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[21:16:10 03/10]	Warning, EVENT Localization does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[21:16:10 03/10]	Warning, EVENT Negative_regulation does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[21:16:10 03/10]	Warning, EVENT Phosphorylation does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[21:16:10 03/10]	Warning, EVENT Positive_regulation does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[21:16:10 03/10]	Warning, EVENT Protein_catabolism does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[21:16:10 03/10]	Warning, EVENT Regulation does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[21:16:10 03/10]	Warning, EVENT Transcription does not have argument limits. Possibly using a model file from version <2.2. Argument limits set to [1-999].
+[21:16:10 03/10]	Warning, RELATION RELATION SiteParent uses model file format <2.2.
+[21:16:10 03/10]	Example generation for /tmp/tmpHYNohi/two_PMIDS-trigger-examples.gz
+[21:16:10 03/10]	Caching model "/home/ubuntu/.tees/models/GE11-test" member "trigger-ids.classes" to "/tmp/tmpbCLsH7/trigger-ids.classes"
+[21:16:10 03/10]	Caching model "/home/ubuntu/.tees/models/GE11-test" member "trigger-ids.features" to "/tmp/tmpbCLsH7/trigger-ids.features"
+[21:16:10 03/10]	Running EntityExampleBuilder
+[21:16:10 03/10]	  input: /home/ubuntu/.tees/corpora/madeup.xml
+[21:16:10 03/10]	  output: /tmp/tmpHYNohi/two_PMIDS-trigger-examples.gz (append: False)
+[21:16:10 03/10]	  add new class/feature ids: False
+[21:16:10 03/10]	  style: 
+[21:16:10 03/10]	  parse: McCC
+[21:16:10 03/10]	Using predefined class names from /tmp/tmpbCLsH7/trigger-ids.classes
+[21:16:10 03/10]	Using predefined feature names from /tmp/tmpbCLsH7/trigger-ids.features
+[21:16:11 03/10]	No gazetteer loaded
+[21:16:11 03/10]	Counting elements: {'documents': 2, 'sentences': 0}
+[21:16:11 03/10]	Loading corpus file /home/ubuntu/.tees/corpora/madeup.xml
+[21:16:11 03/10]	Traceback (most recent call last):
+[21:16:11 03/10]	  File "classify.py", line 193, in <module>
+[21:16:11 03/10]	    preprocessorParams=options.preprocessorParams, bioNLPSTParams=options.bioNLPSTParams)
+[21:16:11 03/10]	  File "classify.py", line 78, in classify
+[21:16:11 03/10]	    detector.classify(classifyInput, model, output, goldData=goldInput, fromStep=detectorSteps["CLASSIFY"], omitSteps=omitDetectorSteps["CLASSIFY"], workDir=workDir)
+[21:16:11 03/10]	  File "/home/ubuntu/TEES/Detectors/EventDetector.py", line 339, in classify
+[21:16:11 03/10]	    xml = self.triggerDetector.classifyToXML(self.classifyData, self.model, None, workOutputTag, goldData=goldData, parse=self.parse, recallAdjust=float(self.getStr("recallAdjustParameter", self.model)))
+[21:16:11 03/10]	  File "/home/ubuntu/TEES/Detectors/SingleStageDetector.py", line 157, in classifyToXML
+[21:16:11 03/10]	    self.buildExamples(model, [data], [exampleFileName], [goldData], parse=parse, exampleStyle=exampleStyle)
+[21:16:11 03/10]	  File "/home/ubuntu/TEES/Detectors/Detector.py", line 203, in buildExamples
+[21:16:11 03/10]	    structureAnalyzer=self.structureAnalyzer)
+[21:16:11 03/10]	  File "/home/ubuntu/TEES/ExampleBuilders/ExampleBuilder.py", line 220, in run
+[21:16:11 03/10]	    builder.processCorpus(input, output, gold, append=append, allowNewIds=allowNewIds, structureAnalyzer=structureAnalyzer)
+[21:16:11 03/10]	  File "/home/ubuntu/TEES/ExampleBuilders/ExampleBuilder.py", line 125, in processCorpus
+[21:16:11 03/10]	    self.calculatePredictedRange(self.getSentences(input, self.parse, self.tokenization))
+[21:16:11 03/10]	  File "/home/ubuntu/TEES/ExampleBuilders/ExampleBuilder.py", line 272, in getSentences
+[21:16:11 03/10]	    corpusElements = Core.SentenceGraph.loadCorpus(input, parse, tokenization, removeNameInfo=removeNameInfo)
+[21:16:11 03/10]	  File "/home/ubuntu/TEES/Core/SentenceGraph.py", line 29, in loadCorpus
+[21:16:11 03/10]	    corpusTree = ETUtils.ETFromObj(corpus)
+[21:16:11 03/10]	  File "/home/ubuntu/TEES/Utils/ElementTreeUtils.py", line 127, in ETFromObj
+[21:16:11 03/10]	    return ElementTree.parse(fStream)
+[21:16:11 03/10]	  File "<string>", line 62, in parse
+[21:16:11 03/10]	  File "<string>", line 38, in parse
+[21:16:11 03/10]	cElementTree.ParseError: no element found: line 6, column 0

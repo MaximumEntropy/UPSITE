@@ -1,0 +1,913 @@
+[01:01:35 22/10]	Opening log /home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/DISC1/26475744-log.txt at Thu Oct 22 01:01:35 2015
+####### Log opened at Thu Oct 22 01:01:35 2015 #######
+Command line: UPSITE_kwargs.py -q DISC1 -w BRCA2 -i single -n 2 -m REL11 -o disc1brca2
+[01:01:35 22/10]	Classifying PubMed abstract 26475744
+[01:01:35 22/10]	*************************** NOTE ***************************
+[01:01:35 22/10]	Do not attempt to do large-scale classification of PubMed
+[01:01:35 22/10]	abstracts with this feature. For that, use the downloadable
+[01:01:35 22/10]	PubMed release. This is a demonstration feature only, and
+[01:01:35 22/10]	abusing it will cause you to be banned from PubMed!!!!!!!!!!!!
+[01:01:35 22/10]	************************************************************
+[01:01:35 22/10]	Downloading PubMed abstract 26475744
+[01:01:35 22/10]	Downloading file http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=26475744&retmode=xml to /tmp/pmid-26475744.xml
+[01:01:35 22/10]	Classifying input /tmp/pmid-26475744.txt
+[01:01:35 22/10]	Model /home/ubuntu/UPSITE/UPTEES/REL11 doesn't exist, looking for a default model
+[01:01:35 22/10]	Classifying with default model /home/ubuntu/.tees/models/REL11-test
+[01:01:35 22/10]	Preprocessor output /home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/DISC1/26475744-preprocessed.xml.gz does not exist
+[01:01:35 22/10]	------------ Preprocessing ------------
+[01:01:35 22/10]	* Preprocessor:PROCESS(ENTER) *
+[01:01:35 22/10]	Caching model "/home/ubuntu/.tees/models/REL11-test" member "TEES_MODEL_VALUES.tsv" to "/tmp/tmpxERdYo/TEES_MODEL_VALUES.tsv"
+[01:01:35 22/10]	Tool chain parameters: 
+[01:01:35 22/10]	=== ENTER STEP Preprocessor:PROCESS:CONVERT ===
+[01:01:35 22/10]	Running step CONVERT with arguments {'input': '/tmp/pmid-26475744.txt', 'output': '/home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/DISC1/26475744-preprocessed.xml.gz-documents.xml.gz', 'dataSetNames': None, 'corpusName': None}
+[01:01:35 22/10]	Converting ST-format to Interaction XML
+[01:01:35 22/10]	Reading /tmp/pmid-26475744.txt set, 1 documents
+[01:01:35 22/10]	Resolving equivalences
+[01:01:35 22/10]	Duplication created 0 new events (new total 0 events)
+[01:01:35 22/10]	Writing output to /home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/DISC1/26475744-preprocessed.xml.gz-documents.xml.gz
+[01:01:35 22/10]	=== EXIT STEP CONVERT time: 0:00:00.005967 ===
+[01:01:35 22/10]	=== ENTER STEP Preprocessor:PROCESS:SPLIT-SENTENCES ===
+[01:01:35 22/10]	Running step SPLIT-SENTENCES with arguments {'debug': False, 'input': <ElementTree object at 0x7f0fbe8159d0>, 'postProcess': True, 'output': '/home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/DISC1/26475744-preprocessed.xml.gz-sentences.xml.gz'}
+[01:01:35 22/10]	Loading corpus <ElementTree object at 0x7f0fbe8159d0>
+[01:01:35 22/10]	Corpus file loaded
+[01:01:35 22/10]	Running GENIA Sentence Splitter /home/ubuntu/.tees/tools/geniass (Using post-processing)
+[01:01:35 22/10]	Splitting Documents (TEES.d0): 100.00 % (0:0:0.000)
+[01:01:35 22/10]	Sentence splitting created 1 sentences
+[01:01:35 22/10]	Redivided 0 sentences
+[01:01:35 22/10]	Writing output to /home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/DISC1/26475744-preprocessed.xml.gz-sentences.xml.gz
+[01:01:35 22/10]	=== EXIT STEP SPLIT-SENTENCES time: 0:00:00.140269 ===
+[01:01:35 22/10]	=== ENTER STEP Preprocessor:PROCESS:NER ===
+[01:01:35 22/10]	Running step NER with arguments {'elementName': 'entity', 'splitNewlines': True, 'output': '/home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/DISC1/26475744-preprocessed.xml.gz-ner.xml.gz', 'debug': False, 'input': <ElementTree object at 0x7f0fbe8159d0>, 'processElement': 'sentence'}
+[01:01:35 22/10]	Loading corpus <ElementTree object at 0x7f0fbe8159d0>
+[01:01:35 22/10]	Corpus file loaded
+[01:01:35 22/10]	Running BANNER /home/ubuntu/.tees/tools/BANNER
+[01:01:35 22/10]	BANNER command: java -cp /home/ubuntu/.tees/tools/BANNER/bin:/home/ubuntu/.tees/tools/BANNER/lib/* banner.eval.BANNER test /tmp/tmpwQrXnx/banner_config.xml
+[01:01:42 22/10]	BANNER time: 0:00:06.662060
+[01:01:42 22/10]	Inserting entities
+[01:01:42 22/10]	BANNER found 2 entities in 1 sentence-elements (1 sentences processed)
+[01:01:42 22/10]	New entity-elements: 2 (Split 0 BANNER entities with newlines)
+[01:01:42 22/10]	Writing output to /home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/DISC1/26475744-preprocessed.xml.gz-ner.xml.gz
+[01:01:42 22/10]	=== EXIT STEP NER time: 0:00:06.670603 ===
+[01:01:42 22/10]	=== ENTER STEP Preprocessor:PROCESS:PARSE ===
+[01:01:42 22/10]	Running step PARSE with arguments {'debug': False, 'input': <ElementTree object at 0x7f0fbe8159d0>, 'requireEntities': False, 'parseName': 'McCC', 'output': '/home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/DISC1/26475744-preprocessed.xml.gz-parse.xml.gz'}
+[01:01:42 22/10]	BLLIP parser
+[01:01:42 22/10]	BLLIP time stamp: 22.10.15 01:01:42
+[01:01:42 22/10]	BLLIP parser at: /home/ubuntu/.tees/tools/BLLIP/dmcc-bllip-parser-cb43c6c
+[01:01:42 22/10]	Biomodel at: /home/ubuntu/.tees/tools/BLLIP/biomodel
+[01:01:42 22/10]	Loading corpus <ElementTree object at 0x7f0fbe8159d0>
+[01:01:42 22/10]	Corpus file loaded
+[01:01:42 22/10]	Parser does the tokenization
+[01:01:42 22/10]	Running BLLIP parser with tokenization
+[01:01:48 22/10]	Parsing: 100.00 % (0:0:6.007)
+[01:01:48 22/10]	Processed succesfully all sentences
+[01:01:48 22/10]	Inserting parses
+[01:01:48 22/10]	Parsed 1 sentences (0 failed)
+[01:01:48 22/10]	All sentences were parsed succesfully
+[01:01:48 22/10]	Writing output to /home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/DISC1/26475744-preprocessed.xml.gz-parse.xml.gz
+[01:01:48 22/10]	=== EXIT STEP PARSE time: 0:00:06.042478 ===
+[01:01:48 22/10]	=== ENTER STEP Preprocessor:PROCESS:CONVERT-PARSE ===
+[01:01:48 22/10]	Running step CONVERT-PARSE with arguments {'debug': False, 'input': <ElementTree object at 0x7f0fbe8159d0>, 'parser': 'McCC', 'output': '/home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/DISC1/26475744-preprocessed.xml.gz-converted-parse.xml.gz'}
+[01:01:48 22/10]	Running Stanford conversion
+[01:01:48 22/10]	Stanford tools at: /home/ubuntu/.tees/tools/stanford-parser-2012-03-09
+[01:01:48 22/10]	Stanford tools arguments: java -mx500m -cp stanford-parser.jar edu.stanford.nlp.trees.EnglishGrammaticalStructure -CCprocessed -keepPunct -treeFile
+[01:01:48 22/10]	Stanford time stamp: 22.10.15 01:01:48
+[01:01:48 22/10]	Loading corpus <ElementTree object at 0x7f0fbe8159d0>
+[01:01:48 22/10]	Corpus file loaded
+[01:01:49 22/10]	Stanford Conversion: 100.00 % (0:0:1.003)
+[01:01:49 22/10]	Processed succesfully all sentences
+[01:01:49 22/10]	Stanford conversion was done for 1 sentences, 0 had no dependencies, 0 failed
+[01:01:49 22/10]	Writing output to /home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/DISC1/26475744-preprocessed.xml.gz-converted-parse.xml.gz
+[01:01:49 22/10]	=== EXIT STEP CONVERT-PARSE time: 0:00:01.016145 ===
+[01:01:49 22/10]	=== ENTER STEP Preprocessor:PROCESS:SPLIT-NAMES ===
+[01:01:49 22/10]	Running step SPLIT-NAMES with arguments {'input': <ElementTree object at 0x7f0fbe8159d0>, 'parseName': 'McCC', 'removeOld': True, 'output': '/home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/DISC1/26475744-preprocessed.xml.gz-split-names.xml.gz'}
+[01:01:49 22/10]	Protein Name Splitter
+[01:01:49 22/10]	Splitting names (TEES.d0.s0): 100.00 % (0:0:0.000)
+[01:01:49 22/10]	Tokenization missing from 0 sentences
+[01:01:49 22/10]	Writing output to /home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/DISC1/26475744-preprocessed.xml.gz-split-names.xml.gz
+[01:01:49 22/10]	=== EXIT STEP SPLIT-NAMES time: 0:00:00.007453 ===
+[01:01:49 22/10]	=== ENTER STEP Preprocessor:PROCESS:FIND-HEADS ===
+[01:01:49 22/10]	Running step FIND-HEADS with arguments {'parse': 'McCC', 'removeExisting': True, 'output': '/home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/DISC1/26475744-preprocessed.xml.gz-heads.xml.gz', 'input': <ElementTree object at 0x7f0fbe8159d0>}
+[01:01:49 22/10]	Removing existing head offsets
+[01:01:49 22/10]	Removed head offsets from 0 entities
+[01:01:49 22/10]	Determining head offsets using parse McCC and tokenization None
+[01:01:49 22/10]	1 documents, 1 sentences
+[01:01:49 22/10]	Making sentence graphs (TEES.d0.s0): 100.00 % (0:0:0.000)
+[01:01:49 22/10]	Skipped 0 duplicate interaction edges in SentenceGraphs
+[01:01:49 22/10]	Writing output to /home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/DISC1/26475744-preprocessed.xml.gz-heads.xml.gz
+[01:01:49 22/10]	=== EXIT STEP FIND-HEADS time: 0:00:00.009070 ===
+[01:01:49 22/10]	=== ENTER STEP Preprocessor:PROCESS:DIVIDE-SETS ===
+[01:01:49 22/10]	Running step DIVIDE-SETS with arguments {'input': <ElementTree object at 0x7f0fbe8159d0>, 'outputStem': None, 'saveCombined': True}
+[01:01:49 22/10]	No set division
+[01:01:49 22/10]	=== EXIT STEP DIVIDE-SETS: 0:00:00.001499 ===
+[01:01:49 22/10]	* Preprocessor:PROCESS(EXIT) 0:00:13.899016 *
+[01:01:49 22/10]	=== EXIT STEP PREPROCESS time: 0:00:13.905085 ===
+[01:01:49 22/10]	Caching model "/home/ubuntu/.tees/models/REL11-test" member "TEES_MODEL_VALUES.tsv" to "/tmp/tmptQ1BL7/TEES_MODEL_VALUES.tsv"
+[01:01:49 22/10]	Importing detector Detectors.EventDetector
+[01:01:49 22/10]	Caching model "/home/ubuntu/.tees/models/REL11-test" member "TEES_MODEL_VALUES.tsv" to "/tmp/tmpCRb7TX/TEES_MODEL_VALUES.tsv"
+[01:01:49 22/10]	* EventDetector:CLASSIFY(ENTER) *
+[01:01:49 22/10]	=== ENTER STEP EventDetector:CLASSIFY:TRIGGERS ===
+[01:01:49 22/10]	Caching model "/home/ubuntu/.tees/models/REL11-test" member "TEES_MODEL_VALUES.tsv" to "/tmp/tmpW_vyQt/TEES_MODEL_VALUES.tsv"
+[01:01:49 22/10]	Caching model "/home/ubuntu/.tees/models/REL11-test" member "structure.txt" to "/tmp/tmpW_vyQt/structure.txt"
+[01:01:49 22/10]	Warning, RELATION RELATION Protein-Component uses model file format <2.2.
+[01:01:49 22/10]	Warning, RELATION RELATION Subunit-Complex uses model file format <2.2.
+[01:01:49 22/10]	Example generation for /tmp/tmphZIV8G/26475744-trigger-examples.gz
+[01:01:49 22/10]	Caching model "/home/ubuntu/.tees/models/REL11-test" member "trigger-ids.classes" to "/tmp/tmpW_vyQt/trigger-ids.classes"
+[01:01:49 22/10]	Caching model "/home/ubuntu/.tees/models/REL11-test" member "trigger-ids.features" to "/tmp/tmpW_vyQt/trigger-ids.features"
+[01:01:49 22/10]	Running EntityExampleBuilder
+[01:01:49 22/10]	  input: <ElementTree object at 0x7f0fbe8159d0>
+[01:01:49 22/10]	  output: /tmp/tmphZIV8G/26475744-trigger-examples.gz (append: False)
+[01:01:49 22/10]	  add new class/feature ids: False
+[01:01:49 22/10]	  style: rel_features
+[01:01:49 22/10]	  parse: McCC
+[01:01:49 22/10]	Using predefined class names from /tmp/tmpW_vyQt/trigger-ids.classes
+[01:01:49 22/10]	Using predefined feature names from /tmp/tmpW_vyQt/trigger-ids.features
+[01:01:50 22/10]	No gazetteer loaded
+[01:01:50 22/10]	1 documents, 1 sentences
+[01:01:50 22/10]	Making sentence graphs (TEES.d0.s0): 100.00 % (0:0:0.000)
+[01:01:50 22/10]	Skipped 0 duplicate interaction edges in SentenceGraphs
+[01:01:50 22/10]	Defining predicted value range: None
+[01:01:50 22/10]	Building examples (TEES.d0.s0): 1 (0:0:0) 
+[01:01:50 22/10]	Examples built: 8
+[01:01:50 22/10]	Features: 405137
+[01:01:50 22/10]	Style: rel_features
+[01:01:50 22/10]	Example Statistics (total/filtered)
+[01:01:50 22/10]	  Protein: 2/2 {'name': 2}
+[01:01:50 22/10]	  neg: 11/3 {'name': 3}
+[01:01:50 22/10]	Positives Coverage 0.00 % [2, 2]
+[01:01:50 22/10]	Caching model "/home/ubuntu/.tees/models/REL11-test" member "trigger-classifier-model" to "/tmp/tmpW_vyQt/trigger-classifier-model"
+[01:01:50 22/10]	Uncompressing example file /tmp/tmphZIV8G/26475744-trigger-examples.gz
+[01:01:50 22/10]	SVMMultiClassClassifier using example file /tmp/tmphZIV8G/26475744-trigger-examples.gz as /tmp/tmphZIV8G/26475744-trigger-examples-unzipped-temp
+[01:01:50 22/10]	Submitted job 4351 1445475720.88
+[01:02:00 22/10]	Entity p/n:0/8 tp/fp|tn/fn:0/0|8/0 p/r/f:0.0/0.0/0
+[01:02:00 22/10]	(neg p/n:8/0 tp/fp|tn/fn:8/0|0/0 p/r/f:1.0/1.0/1.0)
+[01:02:00 22/10]	averages:
+[01:02:00 22/10]	micro p/n:0/8 tp/fp|tn/fn:0/0|8/0 p/r/f:0.0/0.0/0
+[01:02:00 22/10]	macro p/r/f:0.0/0.0/0.0
+[01:02:00 22/10]	untyped p/n:0/8 tp/fp|tn/fn:0/0|8/0 p/r/f:0.0/0.0/0
+[01:02:00 22/10]	untyped undirected p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:None/None/None
+[01:02:00 22/10]	Warning, RELATION RELATION Protein-Component uses model file format <2.2.
+[01:02:00 22/10]	Warning, RELATION RELATION Subunit-Complex uses model file format <2.2.
+[01:02:00 22/10]	1 documents, 1 sentences
+[01:02:00 22/10]	Making sentence graphs (TEES.d0.s0): 100.00 % (0:0:0.000)
+[01:02:00 22/10]	Skipped 0 duplicate interaction edges in SentenceGraphs
+[01:02:00 22/10]	Reading examples from /tmp/tmphZIV8G/26475744-trigger-examples.gz
+[01:02:00 22/10]	Writing examples (TEES.d0.s0.x7): 100.00 % (0:0:0)
+[01:02:00 22/10]	Writing corpus to /tmp/tmphZIV8G/26475744-trigger-pred.xml.gz
+[01:02:00 22/10]	=== EXIT STEP TRIGGERS time: 0:00:11.809024 ===
+[01:02:00 22/10]	=== ENTER STEP EventDetector:CLASSIFY:EDGES ===
+[01:02:00 22/10]	Warning, RELATION RELATION Protein-Component uses model file format <2.2.
+[01:02:00 22/10]	Warning, RELATION RELATION Subunit-Complex uses model file format <2.2.
+[01:02:00 22/10]	Example generation for /tmp/tmphZIV8G/26475744-edge-examples.gz
+[01:02:00 22/10]	Caching model "/home/ubuntu/.tees/models/REL11-test" member "edge-ids.classes" to "/tmp/tmpW_vyQt/edge-ids.classes"
+[01:02:00 22/10]	Caching model "/home/ubuntu/.tees/models/REL11-test" member "edge-ids.features" to "/tmp/tmpW_vyQt/edge-ids.features"
+[01:02:01 22/10]	Running EdgeExampleBuilder
+[01:02:01 22/10]	  input: <ElementTree object at 0x7f0fbe8159d0>
+[01:02:01 22/10]	  output: /tmp/tmphZIV8G/26475744-edge-examples.gz (append: False)
+[01:02:01 22/10]	  add new class/feature ids: False
+[01:02:01 22/10]	  style: rel_features
+[01:02:01 22/10]	  parse: McCC
+[01:02:01 22/10]	Using predefined class names from /tmp/tmpW_vyQt/edge-ids.classes
+[01:02:01 22/10]	Using predefined feature names from /tmp/tmpW_vyQt/edge-ids.features
+[01:02:01 22/10]	1 documents, 1 sentences
+[01:02:01 22/10]	Making sentence graphs (TEES.d0.s0): 100.00 % (0:0:0.000)
+[01:02:01 22/10]	Skipped 0 duplicate interaction edges in SentenceGraphs
+[01:02:01 22/10]	Defining predicted value range: [None, None]
+[01:02:01 22/10]	Building examples (TEES.d0.s0): 1 (0:0:0) 
+[01:02:01 22/10]	Examples built: 0
+[01:02:02 22/10]	Features: 219198
+[01:02:02 22/10]	Style: rel_features
+[01:02:02 22/10]	Example Statistics (total/filtered)
+[01:02:02 22/10]	  neg: 2/2 {'auto_limits': 2}
+[01:02:02 22/10]	Duplicate entities skipped: 0
+[01:02:02 22/10]	Caching model "/home/ubuntu/.tees/models/REL11-test" member "edge-classifier-model" to "/tmp/tmpW_vyQt/edge-classifier-model"
+[01:02:02 22/10]	Uncompressing example file /tmp/tmphZIV8G/26475744-edge-examples.gz
+[01:02:02 22/10]	SVMMultiClassClassifier using example file /tmp/tmphZIV8G/26475744-edge-examples.gz as /tmp/tmphZIV8G/26475744-edge-examples-unzipped-temp
+[01:02:02 22/10]	Submitted job 4387 1445475732.41
+[01:02:12 22/10]	Protein-Component p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[01:02:12 22/10]	Subunit-Complex p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[01:02:12 22/10]	(neg p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0)
+[01:02:12 22/10]	averages:
+[01:02:12 22/10]	micro p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[01:02:12 22/10]	macro p/r/f:0.0/0.0/0.0
+[01:02:12 22/10]	untyped p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[01:02:12 22/10]	untyped undirected p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:None/None/None
+[01:02:12 22/10]	Warning, RELATION RELATION Protein-Component uses model file format <2.2.
+[01:02:12 22/10]	Warning, RELATION RELATION Subunit-Complex uses model file format <2.2.
+[01:02:12 22/10]	1 documents, 1 sentences
+[01:02:12 22/10]	Making sentence graphs (TEES.d0.s0): 100.00 % (0:0:0.000)
+[01:02:12 22/10]	Skipped 0 duplicate interaction edges in SentenceGraphs
+[01:02:12 22/10]	Reading examples from /tmp/tmphZIV8G/26475744-edge-examples.gz
+[01:02:12 22/10]	Writing corpus to /tmp/tmphZIV8G/26475744-edge-pred.xml.gz
+[01:02:12 22/10]	##### EvaluateInteractionXML #####
+[01:02:12 22/10]	Comparing input <ElementTree object at 0x7f0fbe8159d0> to gold <ElementTree object at 0x7f0fbe8159d0>
+[01:02:12 22/10]	1 documents, 1 sentences
+[01:02:12 22/10]	Making sentence graphs (TEES.d0.s0): 100.00 % (0:0:0.000)
+[01:02:12 22/10]	Skipped 0 duplicate interaction edges in SentenceGraphs
+[01:02:12 22/10]	1 documents, 1 sentences
+[01:02:12 22/10]	Making sentence graphs (TEES.d0.s0): 100.00 % (0:0:0.000)
+[01:02:12 22/10]	Skipped 0 duplicate interaction edges in SentenceGraphs
+[01:02:12 22/10]	TEES.d0100.00 % (0:0:0)
+[01:02:12 22/10]	=== EXIT STEP EDGES time: 0:00:11.556114 ===
+[01:02:12 22/10]	=== ENTER STEP EventDetector:CLASSIFY:UNMERGING ===
+[01:02:12 22/10]	No model for unmerging
+[01:02:12 22/10]	=== EXIT STEP UNMERGING time: 0:00:00.000948 ===
+[01:02:12 22/10]	=== ENTER STEP EventDetector:CLASSIFY:MODIFIERS ===
+[01:02:12 22/10]	No model for modifier detection
+[01:02:12 22/10]	=== EXIT STEP MODIFIERS time: 0:00:00.000812 ===
+[01:02:12 22/10]	=== ENTER STEP EventDetector:CLASSIFY:ST-CONVERT ===
+[01:02:12 22/10]	Loading corpus <ElementTree object at 0x7f0fbe8159d0>
+[01:02:12 22/10]	Corpus file loaded
+[01:02:12 22/10]	Writing output to /home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/DISC1/26475744-events.tar.gz
+[01:02:12 22/10]	BioNLP task REL11 devel evaluation
+[01:02:12 22/10]	No official evaluator for task REL11
+[01:02:12 22/10]	Removing temporary work directory /tmp/tmphZIV8G
+[01:02:12 22/10]	=== EXIT STEP ST-CONVERT: 0:00:00.004710 ===
+[01:02:12 22/10]	* EventDetector:CLASSIFY(EXIT) 0:00:23.373460 *
+[01:02:12 22/10]	--------------------------------------------model: REL11--------------------------------------------
+[01:02:12 22/10]	Opening log /home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/DISC1/26443054-log.txt at Thu Oct 22 01:02:12 2015
+[01:02:12 22/10]	Classifying PubMed abstract 26443054
+[01:02:12 22/10]	*************************** NOTE ***************************
+[01:02:12 22/10]	Do not attempt to do large-scale classification of PubMed
+[01:02:12 22/10]	abstracts with this feature. For that, use the downloadable
+[01:02:12 22/10]	PubMed release. This is a demonstration feature only, and
+[01:02:12 22/10]	abusing it will cause you to be banned from PubMed!!!!!!!!!!!!
+[01:02:12 22/10]	************************************************************
+[01:02:12 22/10]	Downloading PubMed abstract 26443054
+[01:02:12 22/10]	Downloading file http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=26443054&retmode=xml to /tmp/pmid-26443054.xml
+[01:02:12 22/10]	Classifying input /tmp/pmid-26443054.txt
+[01:02:12 22/10]	Model /home/ubuntu/UPSITE/UPTEES/REL11 doesn't exist, looking for a default model
+[01:02:12 22/10]	Classifying with default model /home/ubuntu/.tees/models/REL11-test
+[01:02:12 22/10]	Preprocessor output /home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/DISC1/26443054-preprocessed.xml.gz does not exist
+[01:02:12 22/10]	------------ Preprocessing ------------
+[01:02:12 22/10]	* Preprocessor:PROCESS(ENTER) *
+[01:02:12 22/10]	Caching model "/home/ubuntu/.tees/models/REL11-test" member "TEES_MODEL_VALUES.tsv" to "/tmp/tmpqONetq/TEES_MODEL_VALUES.tsv"
+[01:02:12 22/10]	Tool chain parameters: 
+[01:02:12 22/10]	=== ENTER STEP Preprocessor:PROCESS:CONVERT ===
+[01:02:12 22/10]	Running step CONVERT with arguments {'input': '/tmp/pmid-26443054.txt', 'output': '/home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/DISC1/26443054-preprocessed.xml.gz-documents.xml.gz', 'dataSetNames': None, 'corpusName': None}
+[01:02:12 22/10]	Converting ST-format to Interaction XML
+[01:02:12 22/10]	Reading /tmp/pmid-26443054.txt set, 1 documents
+[01:02:12 22/10]	Resolving equivalences
+[01:02:12 22/10]	Duplication created 0 new events (new total 0 events)
+[01:02:12 22/10]	Writing output to /home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/DISC1/26443054-preprocessed.xml.gz-documents.xml.gz
+[01:02:12 22/10]	=== EXIT STEP CONVERT time: 0:00:00.005044 ===
+[01:02:12 22/10]	=== ENTER STEP Preprocessor:PROCESS:SPLIT-SENTENCES ===
+[01:02:12 22/10]	Running step SPLIT-SENTENCES with arguments {'debug': False, 'input': <ElementTree object at 0x7f0fbe106f50>, 'postProcess': True, 'output': '/home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/DISC1/26443054-preprocessed.xml.gz-sentences.xml.gz'}
+[01:02:12 22/10]	Loading corpus <ElementTree object at 0x7f0fbe106f50>
+[01:02:12 22/10]	Corpus file loaded
+[01:02:12 22/10]	Running GENIA Sentence Splitter /home/ubuntu/.tees/tools/geniass (Using post-processing)
+[01:02:12 22/10]	Splitting Documents (TEES.d0): 100.00 % (0:0:0.000)
+[01:02:12 22/10]	Sentence splitting created 11 sentences
+[01:02:12 22/10]	Redivided 0 sentences
+[01:02:12 22/10]	Writing output to /home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/DISC1/26443054-preprocessed.xml.gz-sentences.xml.gz
+[01:02:12 22/10]	=== EXIT STEP SPLIT-SENTENCES time: 0:00:00.047499 ===
+[01:02:12 22/10]	=== ENTER STEP Preprocessor:PROCESS:NER ===
+[01:02:12 22/10]	Running step NER with arguments {'elementName': 'entity', 'splitNewlines': True, 'output': '/home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/DISC1/26443054-preprocessed.xml.gz-ner.xml.gz', 'debug': False, 'input': <ElementTree object at 0x7f0fbe106f50>, 'processElement': 'sentence'}
+[01:02:12 22/10]	Loading corpus <ElementTree object at 0x7f0fbe106f50>
+[01:02:12 22/10]	Corpus file loaded
+[01:02:12 22/10]	Running BANNER /home/ubuntu/.tees/tools/BANNER
+[01:02:12 22/10]	BANNER command: java -cp /home/ubuntu/.tees/tools/BANNER/bin:/home/ubuntu/.tees/tools/BANNER/lib/* banner.eval.BANNER test /tmp/tmpiPobWA/banner_config.xml
+[01:02:19 22/10]	BANNER time: 0:00:07.066038
+[01:02:19 22/10]	Inserting entities
+[01:02:19 22/10]	BANNER found 6 entities in 4 sentence-elements (11 sentences processed)
+[01:02:19 22/10]	New entity-elements: 6 (Split 0 BANNER entities with newlines)
+[01:02:19 22/10]	Writing output to /home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/DISC1/26443054-preprocessed.xml.gz-ner.xml.gz
+[01:02:19 22/10]	=== EXIT STEP NER time: 0:00:07.077125 ===
+[01:02:19 22/10]	=== ENTER STEP Preprocessor:PROCESS:PARSE ===
+[01:02:19 22/10]	Running step PARSE with arguments {'debug': False, 'input': <ElementTree object at 0x7f0fbe106f50>, 'requireEntities': False, 'parseName': 'McCC', 'output': '/home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/DISC1/26443054-preprocessed.xml.gz-parse.xml.gz'}
+[01:02:19 22/10]	BLLIP parser
+[01:02:19 22/10]	BLLIP time stamp: 22.10.15 01:02:19
+[01:02:19 22/10]	BLLIP parser at: /home/ubuntu/.tees/tools/BLLIP/dmcc-bllip-parser-cb43c6c
+[01:02:19 22/10]	Biomodel at: /home/ubuntu/.tees/tools/BLLIP/biomodel
+[01:02:19 22/10]	Loading corpus <ElementTree object at 0x7f0fbe106f50>
+[01:02:19 22/10]	Corpus file loaded
+[01:02:19 22/10]	Parser does the tokenization
+[01:02:19 22/10]	Running BLLIP parser with tokenization
+[01:02:27 22/10]	Parsing: 100.00 % (0:0:8.009)
+[01:02:27 22/10]	Processed succesfully all sentences
+[01:02:27 22/10]	Inserting parses
+[01:02:27 22/10]	Parsed 11 sentences (0 failed)
+[01:02:27 22/10]	All sentences were parsed succesfully
+[01:02:27 22/10]	Writing output to /home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/DISC1/26443054-preprocessed.xml.gz-parse.xml.gz
+[01:02:27 22/10]	=== EXIT STEP PARSE time: 0:00:08.066810 ===
+[01:02:27 22/10]	=== ENTER STEP Preprocessor:PROCESS:CONVERT-PARSE ===
+[01:02:27 22/10]	Running step CONVERT-PARSE with arguments {'debug': False, 'input': <ElementTree object at 0x7f0fbe106f50>, 'parser': 'McCC', 'output': '/home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/DISC1/26443054-preprocessed.xml.gz-converted-parse.xml.gz'}
+[01:02:27 22/10]	Running Stanford conversion
+[01:02:27 22/10]	Stanford tools at: /home/ubuntu/.tees/tools/stanford-parser-2012-03-09
+[01:02:27 22/10]	Stanford tools arguments: java -mx500m -cp stanford-parser.jar edu.stanford.nlp.trees.EnglishGrammaticalStructure -CCprocessed -keepPunct -treeFile
+[01:02:27 22/10]	Stanford time stamp: 22.10.15 01:02:27
+[01:02:27 22/10]	Loading corpus <ElementTree object at 0x7f0fbe106f50>
+[01:02:27 22/10]	Corpus file loaded
+[01:02:29 22/10]	Stanford Conversion: 100.00 % (0:0:2.004)
+[01:02:29 22/10]	Processed succesfully all sentences
+[01:02:29 22/10]	Stanford conversion was done for 11 sentences, 0 had no dependencies, 0 failed
+[01:02:29 22/10]	Writing output to /home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/DISC1/26443054-preprocessed.xml.gz-converted-parse.xml.gz
+[01:02:29 22/10]	=== EXIT STEP CONVERT-PARSE time: 0:00:02.074613 ===
+[01:02:29 22/10]	=== ENTER STEP Preprocessor:PROCESS:SPLIT-NAMES ===
+[01:02:29 22/10]	Running step SPLIT-NAMES with arguments {'input': <ElementTree object at 0x7f0fbe106f50>, 'parseName': 'McCC', 'removeOld': True, 'output': '/home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/DISC1/26443054-preprocessed.xml.gz-split-names.xml.gz'}
+[01:02:29 22/10]	Protein Name Splitter
+[01:02:29 22/10]	Splitting names (TEES.d0.s10): 100.00 % (0:0:0.007)
+[01:02:29 22/10]	Tokenization missing from 0 sentences
+[01:02:29 22/10]	Writing output to /home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/DISC1/26443054-preprocessed.xml.gz-split-names.xml.gz
+[01:02:30 22/10]	=== EXIT STEP SPLIT-NAMES time: 0:00:00.064219 ===
+[01:02:30 22/10]	=== ENTER STEP Preprocessor:PROCESS:FIND-HEADS ===
+[01:02:30 22/10]	Running step FIND-HEADS with arguments {'parse': 'McCC', 'removeExisting': True, 'output': '/home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/DISC1/26443054-preprocessed.xml.gz-heads.xml.gz', 'input': <ElementTree object at 0x7f0fbe106f50>}
+[01:02:30 22/10]	Removing existing head offsets
+[01:02:30 22/10]	Removed head offsets from 0 entities
+[01:02:30 22/10]	Determining head offsets using parse McCC and tokenization None
+[01:02:30 22/10]	1 documents, 11 sentences
+[01:02:30 22/10]	Making sentence graphs (TEES.d0.s10): 100.00 % (0:0:0.019)
+[01:02:30 22/10]	Skipped 0 duplicate interaction edges in SentenceGraphs
+[01:02:30 22/10]	Writing output to /home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/DISC1/26443054-preprocessed.xml.gz-heads.xml.gz
+[01:02:30 22/10]	=== EXIT STEP FIND-HEADS time: 0:00:00.080811 ===
+[01:02:30 22/10]	=== ENTER STEP Preprocessor:PROCESS:DIVIDE-SETS ===
+[01:02:30 22/10]	Running step DIVIDE-SETS with arguments {'input': <ElementTree object at 0x7f0fbe106f50>, 'outputStem': None, 'saveCombined': True}
+[01:02:30 22/10]	No set division
+[01:02:30 22/10]	=== EXIT STEP DIVIDE-SETS: 0:00:00.001540 ===
+[01:02:30 22/10]	* Preprocessor:PROCESS(EXIT) 0:00:17.422303 *
+[01:02:30 22/10]	=== EXIT STEP PREPROCESS time: 0:00:17.479148 ===
+[01:02:30 22/10]	Caching model "/home/ubuntu/.tees/models/REL11-test" member "TEES_MODEL_VALUES.tsv" to "/tmp/tmpMhLidc/TEES_MODEL_VALUES.tsv"
+[01:02:30 22/10]	Importing detector Detectors.EventDetector
+[01:02:30 22/10]	Caching model "/home/ubuntu/.tees/models/REL11-test" member "TEES_MODEL_VALUES.tsv" to "/tmp/tmpR5HbeX/TEES_MODEL_VALUES.tsv"
+[01:02:30 22/10]	* EventDetector:CLASSIFY(ENTER) *
+[01:02:30 22/10]	=== ENTER STEP EventDetector:CLASSIFY:TRIGGERS ===
+[01:02:30 22/10]	Caching model "/home/ubuntu/.tees/models/REL11-test" member "TEES_MODEL_VALUES.tsv" to "/tmp/tmpIvjY6y/TEES_MODEL_VALUES.tsv"
+[01:02:30 22/10]	Caching model "/home/ubuntu/.tees/models/REL11-test" member "structure.txt" to "/tmp/tmpIvjY6y/structure.txt"
+[01:02:30 22/10]	Warning, RELATION RELATION Protein-Component uses model file format <2.2.
+[01:02:30 22/10]	Warning, RELATION RELATION Subunit-Complex uses model file format <2.2.
+[01:02:30 22/10]	Example generation for /tmp/tmp_ZZBr1/26443054-trigger-examples.gz
+[01:02:30 22/10]	Caching model "/home/ubuntu/.tees/models/REL11-test" member "trigger-ids.classes" to "/tmp/tmpIvjY6y/trigger-ids.classes"
+[01:02:30 22/10]	Caching model "/home/ubuntu/.tees/models/REL11-test" member "trigger-ids.features" to "/tmp/tmpIvjY6y/trigger-ids.features"
+[01:02:30 22/10]	Running EntityExampleBuilder
+[01:02:30 22/10]	  input: <ElementTree object at 0x7f0fbe106f50>
+[01:02:30 22/10]	  output: /tmp/tmp_ZZBr1/26443054-trigger-examples.gz (append: False)
+[01:02:30 22/10]	  add new class/feature ids: False
+[01:02:30 22/10]	  style: rel_features
+[01:02:30 22/10]	  parse: McCC
+[01:02:30 22/10]	Using predefined class names from /tmp/tmpIvjY6y/trigger-ids.classes
+[01:02:30 22/10]	Using predefined feature names from /tmp/tmpIvjY6y/trigger-ids.features
+[01:02:31 22/10]	No gazetteer loaded
+[01:02:31 22/10]	1 documents, 11 sentences
+[01:02:31 22/10]	Making sentence graphs (TEES.d0.s10): 100.00 % (0:0:0.004)
+[01:02:31 22/10]	Skipped 0 duplicate interaction edges in SentenceGraphs
+[01:02:31 22/10]	Defining predicted value range: None
+[01:02:31 22/10]	Building examples (TEES.d0.s10): 11 (0:0:0) 
+[01:02:31 22/10]	Examples built: 88
+[01:02:31 22/10]	Features: 405137
+[01:02:31 22/10]	Style: rel_features
+[01:02:31 22/10]	Example Statistics (total/filtered)
+[01:02:31 22/10]	  Protein: 6/6 {'name': 6}
+[01:02:31 22/10]	  neg: 94/6 {'name': 6}
+[01:02:31 22/10]	Positives Coverage 0.00 % [6, 6]
+[01:02:31 22/10]	Caching model "/home/ubuntu/.tees/models/REL11-test" member "trigger-classifier-model" to "/tmp/tmpIvjY6y/trigger-classifier-model"
+[01:02:31 22/10]	Uncompressing example file /tmp/tmp_ZZBr1/26443054-trigger-examples.gz
+[01:02:31 22/10]	SVMMultiClassClassifier using example file /tmp/tmp_ZZBr1/26443054-trigger-examples.gz as /tmp/tmp_ZZBr1/26443054-trigger-examples-unzipped-temp
+[01:02:31 22/10]	Submitted job 4479 1445475761.81
+[01:02:41 22/10]	Entity p/n:0/88 tp/fp|tn/fn:0/1|87/0 p/r/f:0.0/0.0/0
+[01:02:41 22/10]	(neg p/n:88/0 tp/fp|tn/fn:87/0|0/1 p/r/f:1.0/0.9886/0.9942)
+[01:02:41 22/10]	averages:
+[01:02:41 22/10]	micro p/n:0/88 tp/fp|tn/fn:0/1|87/0 p/r/f:0.0/0.0/0
+[01:02:41 22/10]	macro p/r/f:0.0/0.0/0.0
+[01:02:41 22/10]	untyped p/n:0/88 tp/fp|tn/fn:0/1|87/0 p/r/f:0.0/0.0/0
+[01:02:41 22/10]	untyped undirected p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:None/None/None
+[01:02:41 22/10]	Warning, RELATION RELATION Protein-Component uses model file format <2.2.
+[01:02:41 22/10]	Warning, RELATION RELATION Subunit-Complex uses model file format <2.2.
+[01:02:41 22/10]	1 documents, 11 sentences
+[01:02:41 22/10]	Making sentence graphs (TEES.d0.s10): 100.00 % (0:0:0.004)
+[01:02:41 22/10]	Skipped 0 duplicate interaction edges in SentenceGraphs
+[01:02:41 22/10]	Reading examples from /tmp/tmp_ZZBr1/26443054-trigger-examples.gz
+[01:02:41 22/10]	Writing examples (TEES.d0.s10.x22): 100.00 % (0:0:0)
+[01:02:41 22/10]	Writing corpus to /tmp/tmp_ZZBr1/26443054-trigger-pred.xml.gz
+[01:02:41 22/10]	=== EXIT STEP TRIGGERS time: 0:00:11.799902 ===
+[01:02:41 22/10]	=== ENTER STEP EventDetector:CLASSIFY:EDGES ===
+[01:02:41 22/10]	Warning, RELATION RELATION Protein-Component uses model file format <2.2.
+[01:02:41 22/10]	Warning, RELATION RELATION Subunit-Complex uses model file format <2.2.
+[01:02:41 22/10]	Example generation for /tmp/tmp_ZZBr1/26443054-edge-examples.gz
+[01:02:41 22/10]	Caching model "/home/ubuntu/.tees/models/REL11-test" member "edge-ids.classes" to "/tmp/tmpIvjY6y/edge-ids.classes"
+[01:02:41 22/10]	Caching model "/home/ubuntu/.tees/models/REL11-test" member "edge-ids.features" to "/tmp/tmpIvjY6y/edge-ids.features"
+[01:02:41 22/10]	Running EdgeExampleBuilder
+[01:02:41 22/10]	  input: <ElementTree object at 0x7f0fbe106f50>
+[01:02:41 22/10]	  output: /tmp/tmp_ZZBr1/26443054-edge-examples.gz (append: False)
+[01:02:41 22/10]	  add new class/feature ids: False
+[01:02:41 22/10]	  style: rel_features
+[01:02:41 22/10]	  parse: McCC
+[01:02:41 22/10]	Using predefined class names from /tmp/tmpIvjY6y/edge-ids.classes
+[01:02:41 22/10]	Using predefined feature names from /tmp/tmpIvjY6y/edge-ids.features
+[01:02:42 22/10]	1 documents, 11 sentences
+[01:02:42 22/10]	Making sentence graphs (TEES.d0.s10): 100.00 % (0:0:0.004)
+[01:02:42 22/10]	Skipped 0 duplicate interaction edges in SentenceGraphs
+[01:02:42 22/10]	Defining predicted value range: [None, None]
+[01:02:42 22/10]	Building examples (TEES.d0.s10): 11 (0:0:0) 
+[01:02:42 22/10]	Examples built: 2
+[01:02:42 22/10]	Features: 219198
+[01:02:42 22/10]	Style: rel_features
+[01:02:42 22/10]	Example Statistics (total/filtered)
+[01:02:42 22/10]	  neg: 8/6 {'auto_limits': 6}
+[01:02:42 22/10]	Duplicate entities skipped: 0
+[01:02:42 22/10]	Caching model "/home/ubuntu/.tees/models/REL11-test" member "edge-classifier-model" to "/tmp/tmpIvjY6y/edge-classifier-model"
+[01:02:42 22/10]	Uncompressing example file /tmp/tmp_ZZBr1/26443054-edge-examples.gz
+[01:02:42 22/10]	SVMMultiClassClassifier using example file /tmp/tmp_ZZBr1/26443054-edge-examples.gz as /tmp/tmp_ZZBr1/26443054-edge-examples-unzipped-temp
+[01:02:42 22/10]	Submitted job 4515 1445475772.87
+[01:02:52 22/10]	Protein-Component p/n:0/2 tp/fp|tn/fn:0/0|2/0 p/r/f:0.0/0.0/0
+[01:02:52 22/10]	Subunit-Complex p/n:0/2 tp/fp|tn/fn:0/0|2/0 p/r/f:0.0/0.0/0
+[01:02:52 22/10]	(neg p/n:2/0 tp/fp|tn/fn:2/0|0/0 p/r/f:1.0/1.0/1.0)
+[01:02:52 22/10]	averages:
+[01:02:52 22/10]	micro p/n:0/2 tp/fp|tn/fn:0/0|2/0 p/r/f:0.0/0.0/0
+[01:02:52 22/10]	macro p/r/f:0.0/0.0/0.0
+[01:02:52 22/10]	untyped p/n:0/2 tp/fp|tn/fn:0/0|2/0 p/r/f:0.0/0.0/0
+[01:02:52 22/10]	untyped undirected p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:None/None/None
+[01:02:52 22/10]	Warning, RELATION RELATION Protein-Component uses model file format <2.2.
+[01:02:52 22/10]	Warning, RELATION RELATION Subunit-Complex uses model file format <2.2.
+[01:02:52 22/10]	1 documents, 11 sentences
+[01:02:52 22/10]	Making sentence graphs (TEES.d0.s10): 100.00 % (0:0:0.004)
+[01:02:52 22/10]	Skipped 0 duplicate interaction edges in SentenceGraphs
+[01:02:52 22/10]	Reading examples from /tmp/tmp_ZZBr1/26443054-edge-examples.gz
+[01:02:52 22/10]	Writing examples (TEES.d0.s9.x1): 100.00 % (0:0:0)
+[01:02:52 22/10]	defaultdict(<type 'int'>, {'removed-neg': 2})
+[01:02:52 22/10]	Writing corpus to /tmp/tmp_ZZBr1/26443054-edge-pred.xml.gz
+[01:02:53 22/10]	##### EvaluateInteractionXML #####
+[01:02:53 22/10]	Comparing input <ElementTree object at 0x7f0fbe106f50> to gold <ElementTree object at 0x7f0fbe106f50>
+[01:02:53 22/10]	1 documents, 11 sentences
+[01:02:53 22/10]	Making sentence graphs (TEES.d0.s10): 100.00 % (0:0:0.004)
+[01:02:53 22/10]	Skipped 0 duplicate interaction edges in SentenceGraphs
+[01:02:53 22/10]	1 documents, 11 sentences
+[01:02:53 22/10]	Making sentence graphs (TEES.d0.s10): 100.00 % (0:0:0.004)
+[01:02:53 22/10]	Skipped 0 duplicate interaction edges in SentenceGraphs
+[01:02:53 22/10]	TEES.d0100.00 % (0:0:0)
+[01:02:53 22/10]	Entities
+[01:02:53 22/10]	 Entity p/n:1/0 tp/fp|tn/fn:1/0|0/0 p/r/f:1.0/1.0/1.0
+[01:02:53 22/10]	 (neg p/n:0/1 tp/fp|tn/fn:0/0|1/0 p/r/f:0.0/0.0/0)
+[01:02:53 22/10]	 averages:
+[01:02:53 22/10]	 micro p/n:1/0 tp/fp|tn/fn:1/0|0/0 p/r/f:1.0/1.0/1.0
+[01:02:53 22/10]	 macro p/r/f:1.0/1.0/1.0
+[01:02:53 22/10]	 untyped p/n:1/0 tp/fp|tn/fn:1/0|0/0 p/r/f:1.0/1.0/1.0
+[01:02:53 22/10]	 untyped undirected p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:None/None/None
+[01:02:53 22/10]	Events
+[01:02:53 22/10]	 Entity p/n:1/0 tp/fp|tn/fn:1/0|0/0 p/r/f:1.0/1.0/1.0
+[01:02:53 22/10]	 (neg p/n:0/1 tp/fp|tn/fn:0/0|1/0 p/r/f:0.0/0.0/0)
+[01:02:53 22/10]	 averages:
+[01:02:53 22/10]	 micro p/n:1/0 tp/fp|tn/fn:1/0|0/0 p/r/f:1.0/1.0/1.0
+[01:02:53 22/10]	 macro p/r/f:1.0/1.0/1.0
+[01:02:53 22/10]	 untyped p/n:1/0 tp/fp|tn/fn:1/0|0/0 p/r/f:1.0/1.0/1.0
+[01:02:53 22/10]	 untyped undirected p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:None/None/None
+[01:02:53 22/10]	=== EXIT STEP EDGES time: 0:00:11.068440 ===
+[01:02:53 22/10]	=== ENTER STEP EventDetector:CLASSIFY:UNMERGING ===
+[01:02:53 22/10]	No model for unmerging
+[01:02:53 22/10]	=== EXIT STEP UNMERGING time: 0:00:00.001066 ===
+[01:02:53 22/10]	=== ENTER STEP EventDetector:CLASSIFY:MODIFIERS ===
+[01:02:53 22/10]	No model for modifier detection
+[01:02:53 22/10]	=== EXIT STEP MODIFIERS time: 0:00:00.000959 ===
+[01:02:53 22/10]	=== ENTER STEP EventDetector:CLASSIFY:ST-CONVERT ===
+[01:02:53 22/10]	Loading corpus <ElementTree object at 0x7f0fbe106f50>
+[01:02:53 22/10]	Corpus file loaded
+[01:02:53 22/10]	Writing output to /home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/DISC1/26443054-events.tar.gz
+[01:02:53 22/10]	BioNLP task REL11 devel evaluation
+[01:02:53 22/10]	No official evaluator for task REL11
+[01:02:53 22/10]	Removing temporary work directory /tmp/tmp_ZZBr1
+[01:02:53 22/10]	=== EXIT STEP ST-CONVERT: 0:00:00.006006 ===
+[01:02:53 22/10]	* EventDetector:CLASSIFY(EXIT) 0:00:22.878640 *
+[01:02:53 22/10]	info from inter /home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/DISC1/26475744-pred.xml.gz
+[01:02:53 22/10]	info from inter /home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/DISC1/26443054-pred.xml.gz
+[01:02:53 22/10]	{}
+[01:02:53 22/10]	--------------------------------------------model: REL11--------------------------------------------
+[01:02:53 22/10]	Opening log /home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/BRCA2/26485111-log.txt at Thu Oct 22 01:02:53 2015
+[01:02:53 22/10]	Classifying PubMed abstract 26485111
+[01:02:53 22/10]	*************************** NOTE ***************************
+[01:02:53 22/10]	Do not attempt to do large-scale classification of PubMed
+[01:02:53 22/10]	abstracts with this feature. For that, use the downloadable
+[01:02:53 22/10]	PubMed release. This is a demonstration feature only, and
+[01:02:53 22/10]	abusing it will cause you to be banned from PubMed!!!!!!!!!!!!
+[01:02:53 22/10]	************************************************************
+[01:02:53 22/10]	Downloading PubMed abstract 26485111
+[01:02:53 22/10]	Downloading file http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=26485111&retmode=xml to /tmp/pmid-26485111.xml
+[01:02:53 22/10]	Classifying input /tmp/pmid-26485111.txt
+[01:02:53 22/10]	Model /home/ubuntu/UPSITE/UPTEES/REL11 doesn't exist, looking for a default model
+[01:02:53 22/10]	Classifying with default model /home/ubuntu/.tees/models/REL11-test
+[01:02:53 22/10]	Preprocessor output /home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/BRCA2/26485111-preprocessed.xml.gz does not exist
+[01:02:53 22/10]	------------ Preprocessing ------------
+[01:02:53 22/10]	* Preprocessor:PROCESS(ENTER) *
+[01:02:53 22/10]	Caching model "/home/ubuntu/.tees/models/REL11-test" member "TEES_MODEL_VALUES.tsv" to "/tmp/tmppVwPxl/TEES_MODEL_VALUES.tsv"
+[01:02:53 22/10]	Tool chain parameters: 
+[01:02:53 22/10]	=== ENTER STEP Preprocessor:PROCESS:CONVERT ===
+[01:02:53 22/10]	Running step CONVERT with arguments {'input': '/tmp/pmid-26485111.txt', 'output': '/home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/BRCA2/26485111-preprocessed.xml.gz-documents.xml.gz', 'dataSetNames': None, 'corpusName': None}
+[01:02:53 22/10]	Converting ST-format to Interaction XML
+[01:02:53 22/10]	Reading /tmp/pmid-26485111.txt set, 1 documents
+[01:02:53 22/10]	Resolving equivalences
+[01:02:53 22/10]	Duplication created 0 new events (new total 0 events)
+[01:02:53 22/10]	Writing output to /home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/BRCA2/26485111-preprocessed.xml.gz-documents.xml.gz
+[01:02:53 22/10]	=== EXIT STEP CONVERT time: 0:00:00.005229 ===
+[01:02:53 22/10]	=== ENTER STEP Preprocessor:PROCESS:SPLIT-SENTENCES ===
+[01:02:53 22/10]	Running step SPLIT-SENTENCES with arguments {'debug': False, 'input': <ElementTree object at 0x7f0fbe133850>, 'postProcess': True, 'output': '/home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/BRCA2/26485111-preprocessed.xml.gz-sentences.xml.gz'}
+[01:02:53 22/10]	Loading corpus <ElementTree object at 0x7f0fbe133850>
+[01:02:53 22/10]	Corpus file loaded
+[01:02:53 22/10]	Running GENIA Sentence Splitter /home/ubuntu/.tees/tools/geniass (Using post-processing)
+[01:02:53 22/10]	Splitting Documents (TEES.d0): 100.00 % (0:0:0.000)
+[01:02:53 22/10]	Sentence splitting created 1 sentences
+[01:02:53 22/10]	Redivided 0 sentences
+[01:02:53 22/10]	Writing output to /home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/BRCA2/26485111-preprocessed.xml.gz-sentences.xml.gz
+[01:02:53 22/10]	=== EXIT STEP SPLIT-SENTENCES time: 0:00:00.051918 ===
+[01:02:53 22/10]	=== ENTER STEP Preprocessor:PROCESS:NER ===
+[01:02:53 22/10]	Running step NER with arguments {'elementName': 'entity', 'splitNewlines': True, 'output': '/home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/BRCA2/26485111-preprocessed.xml.gz-ner.xml.gz', 'debug': False, 'input': <ElementTree object at 0x7f0fbe133850>, 'processElement': 'sentence'}
+[01:02:53 22/10]	Loading corpus <ElementTree object at 0x7f0fbe133850>
+[01:02:53 22/10]	Corpus file loaded
+[01:02:53 22/10]	Running BANNER /home/ubuntu/.tees/tools/BANNER
+[01:02:53 22/10]	BANNER command: java -cp /home/ubuntu/.tees/tools/BANNER/bin:/home/ubuntu/.tees/tools/BANNER/lib/* banner.eval.BANNER test /tmp/tmpqgaCG_/banner_config.xml
+[01:02:59 22/10]	BANNER time: 0:00:06.517727
+[01:02:59 22/10]	Inserting entities
+[01:02:59 22/10]	BANNER found 1 entities in 1 sentence-elements (1 sentences processed)
+[01:02:59 22/10]	New entity-elements: 1 (Split 0 BANNER entities with newlines)
+[01:02:59 22/10]	Writing output to /home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/BRCA2/26485111-preprocessed.xml.gz-ner.xml.gz
+[01:02:59 22/10]	=== EXIT STEP NER time: 0:00:06.526567 ===
+[01:02:59 22/10]	=== ENTER STEP Preprocessor:PROCESS:PARSE ===
+[01:02:59 22/10]	Running step PARSE with arguments {'debug': False, 'input': <ElementTree object at 0x7f0fbe133850>, 'requireEntities': False, 'parseName': 'McCC', 'output': '/home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/BRCA2/26485111-preprocessed.xml.gz-parse.xml.gz'}
+[01:02:59 22/10]	BLLIP parser
+[01:02:59 22/10]	BLLIP time stamp: 22.10.15 01:02:59
+[01:02:59 22/10]	BLLIP parser at: /home/ubuntu/.tees/tools/BLLIP/dmcc-bllip-parser-cb43c6c
+[01:02:59 22/10]	Biomodel at: /home/ubuntu/.tees/tools/BLLIP/biomodel
+[01:02:59 22/10]	Loading corpus <ElementTree object at 0x7f0fbe133850>
+[01:02:59 22/10]	Corpus file loaded
+[01:02:59 22/10]	Parser does the tokenization
+[01:02:59 22/10]	Running BLLIP parser with tokenization
+[01:03:06 22/10]	Parsing: 100.00 % (0:0:6.008)
+[01:03:06 22/10]	Processed succesfully all sentences
+[01:03:06 22/10]	Inserting parses
+[01:03:06 22/10]	Parsed 1 sentences (0 failed)
+[01:03:06 22/10]	All sentences were parsed succesfully
+[01:03:06 22/10]	Writing output to /home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/BRCA2/26485111-preprocessed.xml.gz-parse.xml.gz
+[01:03:06 22/10]	=== EXIT STEP PARSE time: 0:00:06.022921 ===
+[01:03:06 22/10]	=== ENTER STEP Preprocessor:PROCESS:CONVERT-PARSE ===
+[01:03:06 22/10]	Running step CONVERT-PARSE with arguments {'debug': False, 'input': <ElementTree object at 0x7f0fbe133850>, 'parser': 'McCC', 'output': '/home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/BRCA2/26485111-preprocessed.xml.gz-converted-parse.xml.gz'}
+[01:03:06 22/10]	Running Stanford conversion
+[01:03:06 22/10]	Stanford tools at: /home/ubuntu/.tees/tools/stanford-parser-2012-03-09
+[01:03:06 22/10]	Stanford tools arguments: java -mx500m -cp stanford-parser.jar edu.stanford.nlp.trees.EnglishGrammaticalStructure -CCprocessed -keepPunct -treeFile
+[01:03:06 22/10]	Stanford time stamp: 22.10.15 01:03:06
+[01:03:06 22/10]	Loading corpus <ElementTree object at 0x7f0fbe133850>
+[01:03:06 22/10]	Corpus file loaded
+[01:03:07 22/10]	Stanford Conversion: 100.00 % (0:0:1.001)
+[01:03:07 22/10]	Processed succesfully all sentences
+[01:03:07 22/10]	Stanford conversion was done for 1 sentences, 0 had no dependencies, 0 failed
+[01:03:07 22/10]	Writing output to /home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/BRCA2/26485111-preprocessed.xml.gz-converted-parse.xml.gz
+[01:03:07 22/10]	=== EXIT STEP CONVERT-PARSE time: 0:00:01.014334 ===
+[01:03:07 22/10]	=== ENTER STEP Preprocessor:PROCESS:SPLIT-NAMES ===
+[01:03:07 22/10]	Running step SPLIT-NAMES with arguments {'input': <ElementTree object at 0x7f0fbe133850>, 'parseName': 'McCC', 'removeOld': True, 'output': '/home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/BRCA2/26485111-preprocessed.xml.gz-split-names.xml.gz'}
+[01:03:07 22/10]	Protein Name Splitter
+[01:03:07 22/10]	Splitting names (TEES.d0.s0): 100.00 % (0:0:0.000)
+[01:03:07 22/10]	Tokenization missing from 0 sentences
+[01:03:07 22/10]	Writing output to /home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/BRCA2/26485111-preprocessed.xml.gz-split-names.xml.gz
+[01:03:07 22/10]	=== EXIT STEP SPLIT-NAMES time: 0:00:00.006923 ===
+[01:03:07 22/10]	=== ENTER STEP Preprocessor:PROCESS:FIND-HEADS ===
+[01:03:07 22/10]	Running step FIND-HEADS with arguments {'parse': 'McCC', 'removeExisting': True, 'output': '/home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/BRCA2/26485111-preprocessed.xml.gz-heads.xml.gz', 'input': <ElementTree object at 0x7f0fbe133850>}
+[01:03:07 22/10]	Removing existing head offsets
+[01:03:07 22/10]	Removed head offsets from 0 entities
+[01:03:07 22/10]	Determining head offsets using parse McCC and tokenization None
+[01:03:07 22/10]	1 documents, 1 sentences
+[01:03:07 22/10]	Making sentence graphs (TEES.d0.s0): 100.00 % (0:0:0.000)
+[01:03:07 22/10]	Skipped 0 duplicate interaction edges in SentenceGraphs
+[01:03:07 22/10]	Writing output to /home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/BRCA2/26485111-preprocessed.xml.gz-heads.xml.gz
+[01:03:07 22/10]	=== EXIT STEP FIND-HEADS time: 0:00:00.007836 ===
+[01:03:07 22/10]	=== ENTER STEP Preprocessor:PROCESS:DIVIDE-SETS ===
+[01:03:07 22/10]	Running step DIVIDE-SETS with arguments {'input': <ElementTree object at 0x7f0fbe133850>, 'outputStem': None, 'saveCombined': True}
+[01:03:07 22/10]	No set division
+[01:03:07 22/10]	=== EXIT STEP DIVIDE-SETS: 0:00:00.001508 ===
+[01:03:07 22/10]	* Preprocessor:PROCESS(EXIT) 0:00:13.641441 *
+[01:03:07 22/10]	=== EXIT STEP PREPROCESS time: 0:00:13.647420 ===
+[01:03:07 22/10]	Caching model "/home/ubuntu/.tees/models/REL11-test" member "TEES_MODEL_VALUES.tsv" to "/tmp/tmpOGzJee/TEES_MODEL_VALUES.tsv"
+[01:03:07 22/10]	Importing detector Detectors.EventDetector
+[01:03:07 22/10]	Caching model "/home/ubuntu/.tees/models/REL11-test" member "TEES_MODEL_VALUES.tsv" to "/tmp/tmpSRJjbl/TEES_MODEL_VALUES.tsv"
+[01:03:07 22/10]	* EventDetector:CLASSIFY(ENTER) *
+[01:03:07 22/10]	=== ENTER STEP EventDetector:CLASSIFY:TRIGGERS ===
+[01:03:07 22/10]	Caching model "/home/ubuntu/.tees/models/REL11-test" member "TEES_MODEL_VALUES.tsv" to "/tmp/tmpHwUGOA/TEES_MODEL_VALUES.tsv"
+[01:03:07 22/10]	Caching model "/home/ubuntu/.tees/models/REL11-test" member "structure.txt" to "/tmp/tmpHwUGOA/structure.txt"
+[01:03:07 22/10]	Warning, RELATION RELATION Protein-Component uses model file format <2.2.
+[01:03:07 22/10]	Warning, RELATION RELATION Subunit-Complex uses model file format <2.2.
+[01:03:07 22/10]	Example generation for /tmp/tmpw27DWo/26485111-trigger-examples.gz
+[01:03:07 22/10]	Caching model "/home/ubuntu/.tees/models/REL11-test" member "trigger-ids.classes" to "/tmp/tmpHwUGOA/trigger-ids.classes"
+[01:03:07 22/10]	Caching model "/home/ubuntu/.tees/models/REL11-test" member "trigger-ids.features" to "/tmp/tmpHwUGOA/trigger-ids.features"
+[01:03:07 22/10]	Running EntityExampleBuilder
+[01:03:07 22/10]	  input: <ElementTree object at 0x7f0fbe133850>
+[01:03:07 22/10]	  output: /tmp/tmpw27DWo/26485111-trigger-examples.gz (append: False)
+[01:03:07 22/10]	  add new class/feature ids: False
+[01:03:07 22/10]	  style: rel_features
+[01:03:07 22/10]	  parse: McCC
+[01:03:07 22/10]	Using predefined class names from /tmp/tmpHwUGOA/trigger-ids.classes
+[01:03:07 22/10]	Using predefined feature names from /tmp/tmpHwUGOA/trigger-ids.features
+[01:03:08 22/10]	No gazetteer loaded
+[01:03:08 22/10]	1 documents, 1 sentences
+[01:03:08 22/10]	Making sentence graphs (TEES.d0.s0): 100.00 % (0:0:0.000)
+[01:03:08 22/10]	Skipped 0 duplicate interaction edges in SentenceGraphs
+[01:03:08 22/10]	Defining predicted value range: None
+[01:03:08 22/10]	Building examples (TEES.d0.s0): 1 (0:0:0) 
+[01:03:08 22/10]	Examples built: 10
+[01:03:08 22/10]	Features: 405137
+[01:03:08 22/10]	Style: rel_features
+[01:03:08 22/10]	Example Statistics (total/filtered)
+[01:03:08 22/10]	  Protein: 1/1 {'name': 1}
+[01:03:08 22/10]	  neg: 10/0 
+[01:03:08 22/10]	Positives Coverage 0.00 % [1, 1]
+[01:03:08 22/10]	Caching model "/home/ubuntu/.tees/models/REL11-test" member "trigger-classifier-model" to "/tmp/tmpHwUGOA/trigger-classifier-model"
+[01:03:08 22/10]	Uncompressing example file /tmp/tmpw27DWo/26485111-trigger-examples.gz
+[01:03:08 22/10]	SVMMultiClassClassifier using example file /tmp/tmpw27DWo/26485111-trigger-examples.gz as /tmp/tmpw27DWo/26485111-trigger-examples-unzipped-temp
+[01:03:08 22/10]	Submitted job 4607 1445475798.68
+[01:03:18 22/10]	Entity p/n:0/10 tp/fp|tn/fn:0/0|10/0 p/r/f:0.0/0.0/0
+[01:03:18 22/10]	(neg p/n:10/0 tp/fp|tn/fn:10/0|0/0 p/r/f:1.0/1.0/1.0)
+[01:03:18 22/10]	averages:
+[01:03:18 22/10]	micro p/n:0/10 tp/fp|tn/fn:0/0|10/0 p/r/f:0.0/0.0/0
+[01:03:18 22/10]	macro p/r/f:0.0/0.0/0.0
+[01:03:18 22/10]	untyped p/n:0/10 tp/fp|tn/fn:0/0|10/0 p/r/f:0.0/0.0/0
+[01:03:18 22/10]	untyped undirected p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:None/None/None
+[01:03:18 22/10]	Warning, RELATION RELATION Protein-Component uses model file format <2.2.
+[01:03:18 22/10]	Warning, RELATION RELATION Subunit-Complex uses model file format <2.2.
+[01:03:18 22/10]	1 documents, 1 sentences
+[01:03:18 22/10]	Making sentence graphs (TEES.d0.s0): 100.00 % (0:0:0.000)
+[01:03:18 22/10]	Skipped 0 duplicate interaction edges in SentenceGraphs
+[01:03:18 22/10]	Reading examples from /tmp/tmpw27DWo/26485111-trigger-examples.gz
+[01:03:18 22/10]	Writing examples (TEES.d0.s0.x9): 100.00 % (0:0:0)
+[01:03:18 22/10]	Writing corpus to /tmp/tmpw27DWo/26485111-trigger-pred.xml.gz
+[01:03:18 22/10]	=== EXIT STEP TRIGGERS time: 0:00:11.702973 ===
+[01:03:18 22/10]	=== ENTER STEP EventDetector:CLASSIFY:EDGES ===
+[01:03:18 22/10]	Warning, RELATION RELATION Protein-Component uses model file format <2.2.
+[01:03:18 22/10]	Warning, RELATION RELATION Subunit-Complex uses model file format <2.2.
+[01:03:18 22/10]	Example generation for /tmp/tmpw27DWo/26485111-edge-examples.gz
+[01:03:18 22/10]	Caching model "/home/ubuntu/.tees/models/REL11-test" member "edge-ids.classes" to "/tmp/tmpHwUGOA/edge-ids.classes"
+[01:03:18 22/10]	Caching model "/home/ubuntu/.tees/models/REL11-test" member "edge-ids.features" to "/tmp/tmpHwUGOA/edge-ids.features"
+[01:03:18 22/10]	Running EdgeExampleBuilder
+[01:03:18 22/10]	  input: <ElementTree object at 0x7f0fbe133850>
+[01:03:18 22/10]	  output: /tmp/tmpw27DWo/26485111-edge-examples.gz (append: False)
+[01:03:18 22/10]	  add new class/feature ids: False
+[01:03:18 22/10]	  style: rel_features
+[01:03:18 22/10]	  parse: McCC
+[01:03:18 22/10]	Using predefined class names from /tmp/tmpHwUGOA/edge-ids.classes
+[01:03:18 22/10]	Using predefined feature names from /tmp/tmpHwUGOA/edge-ids.features
+[01:03:19 22/10]	1 documents, 1 sentences
+[01:03:19 22/10]	Making sentence graphs (TEES.d0.s0): 100.00 % (0:0:0.000)
+[01:03:19 22/10]	Skipped 0 duplicate interaction edges in SentenceGraphs
+[01:03:19 22/10]	Defining predicted value range: [None, None]
+[01:03:19 22/10]	Building examples (TEES.d0.s0): 1 (0:0:0) 
+[01:03:19 22/10]	Examples built: 0
+[01:03:19 22/10]	Features: 219198
+[01:03:19 22/10]	Style: rel_features
+[01:03:19 22/10]	Caching model "/home/ubuntu/.tees/models/REL11-test" member "edge-classifier-model" to "/tmp/tmpHwUGOA/edge-classifier-model"
+[01:03:19 22/10]	Uncompressing example file /tmp/tmpw27DWo/26485111-edge-examples.gz
+[01:03:19 22/10]	SVMMultiClassClassifier using example file /tmp/tmpw27DWo/26485111-edge-examples.gz as /tmp/tmpw27DWo/26485111-edge-examples-unzipped-temp
+[01:03:19 22/10]	Submitted job 4643 1445475809.7
+[01:03:29 22/10]	Protein-Component p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[01:03:29 22/10]	Subunit-Complex p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[01:03:29 22/10]	(neg p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0)
+[01:03:29 22/10]	averages:
+[01:03:29 22/10]	micro p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[01:03:29 22/10]	macro p/r/f:0.0/0.0/0.0
+[01:03:29 22/10]	untyped p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[01:03:29 22/10]	untyped undirected p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:None/None/None
+[01:03:29 22/10]	Warning, RELATION RELATION Protein-Component uses model file format <2.2.
+[01:03:29 22/10]	Warning, RELATION RELATION Subunit-Complex uses model file format <2.2.
+[01:03:29 22/10]	1 documents, 1 sentences
+[01:03:29 22/10]	Making sentence graphs (TEES.d0.s0): 100.00 % (0:0:0.000)
+[01:03:29 22/10]	Skipped 0 duplicate interaction edges in SentenceGraphs
+[01:03:29 22/10]	Reading examples from /tmp/tmpw27DWo/26485111-edge-examples.gz
+[01:03:29 22/10]	Writing corpus to /tmp/tmpw27DWo/26485111-edge-pred.xml.gz
+[01:03:29 22/10]	##### EvaluateInteractionXML #####
+[01:03:29 22/10]	Comparing input <ElementTree object at 0x7f0fbe133850> to gold <ElementTree object at 0x7f0fbe133850>
+[01:03:29 22/10]	1 documents, 1 sentences
+[01:03:29 22/10]	Making sentence graphs (TEES.d0.s0): 100.00 % (0:0:0.000)
+[01:03:29 22/10]	Skipped 0 duplicate interaction edges in SentenceGraphs
+[01:03:29 22/10]	1 documents, 1 sentences
+[01:03:29 22/10]	Making sentence graphs (TEES.d0.s0): 100.00 % (0:0:0.000)
+[01:03:29 22/10]	Skipped 0 duplicate interaction edges in SentenceGraphs
+[01:03:29 22/10]	TEES.d0100.00 % (0:0:0)
+[01:03:29 22/10]	=== EXIT STEP EDGES time: 0:00:11.017806 ===
+[01:03:29 22/10]	=== ENTER STEP EventDetector:CLASSIFY:UNMERGING ===
+[01:03:29 22/10]	No model for unmerging
+[01:03:29 22/10]	=== EXIT STEP UNMERGING time: 0:00:00.000899 ===
+[01:03:29 22/10]	=== ENTER STEP EventDetector:CLASSIFY:MODIFIERS ===
+[01:03:29 22/10]	No model for modifier detection
+[01:03:29 22/10]	=== EXIT STEP MODIFIERS time: 0:00:00.000805 ===
+[01:03:29 22/10]	=== ENTER STEP EventDetector:CLASSIFY:ST-CONVERT ===
+[01:03:29 22/10]	Loading corpus <ElementTree object at 0x7f0fbe133850>
+[01:03:29 22/10]	Corpus file loaded
+[01:03:29 22/10]	Writing output to /home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/BRCA2/26485111-events.tar.gz
+[01:03:29 22/10]	BioNLP task REL11 devel evaluation
+[01:03:29 22/10]	No official evaluator for task REL11
+[01:03:29 22/10]	Removing temporary work directory /tmp/tmpw27DWo
+[01:03:29 22/10]	=== EXIT STEP ST-CONVERT: 0:00:00.004274 ===
+[01:03:29 22/10]	* EventDetector:CLASSIFY(EXIT) 0:00:22.728673 *
+[01:03:29 22/10]	--------------------------------------------model: REL11--------------------------------------------
+[01:03:29 22/10]	Opening log /home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/BRCA2/26484312-log.txt at Thu Oct 22 01:03:29 2015
+[01:03:29 22/10]	Classifying PubMed abstract 26484312
+[01:03:29 22/10]	*************************** NOTE ***************************
+[01:03:29 22/10]	Do not attempt to do large-scale classification of PubMed
+[01:03:29 22/10]	abstracts with this feature. For that, use the downloadable
+[01:03:29 22/10]	PubMed release. This is a demonstration feature only, and
+[01:03:29 22/10]	abusing it will cause you to be banned from PubMed!!!!!!!!!!!!
+[01:03:29 22/10]	************************************************************
+[01:03:29 22/10]	Downloading PubMed abstract 26484312
+[01:03:29 22/10]	Downloading file http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=26484312&retmode=xml to /tmp/pmid-26484312.xml
+[01:03:29 22/10]	Classifying input /tmp/pmid-26484312.txt
+[01:03:29 22/10]	Model /home/ubuntu/UPSITE/UPTEES/REL11 doesn't exist, looking for a default model
+[01:03:29 22/10]	Classifying with default model /home/ubuntu/.tees/models/REL11-test
+[01:03:29 22/10]	Preprocessor output /home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/BRCA2/26484312-preprocessed.xml.gz does not exist
+[01:03:29 22/10]	------------ Preprocessing ------------
+[01:03:29 22/10]	* Preprocessor:PROCESS(ENTER) *
+[01:03:29 22/10]	Caching model "/home/ubuntu/.tees/models/REL11-test" member "TEES_MODEL_VALUES.tsv" to "/tmp/tmpOZ8jzA/TEES_MODEL_VALUES.tsv"
+[01:03:29 22/10]	Tool chain parameters: 
+[01:03:29 22/10]	=== ENTER STEP Preprocessor:PROCESS:CONVERT ===
+[01:03:29 22/10]	Running step CONVERT with arguments {'input': '/tmp/pmid-26484312.txt', 'output': '/home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/BRCA2/26484312-preprocessed.xml.gz-documents.xml.gz', 'dataSetNames': None, 'corpusName': None}
+[01:03:29 22/10]	Converting ST-format to Interaction XML
+[01:03:29 22/10]	Reading /tmp/pmid-26484312.txt set, 1 documents
+[01:03:29 22/10]	Resolving equivalences
+[01:03:29 22/10]	Duplication created 0 new events (new total 0 events)
+[01:03:29 22/10]	Writing output to /home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/BRCA2/26484312-preprocessed.xml.gz-documents.xml.gz
+[01:03:29 22/10]	=== EXIT STEP CONVERT time: 0:00:00.004733 ===
+[01:03:29 22/10]	=== ENTER STEP Preprocessor:PROCESS:SPLIT-SENTENCES ===
+[01:03:29 22/10]	Running step SPLIT-SENTENCES with arguments {'debug': False, 'input': <ElementTree object at 0x7f0fbe79cc50>, 'postProcess': True, 'output': '/home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/BRCA2/26484312-preprocessed.xml.gz-sentences.xml.gz'}
+[01:03:29 22/10]	Loading corpus <ElementTree object at 0x7f0fbe79cc50>
+[01:03:29 22/10]	Corpus file loaded
+[01:03:29 22/10]	Running GENIA Sentence Splitter /home/ubuntu/.tees/tools/geniass (Using post-processing)
+[01:03:29 22/10]	Splitting Documents (TEES.d0): 100.00 % (0:0:0.000)
+[01:03:29 22/10]	Sentence splitting created 1 sentences
+[01:03:29 22/10]	Redivided 0 sentences
+[01:03:29 22/10]	Writing output to /home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/BRCA2/26484312-preprocessed.xml.gz-sentences.xml.gz
+[01:03:29 22/10]	=== EXIT STEP SPLIT-SENTENCES time: 0:00:00.043711 ===
+[01:03:29 22/10]	=== ENTER STEP Preprocessor:PROCESS:NER ===
+[01:03:29 22/10]	Running step NER with arguments {'elementName': 'entity', 'splitNewlines': True, 'output': '/home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/BRCA2/26484312-preprocessed.xml.gz-ner.xml.gz', 'debug': False, 'input': <ElementTree object at 0x7f0fbe79cc50>, 'processElement': 'sentence'}
+[01:03:29 22/10]	Loading corpus <ElementTree object at 0x7f0fbe79cc50>
+[01:03:29 22/10]	Corpus file loaded
+[01:03:30 22/10]	Running BANNER /home/ubuntu/.tees/tools/BANNER
+[01:03:30 22/10]	BANNER command: java -cp /home/ubuntu/.tees/tools/BANNER/bin:/home/ubuntu/.tees/tools/BANNER/lib/* banner.eval.BANNER test /tmp/tmpTwUYZc/banner_config.xml
+[01:03:36 22/10]	BANNER time: 0:00:06.538790
+[01:03:36 22/10]	Inserting entities
+[01:03:36 22/10]	BANNER found 0 entities in 0 sentence-elements (1 sentences processed)
+[01:03:36 22/10]	New entity-elements: 0 (Split 0 BANNER entities with newlines)
+[01:03:36 22/10]	Writing output to /home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/BRCA2/26484312-preprocessed.xml.gz-ner.xml.gz
+[01:03:36 22/10]	=== EXIT STEP NER time: 0:00:06.547458 ===
+[01:03:36 22/10]	=== ENTER STEP Preprocessor:PROCESS:PARSE ===
+[01:03:36 22/10]	Running step PARSE with arguments {'debug': False, 'input': <ElementTree object at 0x7f0fbe79cc50>, 'requireEntities': False, 'parseName': 'McCC', 'output': '/home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/BRCA2/26484312-preprocessed.xml.gz-parse.xml.gz'}
+[01:03:36 22/10]	BLLIP parser
+[01:03:36 22/10]	BLLIP time stamp: 22.10.15 01:03:36
+[01:03:36 22/10]	BLLIP parser at: /home/ubuntu/.tees/tools/BLLIP/dmcc-bllip-parser-cb43c6c
+[01:03:36 22/10]	Biomodel at: /home/ubuntu/.tees/tools/BLLIP/biomodel
+[01:03:36 22/10]	Loading corpus <ElementTree object at 0x7f0fbe79cc50>
+[01:03:36 22/10]	Corpus file loaded
+[01:03:36 22/10]	Parser does the tokenization
+[01:03:36 22/10]	Running BLLIP parser with tokenization
+[01:03:43 22/10]	Parsing: 100.00 % (0:0:7.008)
+[01:03:43 22/10]	Processed succesfully all sentences
+[01:03:43 22/10]	Inserting parses
+[01:03:43 22/10]	Parsed 1 sentences (0 failed)
+[01:03:43 22/10]	All sentences were parsed succesfully
+[01:03:43 22/10]	Writing output to /home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/BRCA2/26484312-preprocessed.xml.gz-parse.xml.gz
+[01:03:43 22/10]	=== EXIT STEP PARSE time: 0:00:07.025316 ===
+[01:03:43 22/10]	=== ENTER STEP Preprocessor:PROCESS:CONVERT-PARSE ===
+[01:03:43 22/10]	Running step CONVERT-PARSE with arguments {'debug': False, 'input': <ElementTree object at 0x7f0fbe79cc50>, 'parser': 'McCC', 'output': '/home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/BRCA2/26484312-preprocessed.xml.gz-converted-parse.xml.gz'}
+[01:03:43 22/10]	Running Stanford conversion
+[01:03:43 22/10]	Stanford tools at: /home/ubuntu/.tees/tools/stanford-parser-2012-03-09
+[01:03:43 22/10]	Stanford tools arguments: java -mx500m -cp stanford-parser.jar edu.stanford.nlp.trees.EnglishGrammaticalStructure -CCprocessed -keepPunct -treeFile
+[01:03:43 22/10]	Stanford time stamp: 22.10.15 01:03:43
+[01:03:43 22/10]	Loading corpus <ElementTree object at 0x7f0fbe79cc50>
+[01:03:43 22/10]	Corpus file loaded
+[01:03:44 22/10]	Stanford Conversion: 100.00 % (0:0:1.002)
+[01:03:44 22/10]	Processed succesfully all sentences
+[01:03:44 22/10]	Stanford conversion was done for 1 sentences, 0 had no dependencies, 0 failed
+[01:03:44 22/10]	Writing output to /home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/BRCA2/26484312-preprocessed.xml.gz-converted-parse.xml.gz
+[01:03:44 22/10]	=== EXIT STEP CONVERT-PARSE time: 0:00:01.016101 ===
+[01:03:44 22/10]	=== ENTER STEP Preprocessor:PROCESS:SPLIT-NAMES ===
+[01:03:44 22/10]	Running step SPLIT-NAMES with arguments {'input': <ElementTree object at 0x7f0fbe79cc50>, 'parseName': 'McCC', 'removeOld': True, 'output': '/home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/BRCA2/26484312-preprocessed.xml.gz-split-names.xml.gz'}
+[01:03:44 22/10]	Protein Name Splitter
+[01:03:44 22/10]	Splitting names (TEES.d0.s0): 100.00 % (0:0:0.000)
+[01:03:44 22/10]	Tokenization missing from 0 sentences
+[01:03:44 22/10]	Writing output to /home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/BRCA2/26484312-preprocessed.xml.gz-split-names.xml.gz
+[01:03:44 22/10]	=== EXIT STEP SPLIT-NAMES time: 0:00:00.007687 ===
+[01:03:44 22/10]	=== ENTER STEP Preprocessor:PROCESS:FIND-HEADS ===
+[01:03:44 22/10]	Running step FIND-HEADS with arguments {'parse': 'McCC', 'removeExisting': True, 'output': '/home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/BRCA2/26484312-preprocessed.xml.gz-heads.xml.gz', 'input': <ElementTree object at 0x7f0fbe79cc50>}
+[01:03:44 22/10]	Removing existing head offsets
+[01:03:44 22/10]	Removed head offsets from 0 entities
+[01:03:44 22/10]	Determining head offsets using parse McCC and tokenization None
+[01:03:44 22/10]	1 documents, 1 sentences
+[01:03:44 22/10]	Making sentence graphs (TEES.d0.s0): 100.00 % (0:0:0.000)
+[01:03:44 22/10]	Skipped 0 duplicate interaction edges in SentenceGraphs
+[01:03:44 22/10]	Writing output to /home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/BRCA2/26484312-preprocessed.xml.gz-heads.xml.gz
+[01:03:44 22/10]	=== EXIT STEP FIND-HEADS time: 0:00:00.008814 ===
+[01:03:44 22/10]	=== ENTER STEP Preprocessor:PROCESS:DIVIDE-SETS ===
+[01:03:44 22/10]	Running step DIVIDE-SETS with arguments {'input': <ElementTree object at 0x7f0fbe79cc50>, 'outputStem': None, 'saveCombined': True}
+[01:03:44 22/10]	No set division
+[01:03:44 22/10]	=== EXIT STEP DIVIDE-SETS: 0:00:00.001517 ===
+[01:03:44 22/10]	* Preprocessor:PROCESS(EXIT) 0:00:14.659461 *
+[01:03:44 22/10]	=== EXIT STEP PREPROCESS time: 0:00:14.666093 ===
+[01:03:44 22/10]	Caching model "/home/ubuntu/.tees/models/REL11-test" member "TEES_MODEL_VALUES.tsv" to "/tmp/tmpHUPnHn/TEES_MODEL_VALUES.tsv"
+[01:03:44 22/10]	Importing detector Detectors.EventDetector
+[01:03:44 22/10]	Caching model "/home/ubuntu/.tees/models/REL11-test" member "TEES_MODEL_VALUES.tsv" to "/tmp/tmpF73PRw/TEES_MODEL_VALUES.tsv"
+[01:03:44 22/10]	* EventDetector:CLASSIFY(ENTER) *
+[01:03:44 22/10]	=== ENTER STEP EventDetector:CLASSIFY:TRIGGERS ===
+[01:03:44 22/10]	Caching model "/home/ubuntu/.tees/models/REL11-test" member "TEES_MODEL_VALUES.tsv" to "/tmp/tmptpCFuB/TEES_MODEL_VALUES.tsv"
+[01:03:44 22/10]	Caching model "/home/ubuntu/.tees/models/REL11-test" member "structure.txt" to "/tmp/tmptpCFuB/structure.txt"
+[01:03:44 22/10]	Warning, RELATION RELATION Protein-Component uses model file format <2.2.
+[01:03:44 22/10]	Warning, RELATION RELATION Subunit-Complex uses model file format <2.2.
+[01:03:44 22/10]	Example generation for /tmp/tmpUwfbHK/26484312-trigger-examples.gz
+[01:03:44 22/10]	Caching model "/home/ubuntu/.tees/models/REL11-test" member "trigger-ids.classes" to "/tmp/tmptpCFuB/trigger-ids.classes"
+[01:03:44 22/10]	Caching model "/home/ubuntu/.tees/models/REL11-test" member "trigger-ids.features" to "/tmp/tmptpCFuB/trigger-ids.features"
+[01:03:44 22/10]	Running EntityExampleBuilder
+[01:03:44 22/10]	  input: <ElementTree object at 0x7f0fbe79cc50>
+[01:03:44 22/10]	  output: /tmp/tmpUwfbHK/26484312-trigger-examples.gz (append: False)
+[01:03:44 22/10]	  add new class/feature ids: False
+[01:03:44 22/10]	  style: rel_features
+[01:03:44 22/10]	  parse: McCC
+[01:03:44 22/10]	Using predefined class names from /tmp/tmptpCFuB/trigger-ids.classes
+[01:03:44 22/10]	Using predefined feature names from /tmp/tmptpCFuB/trigger-ids.features
+[01:03:45 22/10]	No gazetteer loaded
+[01:03:45 22/10]	1 documents, 1 sentences
+[01:03:45 22/10]	Making sentence graphs (TEES.d0.s0): 100.00 % (0:0:0.000)
+[01:03:45 22/10]	Skipped 0 duplicate interaction edges in SentenceGraphs
+[01:03:45 22/10]	Defining predicted value range: None
+[01:03:45 22/10]	Building examples (TEES.d0.s0): 1 (0:0:0) 
+[01:03:45 22/10]	Examples built: 0
+[01:03:46 22/10]	Features: 405137
+[01:03:46 22/10]	Style: rel_features
+[01:03:46 22/10]	Caching model "/home/ubuntu/.tees/models/REL11-test" member "trigger-classifier-model" to "/tmp/tmptpCFuB/trigger-classifier-model"
+[01:03:46 22/10]	Uncompressing example file /tmp/tmpUwfbHK/26484312-trigger-examples.gz
+[01:03:46 22/10]	SVMMultiClassClassifier using example file /tmp/tmpUwfbHK/26484312-trigger-examples.gz as /tmp/tmpUwfbHK/26484312-trigger-examples-unzipped-temp
+[01:03:46 22/10]	Submitted job 4735 1445475836.28
+[01:03:56 22/10]	Entity p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[01:03:56 22/10]	(neg p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0)
+[01:03:56 22/10]	averages:
+[01:03:56 22/10]	micro p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[01:03:56 22/10]	macro p/r/f:0.0/0.0/0.0
+[01:03:56 22/10]	untyped p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[01:03:56 22/10]	untyped undirected p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:None/None/None
+[01:03:56 22/10]	Warning, RELATION RELATION Protein-Component uses model file format <2.2.
+[01:03:56 22/10]	Warning, RELATION RELATION Subunit-Complex uses model file format <2.2.
+[01:03:56 22/10]	1 documents, 1 sentences
+[01:03:56 22/10]	Making sentence graphs (TEES.d0.s0): 100.00 % (0:0:0.000)
+[01:03:56 22/10]	Skipped 0 duplicate interaction edges in SentenceGraphs
+[01:03:56 22/10]	Reading examples from /tmp/tmpUwfbHK/26484312-trigger-examples.gz
+[01:03:56 22/10]	Writing corpus to /tmp/tmpUwfbHK/26484312-trigger-pred.xml.gz
+[01:03:56 22/10]	=== EXIT STEP TRIGGERS time: 0:00:11.741899 ===
+[01:03:56 22/10]	=== ENTER STEP EventDetector:CLASSIFY:EDGES ===
+[01:03:56 22/10]	Warning, RELATION RELATION Protein-Component uses model file format <2.2.
+[01:03:56 22/10]	Warning, RELATION RELATION Subunit-Complex uses model file format <2.2.
+[01:03:56 22/10]	Example generation for /tmp/tmpUwfbHK/26484312-edge-examples.gz
+[01:03:56 22/10]	Caching model "/home/ubuntu/.tees/models/REL11-test" member "edge-ids.classes" to "/tmp/tmptpCFuB/edge-ids.classes"
+[01:03:56 22/10]	Caching model "/home/ubuntu/.tees/models/REL11-test" member "edge-ids.features" to "/tmp/tmptpCFuB/edge-ids.features"
+[01:03:56 22/10]	Running EdgeExampleBuilder
+[01:03:56 22/10]	  input: <ElementTree object at 0x7f0fbe79cc50>
+[01:03:56 22/10]	  output: /tmp/tmpUwfbHK/26484312-edge-examples.gz (append: False)
+[01:03:56 22/10]	  add new class/feature ids: False
+[01:03:56 22/10]	  style: rel_features
+[01:03:56 22/10]	  parse: McCC
+[01:03:56 22/10]	Using predefined class names from /tmp/tmptpCFuB/edge-ids.classes
+[01:03:56 22/10]	Using predefined feature names from /tmp/tmptpCFuB/edge-ids.features
+[01:03:56 22/10]	1 documents, 1 sentences
+[01:03:56 22/10]	Making sentence graphs (TEES.d0.s0): 100.00 % (0:0:0.000)
+[01:03:56 22/10]	Skipped 0 duplicate interaction edges in SentenceGraphs
+[01:03:56 22/10]	Defining predicted value range: [None, None]
+[01:03:56 22/10]	Building examples (TEES.d0.s0): 1 (0:0:0) 
+[01:03:56 22/10]	Examples built: 0
+[01:03:57 22/10]	Features: 219198
+[01:03:57 22/10]	Style: rel_features
+[01:03:57 22/10]	Caching model "/home/ubuntu/.tees/models/REL11-test" member "edge-classifier-model" to "/tmp/tmptpCFuB/edge-classifier-model"
+[01:03:57 22/10]	Uncompressing example file /tmp/tmpUwfbHK/26484312-edge-examples.gz
+[01:03:57 22/10]	SVMMultiClassClassifier using example file /tmp/tmpUwfbHK/26484312-edge-examples.gz as /tmp/tmpUwfbHK/26484312-edge-examples-unzipped-temp
+[01:03:57 22/10]	Submitted job 4771 1445475847.23
+[01:04:07 22/10]	Protein-Component p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[01:04:07 22/10]	Subunit-Complex p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[01:04:07 22/10]	(neg p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0)
+[01:04:07 22/10]	averages:
+[01:04:07 22/10]	micro p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[01:04:07 22/10]	macro p/r/f:0.0/0.0/0.0
+[01:04:07 22/10]	untyped p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:0.0/0.0/0
+[01:04:07 22/10]	untyped undirected p/n:0/0 tp/fp|tn/fn:0/0|0/0 p/r/f:None/None/None
+[01:04:07 22/10]	Warning, RELATION RELATION Protein-Component uses model file format <2.2.
+[01:04:07 22/10]	Warning, RELATION RELATION Subunit-Complex uses model file format <2.2.
+[01:04:07 22/10]	1 documents, 1 sentences
+[01:04:07 22/10]	Making sentence graphs (TEES.d0.s0): 100.00 % (0:0:0.000)
+[01:04:07 22/10]	Skipped 0 duplicate interaction edges in SentenceGraphs
+[01:04:07 22/10]	Reading examples from /tmp/tmpUwfbHK/26484312-edge-examples.gz
+[01:04:07 22/10]	Writing corpus to /tmp/tmpUwfbHK/26484312-edge-pred.xml.gz
+[01:04:07 22/10]	##### EvaluateInteractionXML #####
+[01:04:07 22/10]	Comparing input <ElementTree object at 0x7f0fbe79cc50> to gold <ElementTree object at 0x7f0fbe79cc50>
+[01:04:07 22/10]	1 documents, 1 sentences
+[01:04:07 22/10]	Making sentence graphs (TEES.d0.s0): 100.00 % (0:0:0.000)
+[01:04:07 22/10]	Skipped 0 duplicate interaction edges in SentenceGraphs
+[01:04:07 22/10]	1 documents, 1 sentences
+[01:04:07 22/10]	Making sentence graphs (TEES.d0.s0): 100.00 % (0:0:0.000)
+[01:04:07 22/10]	Skipped 0 duplicate interaction edges in SentenceGraphs
+[01:04:07 22/10]	TEES.d0100.00 % (0:0:0)
+[01:04:07 22/10]	=== EXIT STEP EDGES time: 0:00:10.947235 ===
+[01:04:07 22/10]	=== ENTER STEP EventDetector:CLASSIFY:UNMERGING ===
+[01:04:07 22/10]	No model for unmerging
+[01:04:07 22/10]	=== EXIT STEP UNMERGING time: 0:00:00.000888 ===
+[01:04:07 22/10]	=== ENTER STEP EventDetector:CLASSIFY:MODIFIERS ===
+[01:04:07 22/10]	No model for modifier detection
+[01:04:07 22/10]	=== EXIT STEP MODIFIERS time: 0:00:00.000848 ===
+[01:04:07 22/10]	=== ENTER STEP EventDetector:CLASSIFY:ST-CONVERT ===
+[01:04:07 22/10]	Loading corpus <ElementTree object at 0x7f0fbe79cc50>
+[01:04:07 22/10]	Corpus file loaded
+[01:04:07 22/10]	Writing output to /home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/BRCA2/26484312-events.tar.gz
+[01:04:07 22/10]	BioNLP task REL11 devel evaluation
+[01:04:07 22/10]	No official evaluator for task REL11
+[01:04:07 22/10]	Removing temporary work directory /tmp/tmpUwfbHK
+[01:04:07 22/10]	=== EXIT STEP ST-CONVERT: 0:00:00.004595 ===
+[01:04:07 22/10]	* EventDetector:CLASSIFY(EXIT) 0:00:22.697450 *
+[01:04:07 22/10]	info from inter /home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/BRCA2/26485111-pred.xml.gz
+[01:04:07 22/10]	info from inter /home/ubuntu/UPSITE/UPTEESoutput/REL11/genes/BRCA2/26484312-pred.xml.gz
+[01:04:07 22/10]	{}
+[01:04:07 22/10]	DISC1 num_docs_processed 2
+[01:04:07 22/10]	BRCA2 num_docs_processed 2
+[01:04:07 22/10]	final_protein_word_dict [[{'disc1': [], 'brca2': []}]]

@@ -1,0 +1,32 @@
+[22:54:15 03/10]	Opening log /home/ubuntu/output/pmid_xml_example/output-log.txt at Fri Oct  3 22:54:15 2014
+####### Log opened at Fri Oct  3 22:54:15 2014 #######
+Command line: UPSITE.py
+[22:54:15 03/10]	os.path.basename(input):  PubmedArticleSet>
+[22:54:15 03/10]	
+[22:54:15 03/10]	Traceback (most recent call last):
+[22:54:15 03/10]	  File "UPSITE.py", line 26, in <module>
+[22:54:15 03/10]	    main(options.q1, options.q2, options.articles)
+[22:54:15 03/10]	  File "UPSITE.py", line 13, in main
+[22:54:15 03/10]	    classify.classify(pmid_xml,'GE11','/home/ubuntu/output/pmid_xml_example/output')    
+[22:54:15 03/10]	  File "/usr/local/lib/python2.7/dist-packages/classify.py", line 45, in classify
+[22:54:15 03/10]	    input, preprocess = getInput(input)
+[22:54:15 03/10]	  File "/usr/local/lib/python2.7/dist-packages/classify.py", line 128, in getInput
+[22:54:15 03/10]	    raise Exception("Default corpus file for input " + str(defaultInput) + " not found")
+[22:54:15 03/10]	Exception: Default corpus file for input PubmedArticleSet>
+[22:54:15 03/10]	 not found
+[23:41:52 03/10]	Opening log /home/ubuntu/output/pmid_xml_example/output-log.txt at Fri Oct  3 23:41:52 2014
+####### Log opened at Fri Oct  3 23:41:52 2014 #######
+Command line: UPSITE.py
+[23:41:52 03/10]	os.path.basename(input):  PubmedArticleSet>
+[23:41:52 03/10]	
+[23:41:52 03/10]	Traceback (most recent call last):
+[23:41:52 03/10]	  File "UPSITE.py", line 32, in <module>
+[23:41:52 03/10]	    main(options.q1, options.q2, options.articles)
+[23:41:52 03/10]	  File "UPSITE.py", line 14, in main
+[23:41:52 03/10]	    classify.classify(pmid_xml,'GE11','/home/ubuntu/output/pmid_xml_example/output')    
+[23:41:52 03/10]	  File "/usr/local/lib/python2.7/dist-packages/classify.py", line 45, in classify
+[23:41:52 03/10]	    input, preprocess = getInput(input)
+[23:41:52 03/10]	  File "/usr/local/lib/python2.7/dist-packages/classify.py", line 128, in getInput
+[23:41:52 03/10]	    raise Exception("Default corpus file for input " + str(defaultInput) + " not found")
+[23:41:52 03/10]	Exception: Default corpus file for input PubmedArticleSet>
+[23:41:52 03/10]	 not found
