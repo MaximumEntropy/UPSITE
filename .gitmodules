@@ -1,0 +1,3 @@
+[submodule "TEES"]
+	path = TEES
+	url = https://github.com/jbjorne/TEES.git

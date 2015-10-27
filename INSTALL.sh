@@ -4,18 +4,15 @@ echo "Installing git ..."
 
 sudo apt-get install git
 
-echo "Fetching TEES ..."
-
-git clone https://github.com/jbjorne/TEES.git
-sudo apt-get install ruby
-sudo apt-get install make
-sudo apt-get install g++-multilib
-sudo apt-get install flex
-sudo apt-get install libboost-all-dev
-sudo apt-get install python-numpy
-sudo apt-get install python-scipy
-sudo apt-get install python-sklearn
-sudo apt-get install python-nltk
+sudo apt-get -y install ruby
+sudo apt-get -y install make
+sudo apt-get -y install g++-multilib
+sudo apt-get -y install flex
+sudo apt-get -y install libboost-all-dev
+sudo apt-get -y install python-numpy
+sudo apt-get -y install python-scipy
+sudo apt-get -y install python-sklearn
+sudo apt-get -y install python-nltk
 
 cd TEES
 python configure.py
