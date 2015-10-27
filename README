@@ -1,10 +1,253 @@
+UPSITE
+===============================
+
+UPSITE is a large scale bioNLP classification system created by researchers from the University of Pittsburgh and Carnegie Mellon University. At the time of writing this documentation, the corresponding publication had been accepted to GLBio2015 conference and IEEE Transactions on Computational Biology and bioinformatics under the title “Text Mining for Validating Protein Interactions”. An exhaustive description of the system can be found within that paper. UPSITE has gained many functions over the course of its development and therefore can be used for a wide variety of ML related entity classification problems. The default and primary use of UPSITE is its ability to automatically synthesize and collate large portions of the ~24million document PubMed corpus and automatically classify entity-entity interactions (primarily PPIs). 
+ 
+UPSITE was designed using only the highest performing modules available to the BioNLP community in an effort to minimize pipeline error propagation. This is great for optimizing performance, but makes its installation quite difficult. For this reason, I highly recommend accessing the public ally available Amazon Machine Instance (AMI) at the following URL: https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#Images:visibility=public-images;search=UPSITE;sort=name 
+The AMI contains a fully pre-configured Ubuntu 14.04 environment and running version of UPSITE. 
+
+In the even that you need to run TEES on your local Ubuntu machine,
+
+clone this repository git clone --recursive https://github.com/MaximumEntropy/UPSITE.git
+
+Run the installation script INSTALL.sh as follows:
+
+chmod +x INSTALL.sh
+
+./INSTALL.sh
+
+This script fetches the necessary dependencies required to run UPSITE and TEES and also configures the TEES event extraction system. 
+
+Once the dependencies are installed, TEES can now be configured.
+
+The TEES configuration is an interactive command line system to download related datasets, models and NLP tools required to run the system.
+
+You should see a prompt that looks like 
+
+[X] 1) Install classifier (SVM Multiclass)
+[X] 2) Install models (TEES models for BioNLP'09-13 and DDI'11-13)
+[X] 3) Install corpora (BioNLP'09-13 and DDI'11-13)
+[X] 4) Install preprocessing tools (BANNER, BLLIP parser etc)
+ *  c) Continue and install selected items
+    q) Quit
+
+* indicates the default option at , press c to continue
+
+============================== Install Directory ==============================
+1. By default, all data and tools will be installed to one directory, the
+DATAPATH. You can later set the installation directory individually for each
+component, or you can change the default path now.
+
+2. TEES reads its configuration from a file defined by the environment variable
+"TEES_SETTINGS". This environment variable must be set, and point to a
+configuration file for TEES to work. By editing this configuration file you can
+configure TEES in addition (or instead of) using this configuration program.
+
+The "TEES_SETTINGS" environment variable is not set, but a configuration file
+has been found in the default location. This installation program will use the
+existing file, and by default install only missing components.
+--------------------------------------------------------------------------------
+    1) Change DATAPATH (/home/ubuntu/.tees)
+    2) Change TEES_SETTINGS (/home/ubuntu/.tees_local_settings.py)
+ *  c) Continue
+================================================================================
+
+press c to continue again. This step allows you to change the path where your TEES settings and data are stored. We recommend sticking to the default settings.
+
+================================== Classifier ==================================
+TEES uses the SVM Multiclass classifer by Thorsten Joachims for all
+classification tasks. You can optionally choose to compile it from source if the
+precompiled Linux-binary does not work on your system. The SVM_MULTICLASS_DIR
+setting is already configured, so the default option is to skip installing.
+
+SVM_MULTICLASS_DIR=/home/ubuntu/.tees/tools/SVMMultiClass
+--------------------------------------------------------------------------------
+[ ] 1) Compile from source
+ *  i) Install
+    s) Skip
+================================================================================
+
+This installs LibSVM for classification. Press i install.
+
+==================================== Models ====================================
+TEES models are used for predicting events or relations using classify.py.
+Models are provided for all tasks in the BioNLP'11, BioNLP'09 and DDI'11 shared
+tasks, for all BioNLP'13 tasks except BB task 1, and for task 9.2 of the DDI'13
+shared task.
+
+For a list of models and instructions for using them see
+https://github.com/jbjorne/TEES/wiki/Classifying.
+--------------------------------------------------------------------------------
+[ ] 1) Redownload already downloaded files
+
+ *  i) Install
+    s) Skip
+================================================================================
+
+TEES uses various event models for its information extraction. Press i to install them.
+
+=================================== Corpora ===================================
+The corpora are used for training new models and testing existing models. The
+corpora installable here are from the three BioNLP Shared Tasks (2009, 2011 and
+2013) on Event Extraction (organized by University of Tokyo), and the two Drug-
+Drug Interaction  Extraction tasks (DDI'11 and 13, organized by Universidad
+Carlos III de Madrid).
+
+The 2009 and 2011 corpora are downloaded as interaction XML files, generated
+from the original Shared Task files. If you need to convert the corpora from
+the original files, you can use the convertBioNLP.py, convertDDI.py and
+convertDDI13.py programs located at Utils/Convert.
+
+The 2013 corpora will be converted to interaction XML from the official corpus
+files, downloaded automatically from the task websites. Installing the BioNLP'13
+corpora will take about 10 minutes.
+
+It is also recommended to download the official BioNLP Shared Task evaluator
+programs, which will be used by TEES when training or testing on those corpora.
+--------------------------------------------------------------------------------
+[ ] 1) Redownload already downloaded files
+
+[X] 2) Install BioNLP'11 corpora
+[x] 3) Install BioNLP'09 (GENIA) corpus
+[x] 4) Install DDI'11 (Drug-Drug Interactions) corpus
+
+[X] 5) Install BioNLP'13 corpora
+[x] 6) Install DDI'13 (Drug-Drug Interactions) corpus
+
+[x] 7) Install BioNLP evaluators
+
+  * i) Install
+    s) Skip
+================================================================================ 
+
+TEES trains its algorithms on various biomedical coropora that can be downloaded in this step. We recommend downloading all corpora for best performance.
+
+==================================== Tools ====================================
+The tools are required for processing unannotated text and can be used as part
+of TEES, or independently through their wrappers. For information and usage
+conditions, see https://github.com/jbjorne/TEES/wiki/Licenses. Some of the tools
+need to be compiled from source, this will take a while.
+
+The external tools used by TEES are:
+
+The GENIA Sentence Splitter of Tokyo University (Tsuruoka Y. et. al.)
+
+The BANNER named entity recognizer by Robert Leaman et. al.
+
+The BLLIP parser of Brown University (Charniak E., Johnson M. et. al.)
+
+The Stanford Parser of the Stanford Natural Language Processing Group The
+GENIA_SENTENCE_SPLITTER_DIR setting is already configured, so the default option
+is to skip installing.
+
+GENIA_SENTENCE_SPLITTER_DIR=/home/ubuntu/.tees/tools/geniassThe BANNER_DIR
+setting is already configured, so the default option is to skip installing.
+
+BANNER_DIR=/home/ubuntu/.tees/tools/BANNERThe BLLIP_PARSER_DIR setting is
+already configured, so the default option is to skip installing.
+
+BLLIP_PARSER_DIR=/home/ubuntu/.tees/tools/BLLIP/dmcc-bllip-parser-cb43c6cThe
+STANFORD_PARSER_DIR setting is already configured, so the default option is to
+skip installing.
+
+STANFORD_PARSER_DIR=/home/ubuntu/.tees/tools/stanford-parser-2012-03-09
+--------------------------------------------------------------------------------
+[x] 1) Redownload already downloaded files
+
+[x] 2) Install GENIA Sentence Splitter
+[x] 3) Install BANNER named entity recognizer
+[x] 4) Install BLLIP parser
+[x] 5) Install Stanford Parser
+
+  * i) Install
+    s) Skip
+================================================================================
+
+This step installs all the NLP tools. Once again, we recommend that you install all the NLP tools.
+
+WARNING: This step involves the download of several resources not developed by us. In the even that one of the models, corpora or NLP tools are unable to download nad install, please try again after a while and if the problem persists, please use our .ami file to run our system on Amazon EC2. 
+
+UPSITE was written by Adam G. Roth. The author can be contacted for questions or collorborations at Roth.AdamG@gmail.com
+
+Turku Event Extraction System 2.2
+=================================
+
+Turku Event Extraction System (TEES) is a free and open source natural language
+processing system developed for the extraction of events and relations from 
+biomedical text. It is written mostly in Python, and should work in generic 
+Unix/Linux environments.
+
+TEES has been evaluated in the following Shared Tasks and models for predicting
+their targets are included in this release.
+
+ * BioNLP 2009 Shared Task (1st place)
+ * BioNLP 2011 Shared Task (1st place in 4/8 tasks, only system to participate
+    in all tasks)
+ * DDI 2011 (Drug-drug interactions) Challenge (4th place, at 96% of the 
+    performance of the best system)
+
+For more information and documentation, see the TEES wiki at 
+https://github.com/jbjorne/TEES/wiki
+
+
+Quick Start
+===========
+
+To get started with TEES, download the latest stable release from
+http://sourceforge.net/projects/tees/files or the current 
+version from the repository. After downloading, TEES can optionally be installed 
+as a module using "setup.py", but this is not required, and the program can 
+simply be used from the unpacked archive.
+
+However, before using TEES the external programs and datafiles need to be 
+installed using the interactive configuration tool "configure.py", located
+in the package root directory:
+
+python configure.py
+
+After TEES had been configured, you can predict events or relations for text 
+with classify.py. Using the "-m" (model) switch, you can select one of the 
+pre-computed models (listed at https://github.com/jbjorne/TEES/wiki/Classifying). 
+For example, to run TEES prediction for the BioNLP 2011 GENIA development 
+corpus, use:
+
+python classify.py -m GE11-devel -i GE11-devel -o OUTSTEM
+ 
+where "OUTSTEM" is the output file stem. To try TEES on unannotated text, you 
+can give "classify.py" a PubMed citation id, such as:
+
+python classify.py -m GE11 -i 9668063 -o OUTSTEM
+  
+TEES will download the abstract and use the
+integrated preprocessing pipeline to split the text into sentences (with the
+GENIA Sentence Splitter, http://www.nactem.ac.uk/y-matsu/geniass/), detect
+named entities (with BANNER, http://banner.sourceforge.net/) and parse the
+text (with BLLIP Parser using David McClosky's biomodel, 
+http://bllip.cs.brown.edu/resources.shtml and Stanford format
+conversion, http://nlp.stanford.edu/software/lex-parser.shtml), after which
+events are detected from the document.
+
+Using TEES
+==========
+
+The primary user interface to TEES consists of the following programs
+
+ * classify.py - Predict events/relations with an existing model
+ * train.py - Train a new event/relation extraction model
+ * batch.py - Batch process large sets of input files
+ * configure.py - Install TEES models, external tools and corpora
+ * visualize.py - Visualize the events and parse for a sentence
+ 
+For information on using these programs, see the TEES wiki at 
+https://github.com/jbjorne/TEES/wiki
+
+TEES also has a number of modules that can be used as standalone executables,
+including the wrappers for external tools such as parsers. A list of these
+executables can be found at https://github.com/jbjorne/TEES/wiki/Programs
+
 This is a list of all the steps I took to get UPTEES running from scratch
 
-1. apt-get install git
-
-2. git clone https://github.com/jbjorne/TEES.git (Download the TEES Source)
-
-3. cd TEES
+cd TEES
 
 4. python configure.py
 
