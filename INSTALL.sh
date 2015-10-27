@@ -13,6 +13,8 @@ sudo apt-get -y install python-numpy
 sudo apt-get -y install python-scipy
 sudo apt-get -y install python-sklearn
 sudo apt-get -y install python-nltk
+sudo apt-get -y install default-jre
+sudo apt-get -y install default-jdk
 
 cd TEES
 python configure.py
