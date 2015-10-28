@@ -6,7 +6,75 @@ UPSITE is a large scale bioNLP classification system created by researchers from
 UPSITE was designed using only the highest performing modules available to the BioNLP community in an effort to minimize pipeline error propagation. This is great for optimizing performance, but makes its installation quite difficult. For this reason, I highly recommend accessing the public ally available Amazon Machine Instance (AMI) at the following URL: https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#Images:visibility=public-images;search=UPSITE;sort=name 
 The AMI contains a fully pre-configured Ubuntu 14.04 environment and running version of UPSITE. 
 
-In the even that you need to run TEES on your local Ubuntu machine,
+We highly recommend that you run UPSITE using this AMI since all TEES models, corpora and NLP tools are already configured for you. If however you need to run UPSITE on your local skip the following instructions and proceed to the section that describes how to setup UPSITE on your local machine.
+
+The following are the steps to use the AMI to run UPSITE
+
+Step 1: Create an Amazon EC2 Instance with the UPSITE AMI
+
+Note: These instructions are written for Ubuntu 14.04.2 but should work for most popular linux distributions as well as the mac operating system. Windows users will find this document helpful but will have to make minor adjustments.
+
+1. Create an Amazon Web Services Account at https://aws.amazon.com
+
+2. Navigate to the AWS console > EC2 > IMAGES > AMIs
+
+3. In the drop down menu located in the search bar, select Public images
+
+4. Type “UPSITE” into the search bar and press enter
+
+◦ The original UPSITE file can be identified by AMI ID:ami-2f5a9144 and owner:503952387608. Alternatively, you may find the AMI at this web address: 
+
+https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#Images:visibility=public-images;search=upsite;sort=name 
+
+5. When the AMI for UPSITE is located, make sure it is selected and click the Launch button. You will be redirected to the EC2 configuration tutorial. Follow steps 1-7. Below are the recommended settings:
+
+1. AMI: UPSITE
+
+2. Instance Type: Use default settings (t2.micro)
+
+3. Instance Configuration: Use default settings
+
+4. Storage: 30GB
+
+5. Instance Tag: key:myUPSITE Value:UPSITE1
+
+6. Security Group: Type: SSH, Source:My IP 
+
+6. When you are finished setting up your EC2 instance, press Launch
+
+7. You will be instructed to assign a key pair. UPSITE is a Linux AMI. For Linus AMIs, the 
+
+private key file allows you to securely SSH into your UPSITE instance from your local 
+
+computer. Select “Create a new key pair” and name it myUPSITEkey. 
+
+8. Select “Download Key Pair” and save the file (myUPSITEkey.pem) to your computer.
+
+9. To verify your UPSITE instance is now launched, navigate to the EC2 dashboard and 
+
+click on Instances > Instances. You should see UPSITE listed with Instance State:”running”. Note the public IP address listed for your instance on this screen, you will need it later. It should be something like: “54.86.228.154”
+
+Step 2: SSH into your remote UPSITE EC2 instance
+
+1. Open a command terminal on your local system and navigate to the folder containing myUPSITEkey.pem
+
+2. Enter the following commands to SSH into your UPSITE instance:
+
+◦ chmod 400 myUPSITEkey.pem 
+
+◦ ssh -i myUPSITEkey.pem ubuntu@”Public_IP_Address_From_Step_9” 
+
+▪ ex. ssh -i myUPSITEkey.pem ubuntu@54.86.228.154
+
+3. You will then be presented with a welcome screen displaying information pertaining to 
+
+your remote UPSITE linux instance. Congratulations, you have successfully gained access to a fully working version of UPSITE. 
+
+If you configured UPSITE using the AMI, you can skip the subsequent instructions and proceed to the end of this README that describes the command line usage of this tool.
+
+Running UPSITE on your local machine:
+
+In the event that you need to run TEES on your local Ubuntu machine,
 
 clone this repository git clone --recursive https://github.com/MaximumEntropy/UPSITE.git
 
@@ -167,10 +235,6 @@ This step installs all the NLP tools. Once again, we recommend that you install 
 
 WARNING: This step involves the download of several resources not developed by us. In the even that one of the models, corpora or NLP tools are unable to download nad install, please try again after a while and if the problem persists, please use our .ami file to run our system on Amazon EC2. 
 
-UPSITE was written by Adam G. Roth. The author can be contacted for questions or collorborations at Roth.AdamG@gmail.com
-
-Disclaimer: The Turku Event Extraction System (TEES) although distributed as a submodule with this repository, is not developed by us.
-
 A full list of dependencies required to run this system are listed below:
 
 1. Ruby (sudo apt-get install ruby)
@@ -184,6 +248,8 @@ A full list of dependencies required to run this system are listed below:
 9. Scipy (sudo apt-get install python-scipy)
 10. Sklearn (sudo apt-get install python-sklearn)
 11. NLTK (sudo apt-get install python-nltk)
+
+Example usage of UPSITE: 
 
 The system is intended to be used a command line tool. 
 
@@ -200,3 +266,7 @@ For a detailed description of the command line arguments, run the following comm
 python UPTEES/UPSITE.py -help
 
 The runtime of this system is heavily dependent on the number of papers parsed. For best performance, we recommend setting n to atleast 60 papers which entails several hours of runtime.
+
+UPSITE was written by Adam G. Roth. The author can be contacted for questions or collorborations at Roth.AdamG@gmail.com
+
+Disclaimer: The Turku Event Extraction System (TEES) although distributed as a submodule with this repository, is not developed by us.
