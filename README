@@ -185,3 +185,17 @@ A full list of dependencies required to run this system are listed below:
 10. Sklearn (sudo apt-get install python-sklearn)
 11. NLTK (sudo apt-get install python-nltk)
 
+The system is intended to be used a command line tool. 
+
+An example usage of this system is:
+
+python UPTEES/UPSITE.py -q MDM2 -w TERT -i single -n 60 -o mdm2_tert.tsv
+
+This will run experiments using the REL11, EPI11 and ID11 TEES models, to run it on a specific model,
+
+python UPTEES/UPSITE.py -q MDM2 -w TERT -i single -n 60 -m REL11 -o mdm2_tert.tsv
+
+For a detailed description of the command line arguments, run the following command 
+
+python UPTEES/UPSITE.py -help
+
