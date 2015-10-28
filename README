@@ -199,3 +199,4 @@ For a detailed description of the command line arguments, run the following comm
 
 python UPTEES/UPSITE.py -help
 
+The runtime of this system is heavily dependent on the number of papers parsed. For best performance, we recommend setting n to atleast 60 papers which entails several hours of runtime.
