@@ -3,7 +3,7 @@ UPSITE
 
 UPSITE is a large scale bioNLP classification system created by researchers from the University of Pittsburgh and Carnegie Mellon University. At the time of writing this documentation, the corresponding publication had been accepted to GLBio2015 conference and IEEE Transactions on Computational Biology and bioinformatics under the title “Text Mining for Validating Protein Interactions”. An exhaustive description of the system can be found within that paper. UPSITE has gained many functions over the course of its development and therefore can be used for a wide variety of ML related entity classification problems. The default and primary use of UPSITE is its ability to automatically synthesize and collate large portions of the ~24million document PubMed corpus and automatically classify entity-entity interactions (primarily PPIs). 
  
-UPSITE was designed using only the highest performing modules available to the BioNLP community in an effort to minimize pipeline error propagation. This is great for optimizing performance, but makes its installation quite difficult. For this reason, I highly recommend accessing the public ally available Amazon Machine Instance (AMI) at the following URL: https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#Images:visibility=public-images;search=UPSITE;sort=name 
+UPSITE was designed using only the highest performing modules available to the BioNLP community in an effort to minimize pipeline error propagation. This is great for optimizing performance, but makes its installation quite difficult. For this reason, I highly recommend accessing the publicly available Amazon Machine Instance (AMI) at the following URL: https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#Images:visibility=public-images;search=UPSITE;sort=name 
 The AMI contains a fully pre-configured Ubuntu 14.04 environment and running version of UPSITE. 
 
 We highly recommend that you run UPSITE using this AMI since all TEES models, corpora and NLP tools are already configured for you. If however you need to run UPSITE on your local skip the following instructions and proceed to the section that describes how to setup UPSITE on your local machine.
@@ -76,13 +76,15 @@ Running UPSITE on your local machine:
 
 In the event that you need to run TEES on your local Ubuntu machine,
 
-clone this repository git clone --recursive https://github.com/MaximumEntropy/UPSITE.git
+clone this repository with the following command
+
+git clone --recursive https://github.com/MaximumEntropy/UPSITE.git
 
 Run the installation script INSTALL.sh as follows:
 
-chmod +x INSTALL.sh
+1. chmod +x INSTALL.sh
 
-./INSTALL.sh
+2. ./INSTALL.sh
 
 This script fetches the necessary dependencies required to run UPSITE and TEES and also configures the TEES event extraction system. 
 
@@ -233,7 +235,7 @@ STANFORD_PARSER_DIR=/home/ubuntu/.tees/tools/stanford-parser-2012-03-09
 
 This step installs all the NLP tools. Once again, we recommend that you install all the NLP tools.
 
-WARNING: This step involves the download of several resources not developed by us. In the even that one of the models, corpora or NLP tools are unable to download nad install, please try again after a while and if the problem persists, please use our .ami file to run our system on Amazon EC2. 
+WARNING: This step involves the download of several resources not developed by us. In the even that one of the models, corpora or NLP tools are unable to download or install, please try again after a while and if the problem persists, please use our .ami file to run our system on Amazon EC2. 
 
 A full list of dependencies required to run this system are listed below:
 
@@ -255,17 +257,17 @@ The system is intended to be used a command line tool.
 
 An example usage of this system is:
 
-python UPTEES/UPSITE.py -q MDM2 -w TERT -i single -n 60 -o mdm2_tert.tsv
+sudo python UPTEES/UPSITE.py -q MDM2 -w TERT -i single -n 60 -o mdm2_tert.tsv
 
 This will run experiments using the REL11, EPI11 and ID11 TEES models, to run it on a specific model,
 
-python UPTEES/UPSITE.py -q MDM2 -w TERT -i single -n 60 -m REL11 -o mdm2_tert.tsv
+sudo python UPTEES/UPSITE.py -q MDM2 -w TERT -i single -n 60 -m REL11 -o mdm2_tert.tsv
 
 For a detailed description of the command line arguments, run the following command 
 
 python UPTEES/UPSITE.py -help
 
-The runtime of this system is heavily dependent on the number of papers parsed. For best performance, we recommend setting n to atleast 60 papers which entails several hours of runtime.
+The runtime of this system is heavily dependent on the number of papers parsed. For best performance, we recommend setting n to atleast 60 papers to replicate the results in our paper. This entails several hours of runtime.
 
 UPSITE was written by Adam G. Roth. The author can be contacted for questions or collorborations at Roth.AdamG@gmail.com
 
